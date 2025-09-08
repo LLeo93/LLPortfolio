@@ -1,0 +1,19 @@
+.bg-project-A {
+  background-image: url('../assets/icons/spotifyimmagine.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-project-B {
+  background-image: url('../assets/icons/coming soon.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg-certificate-capstone {
+  background-image: url('../assets/Certificati/CapstonProject.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
