@@ -32,7 +32,7 @@ const Certifications: React.FC = () => {
             </div>
 
             <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-400 leading-relaxed">
-              Certificato Master di un anno in Sviluppo Full Stack, dove ho
+              Certificato Master di sei mesi in Sviluppo Full Stack, dove ho
               acquisito competenze avanzate in un ambiente di lavoro Agile e
               Scrum. Ho sviluppato progetti completi sia in autonomia che in
               team, dimostrando padronanza di un'ampia gamma di tecnologie, tra
