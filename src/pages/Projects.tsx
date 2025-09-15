@@ -11,6 +11,36 @@ const Projects: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Project Card 1 */}
         <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
+          <Link to="https://pixelpals-pous.onrender.com">
+            <div className="pixelpals h-32 md:h-48 w-full rounded-lg mb-4 "></div>
+            <h4 className="text-xl font-bold mb-2 text-white">Pixelpals</h4>
+            <p className="text-gray-300 text-sm">
+              Pixelpals l'app che unisce i videogiocatori!
+            </p>
+          </Link>
+          <Link to="/projects/Pixelpals">
+            <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block">
+              Dettagli &rarr;
+            </span>
+          </Link>
+          <a
+            href="https://pixelpals-pous.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"
+          >
+            Visualizza progetto&rarr;
+          </a>
+          <a
+            href="https://github.com/LLeo93/pixelpals/blob/main/README.md"
+            className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"
+          >
+            GitHub Repo &rarr;
+          </a>
+        </div>
+
+        {/* Project Card 2 */}
+        <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
           <Link to="https://spoti-team7-final.vercel.app/">
             <div className="bg-project-A h-32 md:h-48 w-full rounded-lg mb-4 "></div>
             <h4 className="text-xl font-bold mb-2 text-white">Spotify clone</h4>
@@ -29,16 +59,8 @@ const Projects: React.FC = () => (
             rel="noopener noreferrer"
             className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"
           >
-            Visualizza progetto &rarr;
+            Visualizza progetto&rarr;
           </a>
-        </div>
-
-        {/* Project Card 2 */}
-        <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
-          <div className="bg-project-B h-32 md:h-48 w-full rounded-lg mb-4 "></div>
-          <h4 className="text-xl font-bold mb-2 text-white"></h4>
-          <p className="text-gray-300 text-sm"></p>
-          <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"></span>
         </div>
 
         {/*altri progetti */}
@@ -63,7 +85,7 @@ const Projects: React.FC = () => (
                 href="#"
                 className="text-cyan-400 hover:text-cyan-200 transition-colors"
               >
-                Visualizza certificato &rarr;
+                Visualizza certificato&rarr;
               </a>
             </Link>
           </div>

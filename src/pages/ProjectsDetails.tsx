@@ -21,9 +21,11 @@ const ProjectsDetails: React.FC = () => {
     <div className="flex-1 flex flex-col items-center justify-start p-8 text-gray-200 overflow-y-auto">
       <h2 className="text-3xl font-bold mb-4 text-cyan-400">{project.title}</h2>
       <div
-        className={`${project.image} h-48 w-full max-w-2xl rounded-lg mb-6`}
+        className={`${project.image} aspect-video w-full max-w-2xl rounded-lg mb-6`}
       ></div>
-      <p className="text-gray-300 mb-6 max-w-2xl">{project.description}</p>
+      <p className="text-gray-300 mb-6 max-w-2xl text-justify">
+        {project.description}
+      </p>
       <a
         href={project.link}
         target="_blank"

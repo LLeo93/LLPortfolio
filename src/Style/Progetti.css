@@ -3,6 +3,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #121212;
 }
 
 .bg-project-B {
@@ -16,4 +17,17 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.spotify-img {
+  background-image: url('../assets/Progetti/Spotify.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pixelpals {
+  background-image: url('../assets/Progetti/Pixelpas.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #121212;
 }
