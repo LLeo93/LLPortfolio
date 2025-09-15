@@ -20,7 +20,7 @@ const About: React.FC = () => (
       Master in Full Stack Developer.
       <br />
       <span className="text-cyan-400 font-bold"> La mia visione </span>
-      <b /r>
+      <br />
       Questo Master mi ha dato gli strumenti per trasformare la mia creatività
       in codice e la mia determinazione in soluzioni. Ho capito che la
       programmazione non è solo un lavoro, ma un modo per costruire qualcosa di
