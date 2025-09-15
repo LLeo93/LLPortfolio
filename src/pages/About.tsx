@@ -19,7 +19,7 @@ const About: React.FC = () => (
       passione di bambino per la modifica dei videogiochi, ho intrapreso un
       Master in Full Stack Developer.
       <br />
-      <span className="text-cyan-400 font-bold"> La mia visione </span>
+      <span className="text-cyan-400 font-bold"> La mia visione.</span>
       <br />
       Questo Master mi ha dato gli strumenti per trasformare la mia creatività
       in codice e la mia determinazione in soluzioni. Ho capito che la
