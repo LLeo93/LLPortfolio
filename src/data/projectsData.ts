@@ -10,7 +10,7 @@ export const projects: Project[] = [
   {
     id: 'spotify',
     title: 'Spotify clone',
-    description: `Clone Dispotify: Non solo un progetto, ma l'inizio di tutto.
+    description: `Clone di Spotify: Non solo un progetto, ma l'inizio di tutto.
                     Questo progetto, sviluppato durante la mia prima Build Week in Epicode, ha rappresentato il mio battesimo nel mondo della programmazione. Con un team di sconosciuti, assegnato dal docente, e armati solo di HTML, CSS, Bootstrap e JavaScript, ci siamo lanciati nella sfida di replicare l'interfaccia di Spotify.
 
                     Abbiamo imparato a lavorare in team, gestendo il flusso con Trello e GitHub, trasformando le nostre competenze front-end in un prodotto funzionante. Oltre al codice, questo progetto ha dato vita a un'amicizia solida che dura ancora oggi.
