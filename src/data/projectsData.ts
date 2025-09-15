@@ -15,7 +15,7 @@ export const projects: Project[] = [
 
                     Abbiamo imparato a lavorare in team, gestendo il flusso con Trello e GitHub, trasformando le nostre competenze front-end in un prodotto funzionante. Oltre al codice, questo progetto ha dato vita a un'amicizia solida che dura ancora oggi.
 
-                    Clone Dispotify non è solo la dimostrazione delle mie prime competenze tecniche. È la prova che la collaborazione e la passione possono trasformare le sfide in successi, creando un legame indissolubile tra le persone. Un'esperienza che mi ha insegnato che i migliori progetti nascono dalla condivisione.`,
+                    Questo lavoro di gruppo non è solo la dimostrazione delle mie prime competenze tecniche. È la prova che la collaborazione e la passione possono trasformare le sfide in successi, creando un legame indissolubile tra le persone. Un'esperienza che mi ha insegnato che i migliori progetti nascono dalla condivisione.`,
     image: 'bg-project-A',
     link: 'https://spoti-team7-final.vercel.app/',
   },
