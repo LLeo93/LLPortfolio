@@ -6,8 +6,14 @@ import {
   Phone as PhoneCall,
 } from 'lucide-react';
 import Avatar from '../assets/LLeoAvatar.png';
+import { useTranslation } from 'react-i18next';
 
 const Sidebar: React.FC = () => {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <aside
       className="
@@ -37,7 +43,34 @@ const Sidebar: React.FC = () => {
             Junior Full Stack Developer
           </p>
         </div>
-
+        <div className="flex justify-center space-x-2 w-full mb-4">
+          <button
+            onClick={() => changeLanguage('it')}
+            className={`
+              text-sm font-bold py-2 px-4 rounded-full transition-colors duration-300
+              ${
+                i18n.language === 'it'
+                  ? 'bg-cyan-400 text-black'
+                  : 'bg-transparent text-gray-400 border border-gray-400 hover:bg-cyan-400 hover:text-black'
+              }
+            `}
+          >
+            IT
+          </button>
+          <button
+            onClick={() => changeLanguage('en')}
+            className={`
+              text-sm font-bold py-2 px-4 rounded-full transition-colors duration-300
+              ${
+                i18n.language === 'en'
+                  ? 'bg-cyan-400 text-black'
+                  : 'bg-transparent text-gray-400 border border-gray-400 hover:bg-cyan-400 hover:text-black'
+              }
+            `}
+          >
+            EN
+          </button>
+        </div>
         {/* Lingue 
         <div className="flex justify-center space-x-6">
           <span

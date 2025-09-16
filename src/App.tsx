@@ -5,6 +5,7 @@ import About from './pages/About.tsx';
 import Projects from './pages/Projects.tsx';
 import Certifications from './pages/Certifications.tsx';
 import ProjectsDetails from './pages/ProjectsDetails.tsx';
+import './Style/ScrollBar.css';
 
 function App() {
   return (

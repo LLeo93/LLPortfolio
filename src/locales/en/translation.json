@@ -1,0 +1,49 @@
+{
+  "about":{
+  "title_1": "Build your future, one experience at a time.",
+  "text_1": "I am a Junior Full Stack Developer driven by a passion for creating and solving problems. My journey into the world of programming was not a straight line. For seven years, I worked full-time in a completely different context as a warehouse worker at Laika, where I learned the importance of precision and organization. The desire for a new challenge and dissatisfaction with my job pushed me to make a courageous decision: to change my life. Inspired by my uncle, a developer with years of experience, and driven by my childhood passion for modifying video games, I embarked on a Full Stack Developer Master's program.",
+  "text_2": "This Master's degree gave me the tools to transform my creativity into code and my determination into solutions. I realized that programming is not just a job, but a way to build something tangible, just as I used to, but in a completely new world. Today, I am ready to put my skills and insatiable desire to learn to work for a dynamic team and innovative projects. I believe my unique background makes me a versatile professional, capable of facing any challenge with a different perspective and a strong work ethic.",
+  "title_2": "My vision."
+},
+"certifications":{
+    "back": "Back",
+    "master_title": "Full Stack Developer Master",
+    "description_1": "Six-month Master's Certificate in Full Stack Development, where I gained advanced skills in an Agile and Scrum work environment. I developed complete projects both independently and in a team, demonstrating mastery of a wide range of technologies, including HTML5, CSS3, JavaScript, TypeScript, React, Java Spring Boot, and SQL.",
+    "description_2": "My final project, 'PixelPals', is a complete web application for player matchmaking, which reflects my ability to manage application development from conception to final implementation."
+  },
+  "home": {
+    "welcome": "Welcome!",
+      "title": "I'm Leoncini Libanio, Junior Full Stack Developer.",
+    "subtitle": "Explore my portfolio to discover my projects and skills."
+  },
+  "project_details": {
+    "not_found": "Project not found",
+    "back_to_projects": "Back to projects",
+    "go_to_project": "Go to project",
+    "back": "Go back"
+  },
+
+  "projects": {
+      "spotify": {
+      "title": "Spotify clone",
+      "description": "Not just a project, but the beginning of everything. This project, developed during my first Build Week at Epicode, was my baptism into the world of programming. With a team of strangers, assigned by the instructor, and armed only with HTML, CSS, Bootstrap, and JavaScript, we launched into the challenge of replicating the Spotify interface. We learned to work in a team, managing the workflow with Trello and GitHub, transforming our front-end skills into a functional product. Beyond the code, this project gave life to a solid friendship that still lasts today. This group work is not just a demonstration of my initial technical skills. It's proof that collaboration and passion can turn challenges into successes, creating an unbreakable bond between people. An experience that taught me that the best projects are born from sharing."
+    },
+    "pixelpals": {
+      "title": "Pixelpals",
+      "description": "Find Your Hero in the Gaming World! PixelPals is my platform created to connect gamers, transforming the gaming experience from solitary to a team adventure. This project was developed with the goal of creating an ecosystem where players can easily find the perfect companion or a team to climb the ranks. I designed a system of customizable profiles and intelligent matching that helps users find compatible gaming partners based on tastes and styles. The platform also includes a real-time chat based on WebSocket and exclusive badges to reward dedication to the community. The Technology behind PixelPals Frontend: Developed with React for a dynamic and reactive user interface, and styled with Tailwind CSS for an attractive design. Backend: I used Spring Boot to build a robust backend, supported by a MongoDB database to efficiently manage data. Connectivity: Authentication is managed with JWT, while real-time communication is made possible by WebSocket. This project is not just a demonstration of my technical skills, but also my vision of how technology can create communities and improve the human experience."
+    }},
+    "projects_list": {
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "pixelpals_description": "Pixelpals, the app that unites gamers!",
+    "spotify_description": "Spotify clone created by Team 7",
+    "details": "Details",
+    "view_project": "View project",
+    "view_certificate": "View certificate",
+    "back": "Back"
+  },
+    "navigation": {
+    "home": "Home",
+    "about_me": "About me"
+  }
+}

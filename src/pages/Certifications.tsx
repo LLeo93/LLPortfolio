@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CapstoneProject from '../assets/Certificati/CapstonProject.webp';
+import { useTranslation } from 'react-i18next';
 
 const Certifications: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <Link to="/Projects">
         <div className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block text-lg mb-2">
-          Indietro &larr;
+          {t('certifications.back')} &larr;
         </div>
       </Link>
       <div className="bg-gray-900 text-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 mx-auto max-w-7xl">
@@ -15,7 +17,7 @@ const Certifications: React.FC = () => {
           <div className="flex-shrink-0"></div>
           <div className="text-center md:text-left">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-indigo-400 mb-2">
-              Master in Full Stack Developer
+              {t('certifications.master_title')}
             </h2>
             <div className="flex">
               <img
@@ -31,19 +33,11 @@ const Certifications: React.FC = () => {
               </h2>
             </div>
 
-            <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-400 leading-relaxed">
-              Certificato Master di sei mesi in Sviluppo Full Stack, dove ho
-              acquisito competenze avanzate in un ambiente di lavoro Agile e
-              Scrum. Ho sviluppato progetti completi sia in autonomia che in
-              team, dimostrando padronanza di un'ampia gamma di tecnologie, tra
-              cui HTML5, CSS3, JavaScript, TypeScript, React, Java Spring Boot e
-              SQL.
+            <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify">
+              {t('certifications.description_1')}
             </p>
-            <p className="mt-4 text-sm sm:text-md md:text-lg lg:text-xl text-gray-400 leading-relaxed">
-              Il mio progetto finale, "PixelPals", è un'applicazione web
-              completa per il matchmaking tra giocatori, che riflette la mia
-              capacità di gestire lo sviluppo di un'applicazione dalla
-              concezione alla realizzazione finale.
+            <p className="mt-4 text-sm sm:text-md md:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify">
+              {t('certifications.description_2')}
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   Home as HomeIcon,
   User as UserIcon,
@@ -12,15 +13,20 @@ interface MainContentProps {
 
 const MainContent: React.FC<MainContentProps> = ({ children }) => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   const getTitle = (pathname: string): string => {
     switch (pathname) {
       case '/':
-        return 'Home';
+        return t('navigation.home'); // "Home"
       case '/about':
-        return 'Su di me';
+        return t('navigation.about_me'); // "Su di me"
       case '/projects':
-        return 'Progetti e Certificazioni';
+        return (
+          t('projects_list.projects') +
+          ' e ' +
+          t('projects_list.certifications')
+        );
       default:
         return '';
     }
@@ -44,7 +50,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           }`}
         >
           <HomeIcon size={24} />
-          Home
+          {t('navigation.home')}
         </Link>
         <Link
           to="/about"
@@ -53,7 +59,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           }`}
         >
           <UserIcon size={24} />
-          Su di me
+          {t('navigation.about_me')}
         </Link>
         <Link
           to="/projects"
@@ -62,7 +68,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           }`}
         >
           <BriefcaseIcon size={24} />
-          Progetti
+          {t('projects_list.projects')}
         </Link>
       </nav>
 
