@@ -36,7 +36,7 @@ Se sei interessato a collaborare o semplicemente vuoi metterti in contatto, non 
 
 💻 GitHub: https://github.com/LLeo93
 
-<img src="https://www.google.com/search?q=https://simpleicons.org/icons/linkedin.svg" width="16" height="16"> https://www.linkedin.com/in/libanio-leoncini/
+💼 https://www.linkedin.com/in/libanio-leoncini/
 
 ✉️ Email: liba.leoncini@gmail.com
 
