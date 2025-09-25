@@ -14,29 +14,19 @@ const Projects: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Project Card Pixelpals*/}
           <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
-            <Link to="https://pixelpals-pous.onrender.com">
-              {/* bg-project per immagine icona */}
-              <div className="bg-project-pixelpals h-32 md:h-48 w-full rounded-lg mb-4 "></div>
-              <h4 className="text-xl font-bold mb-2 text-white">
-                {t('projects.pixelpals.title')}
-              </h4>
-              <p className="text-gray-300 text-sm">
-                {t('projects_list.pixelpals_description')}
-              </p>
-            </Link>
+            {/* bg-project per immagine icona */}
+            <div className="bg-project-pixelpals h-32 md:h-48 w-full rounded-lg mb-4 "></div>
+            <h4 className="text-xl font-bold mb-2 text-white">
+              {t('projects.pixelpals.title')}
+            </h4>
+            <p className="text-gray-300 text-sm">
+              {t('projects_list.pixelpals_description')}
+            </p>
             <Link to="/projects/pixelpals">
               <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block">
                 {t('projects_list.details')}&rarr;
               </span>
             </Link>
-            <a
-              href="https://pixelpals-pous.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"
-            >
-              {t('projects_list.view_project')}&rarr;
-            </a>
             <a
               href="https://github.com/LLeo93/pixelpals/blob/main/README.md"
               className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"
