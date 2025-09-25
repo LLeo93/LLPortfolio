@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
                 {t('projects_list.pixelpals_description')}
               </p>
             </Link>
-            <Link to="/projects/Pixelpals">
+            <Link to="/projects/pixelpals">
               <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block">
                 {t('projects_list.details')}&rarr;
               </span>
@@ -89,7 +89,7 @@ const Projects: React.FC = () => {
                 {t('projects_list.applemusic_description')}
               </p>
             </Link>
-            <Link to="/projects/spotify">
+            <Link to="/projects/applemusic">
               <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block">
                 {t('projects_list.details')}&rarr;
               </span>
@@ -121,7 +121,7 @@ const Projects: React.FC = () => {
                 {t('projects_list.llmeteo_description')}
               </p>
             </Link>
-            <Link to="/projects/spotify">
+            <Link to="/projects/llmeteo">
               <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block">
                 {t('projects_list.details')}&rarr;
               </span>
@@ -153,7 +153,7 @@ const Projects: React.FC = () => {
                 {t('projects_list.llnetflix_description')}
               </p>
             </Link>
-            <Link to="/projects/spotify">
+            <Link to="/projects/llnetflix">
               <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block">
                 {t('projects_list.details')}&rarr;
               </span>

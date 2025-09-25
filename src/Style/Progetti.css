@@ -7,7 +7,7 @@
   background-color: #121212;
 }
 .bg-project-llmeteo {
-  background-image: url('../assets/icons/LLmetoimmagine.png');
+  background-image: url('../assets/icons/LLmeteoimmagine.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -57,19 +57,19 @@
   background-position: center;
 }
 .applemusic-img {
-  background-image: url('../assets/Progetti/Spotify.png');
+  background-image: url('../assets/Progetti/applemusic.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.llmeto-img {
-  background-image: url('../assets/Progetti/Spotify.png');
+.llmeteo-img {
+  background-image: url('../assets/Progetti/llmeteo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .llnetflix-img {
-  background-image: url('../assets/Progetti/Spotify.png');
+  background-image: url('../assets/Progetti/llnetflix.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
