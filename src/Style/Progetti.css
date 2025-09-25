@@ -1,5 +1,34 @@
-.bg-project-A {
+/*immagini icone dei progetti*/
+.bg-project-spotify {
   background-image: url('../assets/icons/spotifyimmagine.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #121212;
+}
+.bg-project-llmeteo {
+  background-image: url('../assets/icons/LLmetoimmagine.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #121212;
+}
+.bg-project-applemusic {
+  background-image: url('../assets/icons/applemusicimmagine.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #121212;
+}
+.bg-project-llnetflix {
+  background-image: url('../assets/icons/Netfliximmagine.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #121212;
+}
+.bg-project-pixelpals {
+  background-image: url('../assets/icons/pixelpalsimmagine.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -12,13 +41,34 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .bg-certificate-capstone {
   background-image: url('../assets/Certificati/CapstonProject.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+/*immagini delle descrizioni dei progetti*/
 .spotify-img {
+  background-image: url('../assets/Progetti/Spotify.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.applemusic-img {
+  background-image: url('../assets/Progetti/Spotify.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.llmeto-img {
+  background-image: url('../assets/Progetti/Spotify.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.llnetflix-img {
   background-image: url('../assets/Progetti/Spotify.png');
   background-size: contain;
   background-repeat: no-repeat;

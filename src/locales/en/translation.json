@@ -31,12 +31,29 @@
     "pixelpals": {
       "title": "Pixelpals",
       "description": "Find Your Hero in the Gaming World! PixelPals is my platform created to connect gamers, transforming the gaming experience from solitary to a team adventure. This project was developed with the goal of creating an ecosystem where players can easily find the perfect companion or a team to climb the ranks. I designed a system of customizable profiles and intelligent matching that helps users find compatible gaming partners based on tastes and styles. The platform also includes a real-time chat based on WebSocket and exclusive badges to reward dedication to the community. The Technology behind PixelPals Frontend: Developed with React for a dynamic and reactive user interface, and styled with Tailwind CSS for an attractive design. Backend: I used Spring Boot to build a robust backend, supported by a MongoDB database to efficiently manage data. Connectivity: Authentication is managed with JWT, while real-time communication is made possible by WebSocket. This project is not just a demonstration of my technical skills, but also my vision of how technology can create communities and improve the human experience."
-    }},
+    },  "llmeteo": {
+    "title": "LLMeteo",
+    "description": "This is a simple, responsive weather app created in a single afternoon during the first months of my Full Stack Development Master's. The project was conceived as a practical exercise to apply my initial knowledge of web development, particularly using React, Bootstrap, and JavaScript. The application focuses on its main function: providing accurate and immediate weather forecasts. It uses an external weather API to retrieve real-time data and displays it in a responsive interface that adapts to different screen sizes (desktop, tablet, mobile). The choice of Bootstrap allowed for quick and efficient layout and style management, ensuring a good user experience even with my limited knowledge of CSS at the time. Despite its nature as a learning project, the app demonstrates a solid understanding of basic React principles, API handling, and the creation of functional and accessible user interfaces.",
+    "link": "https://ll-meteo.vercel.app/"
+  },
+  "applemusic": {
+    "title": "Apple music",
+    "description": "Apple Music Clone. This project represents one of my first steps into the world of front-end development, a small clone of the Apple Music interface created in a single afternoon. The main goal was to test and solidify my initial knowledge of React and, in particular, to apply the concepts of Redux for the first time for state management. The app focuses on its main function: a working search bar that makes API calls to retrieve real-time music data. Thanks to the use of Bootstrap, the interface is fully responsive, ensuring smooth navigation on any device. Despite being a learning project made with limited experience at the time, it demonstrates my ability to quickly understand, apply, and integrate new technologies like React, Redux, JavaScript, and Bootstrap to create a functional and well-structured web application.",
+    "link": "https://applemusic-gold.vercel.app/"
+  },
+  "llnetflix": {
+    "title": "LLNetflix",
+    "description": "Netflix Mockup Clone. This project is a faithful replica of a Netflix mockup, created autonomously in a single afternoon as a test during my training. The goal was to challenge my ability to create a complex and fully responsive user interface with React and to handle API calls to connect dynamic data. The application replicates three main sections: a Homepage with dynamic carousels for various categories, a dedicated TV Shows page, and a Details page for each title, with data retrieved in real-time via the IMDB API. Despite the short timeframe, the project demonstrates a solid understanding of React.js, the use of Bootstrap for an efficient layout, and the integration of external APIs to create a dynamic and functional user experience.",
+    "link": "https://ll-netflix-clone-v4yg.vercel.app/"
+  }},
     "projects_list": {
     "projects": "Projects",
     "certifications": "Certifications",
     "pixelpals_description": "Pixelpals, the app that unites gamers!",
     "spotify_description": "Spotify clone created by Team 7",
+    "llmeteo_description":"Responsive weather app using React and API",
+    "applemusic_description":" Apple Music clone with React and Redux",
+    "llnetflix_description":"Netflix replica using React, API, and Bootstrap",
     "details": "Details",
     "view_project": "View project",
     "view_certificate": "View certificate",
