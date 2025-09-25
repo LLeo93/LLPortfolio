@@ -34,6 +34,13 @@
   background-position: center;
   background-color: #121212;
 }
+.bg-project-prompt-ai {
+  background-image: url('../assets/icons/prompt-aiimmagine.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #121212;
+}
 
 .bg-project-B {
   background-image: url('../assets/icons/coming soon.jpg');
@@ -76,6 +83,13 @@
 }
 .pixelpals {
   background-image: url('../assets/Progetti/Pixelpas.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #121212;
+}
+.prompt-ai-img {
+  background-image: url('../assets/Progetti/prompt-ai.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

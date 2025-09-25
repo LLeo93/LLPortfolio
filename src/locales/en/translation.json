@@ -45,7 +45,13 @@
     "title": "LLNetflix",
     "description": "Netflix Mockup Clone. This project is a faithful replica of a Netflix mockup, created autonomously in a single afternoon as a test during my training. The goal was to challenge my ability to create a complex and fully responsive user interface with React and to handle API calls to connect dynamic data. The application replicates three main sections: a Homepage with dynamic carousels for various categories, a dedicated TV Shows page, and a Details page for each title, with data retrieved in real-time via the IMDB API. Despite the short timeframe, the project demonstrates a solid understanding of React.js, the use of Bootstrap for an efficient layout, and the integration of external APIs to create a dynamic and functional user experience.",
     "link": "https://ll-netflix-clone-v4yg.vercel.app/"
-  }},
+  },
+ "prompt-ai":{
+      "title": "Prompt-AI",
+    "description": "Prompt Manager – AI Prompt Management and Customization\n\nThis project is a web application designed for anyone working with AI models who wants to organize, edit, and optimize their prompts in a simple and intuitive way.\n\nThe app allows you to:\n- Create custom prompts, saving title, content, and tags for quick classification.\n- Edit and update existing prompts through a clear and interactive interface.\n- Manage favorite prompts, with the ability to add or remove prompts from your favorites list.\n- View prompts in detail, with all key information and tags organized as chips.\n- Search and filter saved prompts by title, content, or tags.\n- Interact with smooth animations thanks to Framer Motion and dynamic notifications via SweetAlert2.\n- Export and import prompts in JSON format for backup or sharing.\n\nThe app is fully responsive, optimized for both desktop and mobile, and uses Redux for global state management, ensuring real-time updates and centralized data handling.\n\nThis project is designed as a versatile tool for anyone using AI in content creation, SEO, translation, and script generation, making prompt organization and productivity easier in daily work with language models.",
+    "link": "https://prompt-ai-orpin.vercel.app/"
+    }
+  },
     "projects_list": {
     "projects": "Projects",
     "certifications": "Certifications",
@@ -54,6 +60,7 @@
     "llmeteo_description":"Responsive weather app using React and API",
     "applemusic_description":" Apple Music clone with React and Redux",
     "llnetflix_description":"Netflix replica using React, API, and Bootstrap",
+    "prompt-ai_description":"Manage, organize, and optimize your AI prompts with an intuitive and interactive interface.",
     "details": "Details",
     "view_project": "View project",
     "view_certificate": "View certificate",

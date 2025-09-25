@@ -48,4 +48,12 @@ export const projectsData: ProjectData[] = [
     link: 'https://applemusic-gold.vercel.app/',
     repo: 'https://github.com/LLeo93/applemusic',
   },
+  {
+    id: 'prompt-ai',
+    titleKey: 'projects.prompt-ai.title',
+    descriptionKey: 'projects.prompt-ai.description',
+    image: 'prompt-ai-img',
+    link: 'https://prompt-ai-orpin.vercel.app/',
+    repo: 'https://github.com/LLeo93/prompt-ai',
+  },
 ];

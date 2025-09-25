@@ -34,6 +34,38 @@ const Projects: React.FC = () => {
               GitHub Repo &rarr;
             </a>
           </div>
+          {/* Project Card Prompt-ai*/}
+          <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
+            <Link to="https://prompt-ai-orpin.vercel.app/">
+              {/* bg-project per immagine icona */}
+              <div className="bg-project-prompt-ai h-32 md:h-48 w-full rounded-lg mb-4 "></div>
+              <h4 className="text-xl font-bold mb-2 text-white">
+                {t('projects.prompt-ai.title')}
+              </h4>
+              <p className="text-gray-300 text-sm">
+                {t('projects_list.prompt-ai_description')}
+              </p>
+            </Link>
+            <Link to="/projects/prompt-ai">
+              <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block">
+                {t('projects_list.details')}&rarr;
+              </span>
+            </Link>
+            <a
+              href="https://prompt-ai-orpin.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"
+            >
+              {t('projects_list.view_project')} &rarr;
+            </a>
+            <a
+              href="https://github.com/LLeo93/prompt-ai"
+              className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"
+            >
+              GitHub Repo &rarr;
+            </a>
+          </div>
 
           {/* Project Card Spotify clone*/}
           <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
