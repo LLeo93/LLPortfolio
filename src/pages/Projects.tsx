@@ -12,32 +12,9 @@ const Projects: React.FC = () => {
           {t('projects_list.projects')}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Project Card Pixelpals*/}
-          <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
-            {/* bg-project per immagine icona */}
-            <div className="bg-project-pixelpals h-32 md:h-48 w-full rounded-lg mb-4 "></div>
-            <h4 className="text-xl font-bold mb-2 text-white">
-              {t('projects.pixelpals.title')}
-            </h4>
-            <p className="text-gray-300 text-sm">
-              {t('projects_list.pixelpals_description')}
-            </p>
-            <Link to="/projects/pixelpals">
-              <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block">
-                {t('projects_list.details')}&rarr;
-              </span>
-            </Link>
-            <a
-              href="https://github.com/LLeo93/pixelpals/blob/main/README.md"
-              className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"
-            >
-              GitHub Repo &rarr;
-            </a>
-          </div>
           {/* Project Card Prompt-ai*/}
           <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
             <Link to="https://prompt-ai-orpin.vercel.app/">
-              {/* bg-project per immagine icona */}
               <div className="bg-project-prompt-ai h-32 md:h-48 w-full rounded-lg mb-4 "></div>
               <h4 className="text-xl font-bold mb-2 text-white">
                 {t('projects.prompt-ai.title')}
@@ -66,11 +43,30 @@ const Projects: React.FC = () => {
               GitHub Repo &rarr;
             </a>
           </div>
-
+          {/* Project Card Pixelpals*/}
+          <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
+            <div className="bg-project-pixelpals h-32 md:h-48 w-full rounded-lg mb-4 "></div>
+            <h4 className="text-xl font-bold mb-2 text-white">
+              {t('projects.pixelpals.title')}
+            </h4>
+            <p className="text-gray-300 text-sm">
+              {t('projects_list.pixelpals_description')}
+            </p>
+            <Link to="/projects/pixelpals">
+              <span className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block">
+                {t('projects_list.details')}&rarr;
+              </span>
+            </Link>
+            <a
+              href="https://github.com/LLeo93/pixelpals/blob/main/README.md"
+              className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block"
+            >
+              GitHub Repo &rarr;
+            </a>
+          </div>
           {/* Project Card Spotify clone*/}
           <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
             <Link to="https://spoti-team7-final.vercel.app/">
-              {/* bg-project per immagine icona */}
               <div className="bg-project-spotify h-32 md:h-48 w-full rounded-lg mb-4 "></div>
               <h4 className="text-xl font-bold mb-2 text-white">
                 {t('projects.spotify.title')}
@@ -102,7 +98,6 @@ const Projects: React.FC = () => {
           {/* Project Card Apple Music */}
           <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
             <Link to="https://applemusic-gold.vercel.app/">
-              {/* bg-project per immagine icona */}
               <div className="bg-project-applemusic h-32 md:h-48 w-full rounded-lg mb-4 "></div>
               <h4 className="text-xl font-bold mb-2 text-white">
                 {t('projects.applemusic.title')}
@@ -134,7 +129,6 @@ const Projects: React.FC = () => {
           {/* Project Card LLMeteo */}
           <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
             <Link to="https://ll-meteo.vercel.app/">
-              {/* bg-project per immagine icona */}
               <div className="bg-project-llmeteo h-32 md:h-48 w-full rounded-lg mb-4 "></div>
               <h4 className="text-xl font-bold mb-2 text-white">
                 {t('projects.llmeteo.title')}
@@ -166,7 +160,6 @@ const Projects: React.FC = () => {
           {/* Project Card LLNetflix */}
           <div className="bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 block">
             <Link to="https://ll-netflix-clone-v4yg.vercel.app/">
-              {/* bg-project per immagine icona */}
               <div className="bg-project-llnetflix h-32 md:h-48 w-full rounded-lg mb-4 "></div>
               <h4 className="text-xl font-bold mb-2 text-white">
                 {t('projects.llnetflix.title')}

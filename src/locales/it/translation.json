@@ -1,75 +1,103 @@
 {
-  "about":
-  {
-  "title_1": "Costruisci il tuo futuro, un'esperienza alla volta.",
-  "text_1": "Sono un Junior Full Stack Developer spinto dalla passione per la creazione e la risoluzione di problemi. Il mio percorso nel mondo della programmazione non è stato lineare. Per sette anni ho lavorato a tempo pieno in un contesto completamente diverso, come magazziniere alla Laika, dove ho imparato l'importanza della precisione e dell'organizzazione. Il desiderio di una nuova sfida e l'insoddisfazione per il mio lavoro mi hanno spinto a prendere una decisione coraggiosa: cambiare vita. Ispirato da mio zio, uno sviluppatore con anni di esperienza, e spinto dalla mia passione di bambino per la modifica dei videogiochi, ho intrapreso un Master in Full Stack Developer.",
-  "text_2": " Questo Master mi ha dato gli strumenti per trasformare la mia creatività in codice e la mia determinazione in soluzioni. Ho capito che la programmazione non è solo un lavoro, ma un modo per costruire qualcosa di concreto, proprio come facevo prima, ma in un mondo completamente nuovo. Oggi, sono pronto a mettere le mie competenze e la mia inesauribile voglia di imparare al servizio di un team dinamico e di progetti innovativi. Credo che il mio background unico mi renda un professionista versatile, capace di affrontare ogni sfida con una prospettiva diversa e una forte etica del lavoro.",
-  "title_2": "La mia visione."
-},
-"certifications":{
-  "back":"Indietro",
-  "master_title": "Master in Full Stack Developer",
-  "description_1": "Certificato Master di sei mesi in Sviluppo Full Stack, dove ho acquisito competenze avanzate in un ambiente di lavoro Agile e Scrum. Ho sviluppato progetti completi sia in autonomia che in team, dimostrando padronanza di un'ampia gamma di tecnologie, tra cui HTML5, CSS3, JavaScript, TypeScript, React, Java Spring Boot e SQL.",
-  "description_2": "Il mio progetto finale, 'PixelPals', è un'applicazione web completa per il matchmaking tra giocatori, che riflette la mia capacità di gestire lo sviluppo di un'applicazione dalla concezione alla realizzazione finale."
-},
+    "loading": {
+    "message": "Caricamento in corso, attendere prego..."
+  },
+  "error": {
+    "title": "Ops! Qualcosa è andato storto.",
+    "description": "Si è verificato un errore imprevisto durante il caricamento della pagina.",
+    "back_home": "Torna alla Home"
+  },
+
+  "about": {
+    "title_1": "Costruisci il tuo futuro, un'esperienza alla volta.",
+    "text_1": "Sono un Junior Full Stack Developer spinto dalla passione per la creazione e la risoluzione di problemi. Il mio percorso nel mondo della programmazione non è stato lineare. Per sette anni ho lavorato a tempo pieno in un contesto completamente diverso, come magazziniere alla Laika, dove ho imparato l'importanza della precisione e dell'organizzazione. Il desiderio di una nuova sfida e l'insoddisfazione per il mio lavoro mi hanno spinto a prendere una decisione coraggiosa: cambiare vita. Ispirato da mio zio, uno sviluppatore con anni di esperienza, e spinto dalla mia passione di bambino per la modifica dei videogiochi, ho intrapreso un Master in Full Stack Developer.",
+    "text_2": " Questo Master mi ha dato gli strumenti per trasformare la mia creatività in codice e la mia determinazione in soluzioni. Ho capito che la programmazione non è solo un lavoro, ma un modo per costruire qualcosa di concreto, proprio come facevo prima, ma in un mondo completamente nuovo. Oggi, sono pronto a mettere le mie competenze e la mia inesauribile voglia di imparare al servizio di un team dinamico e di progetti innovativi. Credo che il mio background unico mi renda un professionista versatile, capace di affrontare ogni sfida con una prospettiva diversa e una forte etica del lavoro.",
+    "title_2": "La mia visione.",
+    "heading": "About me",
+    "image_alt": "Portrait of Leoncini Libanio",
+    "image_caption": "Leoncini Libanio - Junior Full Stack Developer",
+    "short_description": "Junior Full Stack Developer passionate about building reliable, accessible web experiences."
+  },
+  "certifications": {
+    "back": "Indietro",
+    "master_title": "Master in Full Stack Developer",
+    "description_1": "Certificato Master di sei mesi in Sviluppo Full Stack, dove ho acquisito competenze avanzate in un ambiente di lavoro Agile e Scrum. Ho sviluppato progetti completi sia in autonomia che in team, dimostrando padronanza di un'ampia gamma di tecnologie, tra cui HTML5, CSS3, JavaScript, TypeScript, React, Java Spring Boot e SQL.",
+    "description_2": "Il mio progetto finale, 'PixelPals', è un'applicazione web completa per il matchmaking tra giocatori, che riflette la mia capacità di gestire lo sviluppo di un'applicazione dalla concezione alla realizzazione finale.",
+    "epicode_logo_alt": "Logo di Epicode",
+    "epicode_link_aria": "Apri il sito di Epicode in una nuova scheda",
+    "capstone_image_alt": "Certificato del progetto Capstone",
+    "capstone_image_caption": "Certificato del Progetto Capstone"
+  },
   "home": {
-    "welcome":"Benvenuto!",
+    "welcome": "Benvenuto!",
     "title": "Sono Leoncini Libanio, Junior Full Stack Developer.",
     "subtitle": "Esplora il mio portfolio per conoscere i miei progetti e le mie competenze."
   },
-   "project_details": {
+  "project_details": {
     "not_found": "Progetto non trovato",
     "back_to_projects": "Torna ai progetti",
     "go_to_project": "Vai al progetto",
     "back": "Torna indietro"
   },
-    "projects": {
- "spotify": {
+  "projects": {
+    "spotify": {
       "title": "Spotify clone",
-      "description": "Non solo un progetto, ma l'inizio di tutto. Questo progetto, sviluppato durante la mia prima Build Week in Epicode, ha rappresentato il mio battesimo nel mondo della programmazione. Con un team di sconosciuti, assegnato dal docente, e armati solo di HTML, CSS, Bootstrap e JavaScript, ci siamo lanciati nella sfida di replicare l'interfaccia di Spotify. Abbiamo imparato a lavorare in team, gestendo il flusso con Trello e GitHub, trasformando le nostre competenze front-end in un prodotto funzionante. Oltre al codice, questo progetto ha dato vita a un'amicizia solida che dura ancora oggi. Questo lavoro di gruppo non è solo la dimostrazione delle mie prime competenze tecniche. È la prova che la collaborazione e la passione possono trasformare le sfide in successi, creando un legame indissolubile tra le persone. Un'esperienza che mi ha insegnato che i migliori progetti nascono dalla condivisione."
+      "description": "Non solo un progetto, ma l'inizio di tutto. Questo progetto, sviluppato durante la mia prima Build Week in Epicode, ha rappresentato il mio battesimo nel mondo della programmazione. Con un team di sconosciuti, assegnato dal docente, e armati solo di HTML, CSS, Bootstrap e JavaScript, ci siamo lanciati nella sfida di replicare l'interfaccia di Spotify. Abbiamo imparato a lavorare in team, gestendo il flusso con Trello e GitHub, trasformando le nostre competenze front-end in un prodotto funzionante. Oltre al codice, questo progetto ha dato vita a un'amicizia solida che dura ancora oggi. Questo lavoro di gruppo non è solo la dimostrazione delle mie prime competenze tecniche. È la prova che la collaborazione e la passione possono trasformare le sfide in successi, creando un legame indissolubile tra le persone. Un'esperienza che mi ha insegnato che i migliori progetti nascono dalla condivisione.",
+      "image_alt": "Screenshot interfaccia Spotify clone",
+      "image_caption": "Spotify clone - progetto di team"
     },
     "pixelpals": {
       "title": "Pixelpals",
-      "description": "Trova il Tuo Eroe nel Mondo del Gaming! PixelPals è la mia piattaforma creata per connettere i gamer, trasformando l'esperienza di gioco da solitaria a un'avventura di squadra. Questo progetto è stato sviluppato con l'obiettivo di creare un ecosistema dove i giocatori possano trovare facilmente il compagno perfetto o un team per scalare le classifiche. Ho progettato un sistema di profili personalizzabili e un matching intelligente che aiuta gli utenti a trovare compagni di gioco compatibili in base a gusti e stili. La piattaforma include anche una chat in tempo reale basata su WebSocket e badge esclusivi per premiare la dedizione alla community. Le Tecnologie dietro PixelPals Frontend: Sviluppato con React per un'interfaccia utente dinamica e reattiva, e stilizzato con Tailwind CSS per un design accattivante. Backend: Ho utilizzato Spring Boot per costruire un backend robusto, supportato da un database MongoDB per gestire i dati in modo efficiente. Connettività: L'autenticazione è gestita con JWT, mentre la comunicazione in tempo reale è resa possibile da WebSocket. Questo progetto non è solo una dimostrazione delle mie competenze tecniche, ma anche la mia visione di come la tecnologia possa creare comunità e migliorare l'esperienza umana."
+      "description": "Trova il Tuo Eroe nel Mondo del Gaming! PixelPals è la mia piattaforma creata per connettere i gamer, trasformando l'esperienza di gioco da solitaria a un'avventura di squadra. Questo progetto è stato sviluppato con l'obiettivo di creare un ecosistema dove i giocatori possano trovare facilmente il compagno perfetto o un team per scalare le classifiche. Ho progettato un sistema di profili personalizzabili e un matching intelligente che aiuta gli utenti a trovare compagni di gioco compatibili in base a gusti e stili. La piattaforma include anche una chat in tempo reale basata su WebSocket e badge esclusivi per premiare la dedizione alla community. Le Tecnologie dietro PixelPals Frontend: Sviluppato con React per un'interfaccia utente dinamica e reattiva, e stilizzato con Tailwind CSS per un design accattivante. Backend: Ho utilizzato Spring Boot per costruire un backend robusto, supportato da un database MongoDB per gestire i dati in modo efficiente. Connettività: L'autenticazione è gestita con JWT, mentre la comunicazione in tempo reale è resa possibile da WebSocket. Questo progetto non è solo una dimostrazione delle mie competenze tecniche, ma anche la mia visione di come la tecnologia possa creare comunità e migliorare l'esperienza umana.",
+      "image_alt": "Screenshot della piattaforma PixelPals",
+      "image_caption": "PixelPals - piattaforma di matchmaking"
     },
-    "llmeteo":{
+    "llmeteo": {
       "title": "LLMeteo",
-    "description": "Questa è una semplice app meteo responsive, creata in un solo pomeriggio durante i primi mesi del mio Master in Full Stack Development. Il progetto è stato concepito come un esercizio pratico per applicare le conoscenze iniziali di sviluppo web, in particolare l'uso di React, Bootstrap e JavaScript. L'applicazione si concentra sulla funzionalità principale: fornire previsioni del tempo accurate e immediate. Utilizza un'API meteo esterna per recuperare dati in tempo reale e li visualizza in un'interfaccia responsive che si adatta a schermi di diverse dimensioni (desktop, tablet, mobile). La scelta di Bootstrap ha permesso di gestire il layout e lo stile in modo rapido ed efficiente, garantendo una buona esperienza utente anche con una conoscenza ancora limitata del CSS. Nonostante la sua natura di progetto di apprendimento, l'app dimostra una solida comprensione dei principi di base di React, della gestione delle API e della creazione di interfacce utente funzionali e accessibili.",
-    "link": "https://ll-meteo.vercel.app/"
+      "description": "Questa è una semplice app meteo responsive, creata in un solo pomeriggio durante i primi mesi del mio Master in Full Stack Development. Il progetto è stato concepito come un esercizio pratico per applicare le conoscenze iniziali di sviluppo web, in particolare l'uso di React, Bootstrap e JavaScript. L'applicazione si concentra sulla funzionalità principale: fornire previsioni del tempo accurate e immediate. Utilizza un'API meteo esterna per recuperare dati in tempo reale e li visualizza in un'interfaccia responsive che si adatta a schermi di diverse dimensioni (desktop, tablet, mobile). La scelta di Bootstrap ha permesso di gestire il layout e lo stile in modo rapido ed efficiente, garantendo una buona esperienza utente anche con una conoscenza ancora limitata del CSS. Nonostante la sua natura di progetto di apprendimento, l'app dimostra una solida comprensione dei principi di base di React, della gestione delle API e della creazione di interfacce utente funzionali e accessibili.",
+      "link": "https://ll-meteo.vercel.app/",
+      "image_alt": "Screenshot app LLMeteo",
+      "image_caption": "LLMeteo - app meteo"
     },
-    "applemusic":{
+    "applemusic": {
       "title": "Apple music",
-    "description": "Apple Music Clone. Questo progetto rappresenta uno dei miei primi passi nel mondo dello sviluppo front-end, un piccolo clone dell'interfaccia di Apple Music realizzato in un solo pomeriggio. L'obiettivo principale era quello di testare e consolidare le mie conoscenze iniziali di React e, in particolare, di applicare per la prima volta i concetti di Redux per la gestione dello stato dell'applicazione. L'app si concentra sulla funzionalità principale: una search bar funzionante che effettua chiamate API per recuperare dati musicali in tempo reale. Grazie all'uso di Bootstrap, l'interfaccia è completamente responsive, garantendo una navigazione fluida su qualsiasi dispositivo. Nonostante sia un progetto di apprendimento realizzato con una pratica ancora limitata, dimostra la mia capacità di comprendere, applicare e integrare rapidamente nuove tecnologie come React, Redux, JavaScript e Bootstrap per creare un'applicazione web funzionale e ben strutturata.",
-    "link": "https://applemusic-gold.vercel.app/"
+      "description": "Apple Music Clone. Questo progetto rappresenta uno dei miei primi passi nel mondo dello sviluppo front-end, un piccolo clone dell'interfaccia di Apple Music realizzato in un solo pomeriggio. L'obiettivo principale era quello di testare e consolidare le mie conoscenze iniziali di React e, in particolare, di applicare per la prima volta i concetti di Redux per la gestione dello stato dell'applicazione. L'app si concentra sulla funzionalità principale: una search bar funzionante che effettua chiamate API per recuperare dati musicali in tempo reale. Grazie all'uso di Bootstrap, l'interfaccia è completamente responsive, garantendo una navigazione fluida su qualsiasi dispositivo. Nonostante sia un progetto di apprendimento realizzato con una pratica ancora limitata, dimostra la mia capacità di comprendere, applicare e integrare rapidamente nuove tecnologie come React, Redux, JavaScript e Bootstrap per creare un'applicazione web funzionale e ben strutturata.",
+      "link": "https://applemusic-gold.vercel.app/",
+      "image_alt": "Screenshot Apple Music clone",
+      "image_caption": "Apple Music clone"
     },
-    "llnetflix":{
+    "llnetflix": {
       "title": "LLNetflix",
-    "description": "Netflix Mockup Clone. Questo progetto è la replica fedele di un mockup di Netflix, realizzata in autonomia in un solo pomeriggio come test durante il mio percorso di formazione. L'obiettivo era mettere alla prova la mia capacità di creare un'interfaccia utente complessa e completamente responsive con React, e di gestire le chiamate API per collegare i dati dinamici. L'applicazione replica tre sezioni principali: una Homepage con caroselli dinamici per le varie categorie, una pagina dedicata a TV Shows e una pagina di Dettagli per ogni titolo, con dati recuperati in tempo reale tramite le API di IMDB. Nonostante la breve finestra di tempo, il progetto dimostra una solida comprensione di React.js, l'uso di Bootstrap per un layout efficiente e l'integrazione di API esterne per creare un'esperienza utente dinamica e funzionale.",
-    "link": "https://ll-netflix-clone-v4yg.vercel.app/"
+      "description": "Netflix Mockup Clone. Questo progetto è la replica fedele di un mockup di Netflix, realizzata in autonomia in un solo pomeriggio come test durante il mio percorso di formazione. L'obiettivo era mettere alla prova la mia capacità di creare un'interfaccia utente complessa e completamente responsive con React, e di gestire le chiamate API per collegare i dati dinamici. L'applicazione replica tre sezioni principali: una Homepage con caroselli dinamici per le varie categorie, una pagina dedicata a TV Shows e una pagina di Dettagli per ogni titolo, con dati recuperati in tempo reale tramite le API di IMDB. Nonostante la breve finestra di tempo, il progetto dimostra una solida comprensione di React.js, l'uso di Bootstrap per un layout efficiente e l'integrazione di API esterne per creare un'esperienza utente dinamica e funzionale.",
+      "link": "https://ll-netflix-clone-v4yg.vercel.app/",
+      "image_alt": "Screenshot mockup LLNetflix",
+      "image_caption": "LLNetflix - mockup"
     },
-    "prompt-ai":{
+    "prompt-ai": {
       "title": "Prompt-IA",
-    "description": "Prompt Manager - Gestione e personalizzazione dei prompt AI\n\nQuesto progetto è un'applicazione web pensata per chi lavora con modelli di intelligenza artificiale e vuole organizzare, modificare e ottimizzare i propri prompt in maniera semplice e intuitiva.\n\nL'app permette di:\n- Creare prompt personalizzati, salvando titolo, contenuto e tag per una rapida classificazione.\n- Modificare e aggiornare prompt esistenti tramite un'interfaccia chiara e interattiva.\n- Gestire i prompt preferiti, con la possibilità di aggiungere o rimuovere prompt dalla lista dei preferiti.\n- Visualizzare prompt dettagliatamente, con tutte le informazioni principali e i tag organizzati in chip.\n- Cercare e filtrare i prompt salvati tramite titolo, contenuto o tag.\n- Interagire con animazioni fluide grazie a Framer Motion e notifiche dinamiche tramite SweetAlert2.\n- Esportare e importare prompt in formato JSON per backup o condivisione.\n\nL'app è completamente responsive, ottimizzata sia per desktop che per mobile, e utilizza Redux per la gestione dello stato globale, garantendo aggiornamenti in tempo reale e una gestione centralizzata dei dati.\n\nIl progetto è pensato come uno strumento versatile per chi utilizza AI nel content creation, SEO, traduzione e generazione di script, facilitando l'organizzazione e la produttività nel lavoro quotidiano con i modelli di linguaggio.",
-    "link": "https://prompt-ai-orpin.vercel.app/"
+      "description": "Prompt Manager - Gestione e personalizzazione dei prompt AI\n\nQuesto progetto è un'applicazione web pensata per chi lavora con modelli di intelligenza artificiale e vuole organizzare, modificare e ottimizzare i propri prompt in maniera semplice e intuitiva.\n\nL'app permette di:\n- Creare prompt personalizzati, salvando titolo, contenuto e tag per una rapida classificazione.\n- Modificare e aggiornare prompt esistenti tramite un'interfaccia chiara e interattiva.\n- Gestire i prompt preferiti, con la possibilità di aggiungere o rimuovere prompt dalla lista dei preferiti.\n- Visualizzare prompt dettagliatamente, con tutte le informazioni principali e i tag organizzati in chip.\n- Cercare e filtrare i prompt salvati tramite titolo, contenuto o tag.\n- Interagire con animazioni fluide grazie a Framer Motion e notifiche dinamiche tramite SweetAlert2.\n- Esportare e importare prompt in formato JSON per backup o condivisione.\n\nL'app è completamente responsive, ottimizzata sia per desktop che per mobile, e utilizza Redux per la gestione dello stato globale, garantendo aggiornamenti in tempo reale e una gestione centralizzata dei dati.\n\nIl progetto è pensato come uno strumento versatile per chi utilizza AI nel content creation, SEO, traduzione e generazione di script, facilitando l'organizzazione e la produttività nel lavoro quotidiano con i modelli di linguaggio.",
+      "link": "https://prompt-ai-orpin.vercel.app/",
+      "image_alt": "Screenshot Prompt-AI",
+      "image_caption": "Prompt-AI - gestore di prompt"
     }
   },
-     "projects_list": {
+  "projects_list": {
     "projects": "Progetti",
     "certifications": "Certificazioni",
     "pixelpals_description": "Pixelpals l'app che unisce i videogiocatori!",
     "spotify_description": "Clone di Spotify realizzato dal Team 7",
-    "llmeteo_description":"App meteo responsive con React e API",
-    "applemusic_description":"Clone di Apple Music con React e Redux",
-    "llnetflix_description":" Replica Netflix con React, API e Bootstrap",
-    "prompt-ai_description":"Gestisci, organizza e ottimizza i tuoi prompt AI con un'interfaccia intuitiva e interattiva.",
+    "llmeteo_description": "App meteo responsive con React e API",
+    "applemusic_description": "Clone di Apple Music con React e Redux",
+    "llnetflix_description": " Replica Netflix con React, API e Bootstrap",
+    "prompt-ai_description": "Gestisci, organizza e ottimizza i tuoi prompt AI con un'interfaccia intuitiva e interattiva.",
     "details": "Dettagli",
     "view_project": "Visualizza progetto",
     "view_certificate": "Visualizza certificato",
     "back": "Indietro"
-  }, 
+  },
   "navigation": {
     "home": "Home",
-    "about_me": "Su di me"
+    "about_me": "Su di me",
+    "main_content_tabs": "Schede di navigazione del contenuto principale"
   }
-  
 }

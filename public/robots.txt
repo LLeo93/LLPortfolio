@@ -1,0 +1,5 @@
+# robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://leoncini-portfolio.vercel.app/sitemap.xml

@@ -1,4 +1,16 @@
 import React, { useEffect, useRef } from 'react';
+// Funzione Throttle per limitare la frequenza di esecuzione della funzione resize
+const throttle = (func: Function, delay: number) => {
+  let lastTime = 0;
+  return (...args: any) => {
+    const now = new Date().getTime();
+    if (now - lastTime < delay) {
+      return;
+    }
+    lastTime = now;
+    func(...args);
+  };
+};
 
 const AnimatedBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -17,6 +29,11 @@ const AnimatedBackground: React.FC = () => {
     const maxSpeed = 2;
     const starSize = 1;
 
+    // A11y: Controlla se l'utente preferisce un movimento ridotto
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
     const resize = () => {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
@@ -31,7 +48,10 @@ const AnimatedBackground: React.FC = () => {
       }
     };
 
-    window.addEventListener('resize', resize);
+    // Applica il throttle alla funzione resize (massimo 4 volte al secondo)
+    const throttledResize = throttle(resize, 1000);
+
+    window.addEventListener('resize', throttledResize);
     resize();
 
     const draw = () => {
@@ -55,15 +75,18 @@ const AnimatedBackground: React.FC = () => {
     };
 
     const animate = () => {
-      update();
-      draw();
+      // Condiziona l'animazione al check di prefersReducedMotion
+      if (!prefersReducedMotion) {
+        update();
+      }
+      draw(); // Disegna sempre lo sfondo statico
       requestAnimationFrame(animate);
     };
 
     animate();
 
     return () => {
-      window.removeEventListener('resize', resize);
+      window.removeEventListener('resize', throttledResize);
     };
   }, []);
 
@@ -72,13 +95,9 @@ const AnimatedBackground: React.FC = () => {
       <canvas
         ref={canvasRef}
         id="animated-stars"
-        className="block w-full h-full bg-[#1A1A2E]"
+        className="block w-full h-full bg-[#1A1A2E] filter blur-[0.5px]"
+        aria-hidden="true"
       ></canvas>
-      <style>{`
-        canvas {
-          filter: blur(0.5px);
-        }
-      `}</style>
     </div>
   );
 };

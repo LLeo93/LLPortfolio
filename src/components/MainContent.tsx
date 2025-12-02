@@ -18,9 +18,9 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
   const getTitle = (pathname: string): string => {
     switch (pathname) {
       case '/':
-        return t('navigation.home'); // "Home"
+        return t('navigation.home');
       case '/about':
-        return t('navigation.about_me'); // "Su di me"
+        return t('navigation.about_me');
       case '/projects':
         return (
           t('projects_list.projects') +
@@ -42,12 +42,16 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
         overflow-y-auto
       "
     >
-      <nav className="flex justify-around items-center w-full mb-4 md:mb-8">
+      <nav
+        className="flex justify-around items-center w-full mb-4 md:mb-8"
+        aria-label={t('navigation.main_content_tabs')}
+      >
         <Link
           to="/"
           className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
             location.pathname === '/' ? 'text-cyan-400' : ''
           }`}
+          aria-current={location.pathname === '/' ? 'page' : undefined}
         >
           <HomeIcon size={24} />
           {t('navigation.home')}
@@ -57,6 +61,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
             location.pathname === '/about' ? 'text-cyan-400' : ''
           }`}
+          aria-current={location.pathname === '/about' ? 'page' : undefined}
         >
           <UserIcon size={24} />
           {t('navigation.about_me')}
@@ -66,6 +71,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
             location.pathname === '/projects' ? 'text-cyan-400' : ''
           }`}
+          aria-current={location.pathname === '/projects' ? 'page' : undefined}
         >
           <BriefcaseIcon size={24} />
           {t('projects_list.projects')}

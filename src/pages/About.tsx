@@ -4,18 +4,28 @@ import { useTranslation } from 'react-i18next';
 
 const About: React.FC = () => {
   const { t } = useTranslation();
+
   return (
-    <div className="flex-1 flex flex-col items-center justify-center p-8 text-gray-200">
-      <p className="text-sm md:text-lg text-justify mb-5">
-        <span className="text-cyan-400 font-bold">{t('about.title_1')}</span>{' '}
+    <section
+      aria-labelledby="about-heading"
+      className="flex-1 flex flex-col items-center justify-center p-8 text-gray-200"
+    >
+      <p className="text-sm md:text-lg text-justify mb-5 max-w-prose">
         <br />
-        {t('about.text_1')} <br />
-        <span className="text-cyan-400 font-bold">{t('about.title_2')} </span>
+        {t('about.text_1')}
+        <br />
+        <span className="text-cyan-400 font-bold">{t('about.title_2')}</span>
         <br />
         {t('about.text_2')}
       </p>
-      <img src={LLimg} alt="" className="w-100 rounded-full" />
-    </div>
+      <img
+        src={LLimg}
+        alt={t('about.image_alt') || 'Leoncini Libanio portrait'}
+        className="w-100 rounded-full"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
   );
 };
 

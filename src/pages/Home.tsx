@@ -5,7 +5,7 @@ import cssIcon from '../assets/icons/css.png';
 import javascriptIcon from '../assets/icons/javascript.png';
 import reactIcon from '../assets/icons/react.png';
 import javaIcon from '../assets/icons/java.png';
-import pg4adminIcon from '../assets/icons/pg4admin.png';
+import pg4adminIcon from '../assets/icons/pg4admin.jpg';
 import githubIcon from '../assets/icons/github.png';
 import tailwindIcon from '../assets/icons/tailwind.png';
 import typescriptIcon from '../assets/icons/typescript.png';

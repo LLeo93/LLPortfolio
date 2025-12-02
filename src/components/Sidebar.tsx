@@ -5,11 +5,12 @@ import {
   Mail as MailIcon,
   Phone as PhoneCall,
 } from 'lucide-react';
-import Avatar from '../assets/LLeoAvatar.png';
+import Avatar from '../assets/LLeoAvatar.jpg';
 import { useTranslation } from 'react-i18next';
 
 const Sidebar: React.FC = () => {
   const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -39,9 +40,7 @@ const Sidebar: React.FC = () => {
           <h2 className="text-xl font-bold text-white mb-1">
             Leoncini Libanio
           </h2>
-          <p className="text-sm text-gray-400 mb-4">
-            Junior Full Stack Developer
-          </p>
+          <p className="text-sm text-white mb-4">Junior Full Stack Developer</p>
         </div>
         <div className="flex justify-center space-x-2 w-full mb-4">
           <button
@@ -92,7 +91,10 @@ const Sidebar: React.FC = () => {
       </div>
 
       {/* Contatti */}
-      <div className="flex flex-col gap-3 w-full text-sm text-center lg:text-left cursor-pointer mt-4">
+      <nav
+        className="flex flex-col gap-3 w-full text-sm text-center lg:text-left cursor-pointer mt-4"
+        aria-label={t('navigation.main_content_tabs"')}
+      >
         <a
           href="mailto:liba.leoncini@gmail.com"
           className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"
@@ -125,9 +127,9 @@ const Sidebar: React.FC = () => {
           <PhoneCall size={18} />
           +39 3806952354
         </a>
-      </div>
+      </nav>
 
-      <div className="mt-6 text-xs text-gray-500 text-center lg:text-left">
+      <div className="mt-6 text-xs text-white text-center lg:text-left">
         &copy; 2025 LLeo. - Junior Full Stack Developer
       </div>
     </aside>
