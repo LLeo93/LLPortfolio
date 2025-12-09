@@ -112,7 +112,7 @@ const Sidebar: React.FC = () => {
           Linkedin
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/LLeo93"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"

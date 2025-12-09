@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-// Funzione Throttle per limitare la frequenza di esecuzione della funzione resize
 const throttle = (func: Function, delay: number) => {
   let lastTime = 0;
   return (...args: any) => {
@@ -28,8 +27,6 @@ const AnimatedBackground: React.FC = () => {
     const minSpeed = 0.5;
     const maxSpeed = 2;
     const starSize = 1;
-
-    // A11y: Controlla se l'utente preferisce un movimento ridotto
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
@@ -47,8 +44,6 @@ const AnimatedBackground: React.FC = () => {
         });
       }
     };
-
-    // Applica il throttle alla funzione resize (massimo 4 volte al secondo)
     const throttledResize = throttle(resize, 1000);
 
     window.addEventListener('resize', throttledResize);
@@ -75,11 +70,10 @@ const AnimatedBackground: React.FC = () => {
     };
 
     const animate = () => {
-      // Condiziona l'animazione al check di prefersReducedMotion
       if (!prefersReducedMotion) {
         update();
       }
-      draw(); // Disegna sempre lo sfondo statico
+      draw();
       requestAnimationFrame(animate);
     };
 
