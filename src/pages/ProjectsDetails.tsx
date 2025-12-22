@@ -29,7 +29,7 @@ const ProjectsDetails: React.FC = () => {
             to="/projects"
             className="text-cyan-400 hover:text-cyan-200 underline"
           >
-            {t('project_details.back_to_projects')} &rarr;
+            &rarr; {t('project_details.back_to_projects')}
           </Link>
         </div>
       </main>
@@ -38,20 +38,20 @@ const ProjectsDetails: React.FC = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col min-[335px]:flex-row justify-between items-center gap-4">
         <Link
           to="/projects"
           className="text-cyan-400 hover:text-cyan-200 transition-colors"
           aria-label={t('project_details.back') + ' - ' + (projectTitle || '')}
         >
-          {t('project_details.back')} &larr;
+          &larr; {t('project_details.back')}
         </Link>
 
         <a
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-cyan-400 hover:text-cyan-200 transition-colors mb-4"
+          className="text-cyan-400 hover:text-cyan-200 transition-colors"
           aria-label={`${t('project_details.go_to_project')} - ${projectTitle}`}
           title={`${t('project_details.go_to_project')} - ${projectTitle}`}
         >
@@ -94,7 +94,16 @@ const ProjectsDetails: React.FC = () => {
             {projectDescription || project.descriptionFallback}
           </p>
         </article>
-        <div className="mt-4 space-x-4">
+        <div className=" flex flex-col min-[335px]:flex-row justify-between items-center gap-4 ">
+          <Link
+            to="/projects"
+            className="text-cyan-400 hover:text-cyan-200 transition-colors"
+            aria-label={
+              t('project_details.back') + ' - ' + (projectTitle || '')
+            }
+          >
+            &larr; {t('project_details.back')}
+          </Link>
           <a
             href={project.link}
             target="_blank"
@@ -106,16 +115,6 @@ const ProjectsDetails: React.FC = () => {
           >
             {t('project_details.go_to_project')} &rarr;
           </a>
-
-          <Link
-            to="/projects"
-            className="text-cyan-400 hover:text-cyan-200 transition-colors"
-            aria-label={
-              t('project_details.back') + ' - ' + (projectTitle || '')
-            }
-          >
-            {t('project_details.back')} &larr;
-          </Link>
         </div>
       </main>
     </>

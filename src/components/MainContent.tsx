@@ -5,6 +5,7 @@ import {
   Home as HomeIcon,
   User as UserIcon,
   Briefcase as BriefcaseIcon,
+  Award as AwardIcon,
 } from 'lucide-react';
 
 interface MainContentProps {
@@ -16,17 +17,18 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
   const { t } = useTranslation();
 
   const getTitle = (pathname: string): string => {
+    if (pathname.startsWith('/projects/'))
+      return t('projects_list.details') || 'Details';
+
     switch (pathname) {
       case '/':
         return t('navigation.home');
       case '/about':
         return t('navigation.about_me');
       case '/projects':
-        return (
-          t('projects_list.projects') +
-          ' e ' +
-          t('projects_list.certifications')
-        );
+        return t('projects_list.projects');
+      case '/certificationsList':
+        return t('navigation.certifications');
       default:
         return '';
     }
@@ -51,34 +53,46 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
             location.pathname === '/' ? 'text-cyan-400' : ''
           }`}
-          aria-current={location.pathname === '/' ? 'page' : undefined}
         >
           <HomeIcon size={24} />
-          {t('navigation.home')}
+          <span className="text-xs sm:text-sm">{t('navigation.home')}</span>
         </Link>
+
         <Link
           to="/about"
           className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
             location.pathname === '/about' ? 'text-cyan-400' : ''
           }`}
-          aria-current={location.pathname === '/about' ? 'page' : undefined}
         >
           <UserIcon size={24} />
-          {t('navigation.about_me')}
+          <span className="text-xs sm:text-sm">{t('navigation.about_me')}</span>
         </Link>
+
         <Link
           to="/projects"
           className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
             location.pathname === '/projects' ? 'text-cyan-400' : ''
           }`}
-          aria-current={location.pathname === '/projects' ? 'page' : undefined}
         >
           <BriefcaseIcon size={24} />
-          {t('projects_list.projects')}
+          <span className="text-xs sm:text-sm">
+            {t('projects_list.projects')}
+          </span>
+        </Link>
+        <Link
+          to="/certificationsList"
+          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
+            location.pathname === '/certificationsList' ? 'text-cyan-400' : ''
+          }`}
+        >
+          <AwardIcon size={24} />
+          <span className="text-xs sm:text-sm">
+            {t('projects_list.certifications')}
+          </span>
         </Link>
       </nav>
 
-      <h1 className="text-3xl font-bold mb-4 text-center ">
+      <h1 className="text-3xl font-bold mb-4 text-center">
         {getTitle(location.pathname)}
       </h1>
 

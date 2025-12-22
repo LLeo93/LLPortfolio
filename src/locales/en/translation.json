@@ -20,14 +20,34 @@
   },
   "certifications": {
     "back": "Back",
-    "aria_back": "Go back to projects list",
+    "not_found": "Certification not found",
+    "aria_back": "Go back to certifications list",
+    "view_pdf": "View  PDF",
     "epicode_logo_alt": "Epicode logo",
     "epicode_link_aria": "Open Epicode website in a new tab",
     "capstone_image_alt": "Capstone project certificate",
     "capstone_image_caption": "Capstone Project Certificate",
     "master_title": "Full Stack Developer Master",
     "description_1": "Six-month Master's Certificate in Full Stack Development, where I gained advanced skills in an Agile and Scrum work environment. I developed complete projects both independently and in a team, demonstrating mastery of a wide range of technologies, including HTML5, CSS3, JavaScript, TypeScript, React, Java Spring Boot, and SQL.",
-    "description_2": "My final project, 'PixelPals', is a complete web application for player matchmaking, which reflects my ability to manage application development from conception to final implementation."
+    "description_2": "My final project, 'PixelPals', is a complete web application for player matchmaking, which reflects my ability to manage application development from conception to final implementation.",
+    "frontend_course": {
+  "title": "Front End Professional Course N°2",
+  "description": "An intensive 160-hour course focused on core web design and front-end development technologies. Funded by Forma.temp and promoted by Synergie Italia, this program allowed me to strengthen my foundations in building modern, responsive user interfaces through practical projects and market-oriented methodologies.",
+  "duration": "160 hours",
+  "period": "November 2025 - December 2025",
+  "provider": "Synergie Academy / Forma.temp",
+  "image_alt": "Front End Course Certificate",
+  "image_caption": "Final Certificate - Front End N°2"
+},
+"digital_skills": {
+  "title": "Digital Education for Employment (EDO)",
+  "description": "Digital skills certification issued by Regione Lombardia under the GOL (Workers' Employability Guarantee) program. The course covered advanced levels of the European DigComp 2.2 framework, including secure data management, collaboration in digital contexts, content creation, and the fundamentals of programming and digital ethics.",
+  "skills": "DigComp 2.2 (Data literacy, Security, Online collaboration, Problem Solving)",
+  "period": "October 2025",
+  "provider": "Regione Lombardia / NextGenerationEU",
+  "image_alt": "EDO Transparency Document",
+  "image_caption": "GOL Digital Skills Certification"
+}
   },
   "home": {
     "welcome": "Welcome!",
@@ -99,6 +119,7 @@
   "navigation": {
     "home": "Home",
     "about_me": "About me",
+    "certifications": "Certifications",
     "main_content_tabs": "Main content navigation tabs"
   }
 }

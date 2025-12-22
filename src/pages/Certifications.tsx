@@ -1,96 +1,127 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import CapstoneProject from '../assets/Certificati/CapstonProject.webp';
+import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { certificationsData } from '../data/CertificationsData';
+import { Image as ImageIcon, FileText } from 'lucide-react';
 
 const Certifications: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
   const { t } = useTranslation();
+  const cert = certificationsData.find((c) => c.id === id);
+
+  if (!cert) {
+    return (
+      <main className="flex flex-col items-center justify-center h-full p-8 text-white">
+        <h2 className="text-2xl font-bold">{t('project_details.not_found')}</h2>
+        <Link to="/certificationsList" className="text-cyan-400 underline mt-4">
+          {t('project_details.back_to_projects')}
+        </Link>
+      </main>
+    );
+  }
 
   return (
-    <section
-      aria-label={
-        t('projects_list.certifications') ||
-        t('certifications.master_title') ||
-        'Certifications'
-      }
-      className="px-4"
-    >
-      <Link
-        to="/Projects"
-        aria-label={
-          t('certifications.aria_back') ||
-          t('projects_list.back') ||
-          'Go back to projects'
-        }
+    <div className="flex flex-col h-full overflow-hidden">
+      <div className="flex flex-col min-[342px]:flex-row justify-between items-center gap-4">
+        <Link
+          to="/certificationsList"
+          className="text-cyan-400 hover:text-cyan-200 transition-colors text-lg"
+          aria-label={t('certifications.aria_back')}
+        >
+          &larr; {t('certifications.back')}
+        </Link>
+
+        {cert.pdfUrl && (
+          <a
+            href={cert.pdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:text-cyan-200 transition-colors text-lg flex items-center gap-2"
+          >
+            <FileText size={20} />
+            {t('certifications.view_pdf')} &rarr;
+          </a>
+        )}
+      </div>
+
+      <main
+        className="flex-1 overflow-y-auto px-4 py-8"
+        aria-labelledby="cert-title"
       >
-        <div className="text-cyan-400 hover:text-cyan-200 transition-colors mt-2 block text-lg mb-2">
-          {t('certifications.back')} &larr;
-        </div>
-      </Link>
-
-      <div className="bg-gray-900 text-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
-          <div className="flex-shrink-0" aria-hidden="true" />
-          <div className="text-center md:text-left">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-indigo-400 mb-2">
-              {t('certifications.master_title')}
-            </h2>
-            <div className="flex items-center">
-              <img
-                src="https://s3-eu-west-1.amazonaws.com/tpd/logos/62a6277627ee655c1226b624/0x0.png"
-                alt={t('certifications.epicode_logo_alt') || 'Epicode logo'}
-                width={50}
-                height={50}
-                className="mr-3"
-                loading="lazy"
-                decoding="async"
-              />
-              <h3 className="text-md sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-300 mb-4 pt-2">
-                <a
-                  href="https://epicode.com/it/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={
-                    t('certifications.epicode_link_aria') ||
-                    'Open Epicode website'
-                  }
-                  className="underline-offset-2 hover:underline"
-                >
-                  Epicode
-                </a>
-              </h3>
+        <article className="bg-gray-900 text-white rounded-xl shadow-lg p-6 md:p-10 max-w-5xl mx-auto">
+          <header className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
+            <div className="text-center md:text-left flex-1">
+              <h2
+                id="cert-title"
+                className="text-2xl md:text-4xl font-extrabold text-indigo-400 mb-4"
+              >
+                {t(cert.titleKey)}
+              </h2>
+              <div className="flex items-center mb-6 justify-center md:justify-start">
+                {cert.logoUrl && (
+                  <img
+                    src={cert.logoUrl}
+                    alt="Logo"
+                    width={50}
+                    className="mr-3"
+                  />
+                )}
+                <h3 className="text-lg font-semibold text-gray-300">
+                  {cert.provider}
+                </h3>
+              </div>
+              <p className="text-gray-400 leading-relaxed text-justify mb-4 text-sm md:text-base">
+                {t(cert.descriptionKey1)}
+              </p>
+              {cert.descriptionKey2 && (
+                <p className="text-gray-400 leading-relaxed text-justify text-sm md:text-base">
+                  {t(cert.descriptionKey2)}
+                </p>
+              )}
             </div>
+          </header>
 
-            <p className="text-sm sm:text-md md:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify max-w-prose">
-              {t('certifications.description_1')}
-            </p>
+          <section className="mt-10 flex flex-col items-center justify-center">
+            <figure className="w-full max-w-3xl">
+              <div
+                className={`${cert.imageClass2} w-full aspect-[16/11] md:aspect-video rounded-lg shadow-2xl border border-gray-800 flex items-center justify-center bg-cover bg-center`}
+                role="img"
+                aria-label={t(cert.imageAltKey)}
+              >
+                {!cert.imageClass && (
+                  <ImageIcon size={48} className="text-gray-700 opacity-50" />
+                )}
+              </div>
 
-            <p className="mt-4 text-sm sm:text-md md:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify max-w-prose">
-              {t('certifications.description_2')}
-            </p>
+              <figcaption className="mt-4 text-center text-gray-400 text-sm italic">
+                {t(cert.imageCaptionKey)}
+              </figcaption>
+            </figure>
+          </section>
+          <div className="flex flex-col min-[419px]:flex-row justify-between items-center gap-2">
+            <Link
+              to="/certificationsList"
+              className="text-cyan-400 hover:text-cyan-200 transition-colors text-lg"
+              aria-label={t('certifications.aria_back')}
+            >
+              &larr; {t('certifications.back')}
+            </Link>
+
+            {cert.pdfUrl && (
+              <a
+                href={cert.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-200 transition-colors text-lg flex items-center gap-2"
+              >
+                <FileText size={20} />
+                {t('certifications.view_pdf')} &rarr;
+              </a>
+            )}
           </div>
-        </div>
-      </div>
-      <div className="flex text-center justify-center m-3">
-        <figure>
-          <img
-            src={CapstoneProject}
-            alt={
-              t('certifications.capstone_image_alt') ||
-              'Capstone project certificate'
-            }
-            loading="lazy"
-            decoding="async"
-            className="max-w-full h-auto rounded-md shadow-md"
-          />
-          {t('certifications.capstone_image_caption') ? (
-            <figcaption className="mt-2 text-xs text-gray-400">
-              {t('certifications.capstone_image_caption')}
-            </figcaption>
-          ) : null}
-        </figure>
-      </div>
-    </section>
+        </article>
+      </main>
+    </div>
   );
 };
 
