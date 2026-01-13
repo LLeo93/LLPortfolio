@@ -27,6 +27,7 @@ export const certificationsData: Certification[] = [
     imageCaptionKey: 'certifications.capstone_image_caption',
     logoUrl:
       'https://s3-eu-west-1.amazonaws.com/tpd/logos/62a6277627ee655c1226b624/0x0.png',
+    pdfUrl: '/Documents/Certificato_Libanio_Leoncini_Epicode.pdf',
   },
   {
     id: 'frontend-synergie',
@@ -38,6 +39,7 @@ export const certificationsData: Certification[] = [
     imageClass2: 'bg-certificate-big-formatemp1',
     imageAltKey: 'certifications.frontend_course.image_alt',
     imageCaptionKey: 'certifications.frontend_course.image_caption',
+    pdfUrl: '/Documents/Certificato_Libanio_Leoncini_Formatemp.pdf',
   },
   {
     id: 'digital-skills-edo',

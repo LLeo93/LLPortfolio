@@ -2,11 +2,13 @@ import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { projectsData } from '../data/projectsData';
 import React from 'react';
+import Seo from '../components/Seo';
 
 const ProjectsDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { t } = useTranslation();
   const project = projectsData.find((p) => p.id === id);
+
   const projectTitle = project ? (t(project.titleKey) as string) : '';
   const projectDescription = project
     ? (t(project.descriptionKey) as string)
@@ -38,6 +40,13 @@ const ProjectsDetails: React.FC = () => {
 
   return (
     <>
+      <Seo
+        title={projectTitle || 'Project'}
+        description={projectDescription || 'Project details'}
+        image={project.image || ''}
+        url={`/projects/${project.id}`}
+      />
+
       <div className="flex flex-col min-[335px]:flex-row justify-between items-center gap-4">
         <Link
           to="/projects"
@@ -58,6 +67,7 @@ const ProjectsDetails: React.FC = () => {
           {t('project_details.go_to_project')} &rarr;
         </a>
       </div>
+
       <main
         id="project-main"
         aria-labelledby="project-title"
@@ -89,12 +99,14 @@ const ProjectsDetails: React.FC = () => {
             </figcaption>
           ) : null}
         </figure>
+
         <article className="prose max-w-2xl">
           <p className="text-gray-300 mb-6 text-justify text-sm md:text-lg">
             {projectDescription || project.descriptionFallback}
           </p>
         </article>
-        <div className=" flex flex-col min-[335px]:flex-row justify-between items-center gap-4 ">
+
+        <div className="flex flex-col min-[335px]:flex-row justify-between items-center gap-4">
           <Link
             to="/projects"
             className="text-cyan-400 hover:text-cyan-200 transition-colors"

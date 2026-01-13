@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "prebuild": "node --loader ts-node/esm scripts/generate-sitemap.ts",
-  "dev": "vite",
-  "build": "tsc -b && vite build",
-  "lint": "eslint .",
-  "preview": "vite preview",
-  "generate-sitemap": "node --loader ts-node/esm scripts/generate-sitemap.ts"
-},
+    "prebuild": "node --loader ts-node/esm scripts/generate-sitemap.ts",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "generate-sitemap": "node --loader ts-node/esm scripts/generate-sitemap.ts"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@tsparticles/react": "^3.0.0",
@@ -20,6 +20,7 @@
     "lucide-react": "^0.542.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-helmet": "^6.1.0",
     "react-i18next": "^15.7.3",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.8.2",
