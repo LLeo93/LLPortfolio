@@ -2,7 +2,7 @@
 import { writeFileSync } from 'node:fs';
 import { SitemapStream, streamToPromise } from 'sitemap';
 
-const hostname = 'https://portfolio-psi-lilac-74.vercel.app/';
+const hostname = 'https://portfolio-psi-lilac-74.vercel.app';
 
 const projects = [
   'spotify',
@@ -13,11 +13,23 @@ const projects = [
   'prompt-ai',
 ];
 
+const certifications = [
+  'master-epicode',
+  'frontend-synergie',
+  'digital-skills-edo',
+];
+
 async function buildSitemap() {
   const sitemap = new SitemapStream({ hostname });
-  ['/', '/about', '/projects', '/certifications'].forEach((path) => {
-    sitemap.write({ url: path, changefreq: 'monthly', priority: 0.8 });
+
+  ['/', '/about', '/projects', '/certificationsList'].forEach((path) => {
+    sitemap.write({
+      url: path,
+      changefreq: 'monthly',
+      priority: 0.8,
+    });
   });
+
   projects.forEach((id) => {
     sitemap.write({
       url: `/projects/${id}`,
@@ -26,10 +38,18 @@ async function buildSitemap() {
     });
   });
 
+  certifications.forEach((id) => {
+    sitemap.write({
+      url: `/certifications/${id}`,
+      changefreq: 'monthly',
+      priority: 0.9,
+    });
+  });
+
   sitemap.end();
 
   try {
-    const data = await streamToPromise(sitemap); // Buffer
+    const data = await streamToPromise(sitemap);
     writeFileSync('./public/sitemap.xml', data.toString());
     console.log('✅ sitemap.xml generata in public/sitemap.xml');
   } catch (err) {
