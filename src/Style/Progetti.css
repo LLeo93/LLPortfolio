@@ -49,13 +49,6 @@
   background-position: center;
 }
 
-.bg-certificate-capstone {
-  background-image: url('../assets/Certificati/CapstonProject.webp');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 /*immagini delle descrizioni dei progetti*/
 .spotify-img {
   background-image: url('../assets/Progetti/Spotify.png');
