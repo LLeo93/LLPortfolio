@@ -9,7 +9,7 @@ const About: React.FC = () => {
   return (
     <>
       <Seo
-        title={`About - ${t('home.title')}`}
+        title={t(`navigation.about_me`)}
         description={t('about.short_description')}
         image={LLimg}
         url="/about"

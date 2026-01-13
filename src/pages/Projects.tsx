@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
   return (
     <>
       <Seo
-        title={t('projects_list.title') || 'Progetti'}
+        title={t('navigation.projects') || 'Progetti'}
         description={
           t('projects_list.description') ||
           'Elenco dei miei progetti e lavori realizzati'

@@ -38,7 +38,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Seo
-        title={t('home.title')}
+        title={t('navigation.home') || 'Home'}
         description={t('home.subtitle')}
         image={githubIcon}
         url="/"

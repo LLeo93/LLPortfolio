@@ -13,7 +13,7 @@
     "text_1": "I am a Junior Full Stack Developer driven by a passion for creating and solving problems. My journey into the world of programming was not a straight line. For seven years, I worked full-time in a completely different context as a warehouse worker at Laika, where I learned the importance of precision and organization. The desire for a new challenge and dissatisfaction with my job pushed me to make a courageous decision: to change my life. Inspired by my uncle, a developer with years of experience, and driven by my childhood passion for modifying video games, I embarked on a Full Stack Developer Master's program.",
     "text_2": "This Master's degree gave me the tools to transform my creativity into code and my determination into solutions. I realized that programming is not just a job, but a way to build something tangible, just as I used to, but in a completely new world. Today, I am ready to put my skills and insatiable desire to learn to work for a dynamic team and innovative projects. I believe my unique background makes me a versatile professional, capable of facing any challenge with a different perspective and a strong work ethic.",
     "title_2": "My vision.",
-    "heading": "Su di me",
+    "heading": "About me",
     "image_alt": "Ritratto di Leoncini Libanio",
     "image_caption": "Leoncini Libanio - Junior Full Stack Developer",
     "short_description": "Junior Full Stack Developer appassionato nella creazione di esperienze web accessibili e performanti."
@@ -50,6 +50,7 @@
 }
   },
   "home": {
+    "home": "Home",
     "welcome": "Welcome!",
     "title": "I'm Leoncini Libanio, Junior Full Stack Developer.",
     "subtitle": "Explore my portfolio to discover my projects and skills."
@@ -120,6 +121,7 @@
     "home": "Home",
     "about_me": "About me",
     "certifications": "Certifications",
+    "projects": "Projects",
     "main_content_tabs": "Main content navigation tabs"
   }
 }
