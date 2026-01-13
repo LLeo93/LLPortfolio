@@ -5,5 +5,10 @@ import App from './App.tsx';
 import './Style/ScrollBar.css';
 import './Style/Certificati.css';
 import './Style/Progetti.css';
+import { HelmetProvider } from 'react-helmet-async';
 
-createRoot(document.getElementById('root')!).render(<App />);
+createRoot(document.getElementById('root')!).render(
+  <HelmetProvider>
+    <App />
+  </HelmetProvider>
+);
