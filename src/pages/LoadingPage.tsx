@@ -8,7 +8,7 @@ const LoadingPage: React.FC = () => {
   return (
     <>
       <Seo
-        title={t('loading.title') || 'Loading...'}
+        title={t('loading.message') || 'Loading...'}
         description={t('loading.message') || 'Pagina in caricamento'}
         image=""
         url="/loading"
