@@ -47,6 +47,15 @@
   "provider": "Regione Lombardia / NextGenerationEU",
   "image_alt": "EDO Transparency Document",
   "image_caption": "GOL Digital Skills Certification"
+},
+"ai_chatgpt": {
+  "title": "Artificial Intelligence: Use ChatGPT to its Full Potential",
+  "description": "Online training focused on advanced ChatGPT usage, completed with a final test score of 100/100[cite: 5, 6, 7, 9]. The course is accredited by the Italian Ministry of Education and Merit (MIM) under directive n. 170/2016.",
+  "skills": "Generative AI, Prompt Engineering, Automation, ChatGPT",
+  "period": "January 2026",
+  "provider": "Lezione-online / MIM (Italian Ministry of Education)",
+  "image_alt": "Certificate of Merit for Artificial Intelligence and ChatGPT",
+  "image_caption": "Certificate of Merit - Libanio Leoncini"
 }
   },
   "home": {

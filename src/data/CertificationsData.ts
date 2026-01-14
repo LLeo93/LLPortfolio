@@ -53,4 +53,16 @@ export const certificationsData: Certification[] = [
     imageCaptionKey: 'certifications.digital_skills.image_caption',
     pdfUrl: '/Documents/Certificato_EDO_E1.2025.1316990.pdf',
   },
+  {
+    id: 'ai-chatgpt-lezione-online',
+    titleKey: 'certifications.ai_chatgpt.title',
+    provider: 'Lezione-online (Accreditato MIM)',
+    providerLink: 'https://www.lezione-online.it',
+    descriptionKey1: 'certifications.ai_chatgpt.description',
+    imageClass: 'bg-certificate-chatgpt',
+    imageClass2: 'bg-certificate-big-chatgpt',
+    imageAltKey: 'certifications.ai_chatgpt.image_alt',
+    imageCaptionKey: 'certifications.ai_chatgpt.image_caption',
+    pdfUrl: '/Documents/Libanio_Leoncini_Certificato_ChatGpt.pdf',
+  },
 ];

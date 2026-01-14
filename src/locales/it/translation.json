@@ -47,6 +47,15 @@
   "provider": "Regione Lombardia / NextGenerationEU",
   "image_alt": "Documento di Trasparenza EDO",
   "image_caption": "Certificazione Competenze Digitali GOL"
+},
+"ai_chatgpt": {
+  "title": "Intelligenza Artificiale: Utilizza ChatGPT al massimo del suo potenziale",
+  "description": "Formazione online focalizzata sull'uso avanzato di ChatGPT, conclusa con il superamento di un test finale con valutazione di 100/100[cite: 5, 6, 7, 9]. Il corso è accreditato dal MIM (Ministero dell'Istruzione e del Merito) secondo la direttiva n. 170/2016.",
+  "skills": "AI Generativa, Prompt Engineering, Automazione, ChatGPT",
+  "period": "Gennaio 2026",
+  "provider": "Lezione-online / MIM (Ministero dell'Istruzione e del Merito)",
+  "image_alt": "Certificato di merito Intelligenza Artificiale ChatGPT",
+  "image_caption": "Attestato di merito - Libanio Leoncini"
 }
   },
   "home": {

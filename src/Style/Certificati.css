@@ -16,7 +16,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.bg-certificate-chatgpt {
+  background-image: url('../assets/Certificati/Certificato_ChatGpt_Leoncini_libanio.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .bg-certificate-big-digitalcomp {
   background-image: url('../assets/Certificati/Digitalcomp.png');
   background-size: contain;
@@ -25,6 +30,12 @@
 }
 .bg-certificate-big-formatemp1 {
   background-image: url('../assets/Certificati/Certificato-Formatemp_Frontend.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg-certificate-big-chatgpt {
+  background-image: url('../assets/Certificati/Certificato_ChatGpt_Leoncini_libanio.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
