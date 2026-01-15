@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export interface ActionItem {
-  type: 'link' | 'external'; // interno / esterno
+  type: 'link' | 'external';
   url: string;
   label: string;
   icon?: React.ReactNode;
@@ -11,8 +11,8 @@ export interface ActionItem {
 
 interface CardActionsProps {
   actions?: ActionItem[];
-  layout?: 'row' | 'col'; // default row
-  backAction?: ActionItem; // opzionale back
+  layout?: 'row' | 'col';
+  backAction?: ActionItem;
 }
 
 const CardActions: React.FC<CardActionsProps> = ({
