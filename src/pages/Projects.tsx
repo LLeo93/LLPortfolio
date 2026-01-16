@@ -58,8 +58,6 @@ const Projects: React.FC = () => {
                   iconPosition: 'end',
                 });
               }
-
-              // Avvolgere l'immagine con il Link dell'internalLink
               const imageNode = project.internalLink ? (
                 <Link to={project.internalLink} className="inline-block w-full">
                   <div

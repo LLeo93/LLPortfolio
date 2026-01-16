@@ -9,8 +9,8 @@ import Avatar from '../assets/LLeoAvatar.jpg';
 import { useTranslation } from 'react-i18next';
 
 const Sidebar: React.FC = () => {
-  const { i18n } = useTranslation();
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+  const fullName = t('me.full_name');
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -38,10 +38,10 @@ const Sidebar: React.FC = () => {
         {/* Nome e Ruolo */}
         <div className="cursor-pointer">
           <h2 className="text-lg sm:text-xl md:text-xl font-bold text-white mb-0 sm:mb-1 md:mb-1">
-            Leoncini Libanio
+            {t('me.full_name')}
           </h2>
           <p className="text-xs sm:text-sm md:text-sm text-white mb-2 sm:mb-3 md:mb-4">
-            Junior Full Stack Developer
+            {t('me.role')}
           </p>
         </div>
         <div className="flex justify-center space-x-2 w-full mb-2 sm:mb-3 md:mb-4">
@@ -56,7 +56,7 @@ const Sidebar: React.FC = () => {
               }
             `}
           >
-            IT
+            {t('me.language.it')}
           </button>
           <button
             onClick={() => changeLanguage('en')}
@@ -69,7 +69,7 @@ const Sidebar: React.FC = () => {
               }
             `}
           >
-            EN
+            {t('me.language.en')}
           </button>
         </div>
         {/* Lingue 
@@ -95,14 +95,14 @@ const Sidebar: React.FC = () => {
       {/* Contatti */}
       <nav
         className="flex flex-col gap-1 sm:gap-2 md:gap-3 w-full text-xs sm:text-sm md:text-sm text-center lg:text-left cursor-pointer mt-2 sm:mt-3 md:mt-4"
-        aria-label={t('navigation.main_content_tabs"')}
+        aria-label={t('navigation.main_content_tabs')}
       >
         <a
           href="mailto:liba.leoncini@gmail.com"
           className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"
         >
           <MailIcon size={18} />
-          Gmail
+          {t('me.social.gmail')}
         </a>
         <a
           href="https://www.linkedin.com/in/libanio-leoncini/"
@@ -111,7 +111,7 @@ const Sidebar: React.FC = () => {
           className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"
         >
           <LinkedinIcon size={18} />
-          Linkedin
+          {t('me.social.linkedin')}
         </a>
         <a
           href="https://github.com/LLeo93"
@@ -120,19 +120,22 @@ const Sidebar: React.FC = () => {
           className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"
         >
           <GithubIcon size={18} />
-          GitHub
+          {t('me.social.github')}
         </a>
         <a
           href="tel:+393806952354"
           className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"
         >
           <PhoneCall size={18} />
-          +39 3806952354
+          {t('me.phone')}
         </a>
       </nav>
 
       <div className="mt-2 sm:mt-3 md:mt-4 text-xs text-white text-center lg:text-left">
-        &copy; 2025 LLeo. - Junior Full Stack Developer
+        {t('me.copyright', {
+          year: new Date().getFullYear(),
+          name: fullName,
+        })}
       </div>
     </aside>
   );

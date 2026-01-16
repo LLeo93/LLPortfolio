@@ -1,4 +1,23 @@
 {
+  "me":{
+    "language":{
+      "en": "EN",
+      "it": "IT"
+    },
+    "social":{
+       "gmail": "Gmail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+
+    "name": "Libanio",
+    "surname":"Leoncini",
+    "full_name": "Leoncini Libanio",
+    "role": "Junior Full Stack Developer",
+    "phone": "+39 3806952354",
+    "copyright": "© {{year}} {{name}}"
+
+  },
     "loading": {
     "message": "Caricamento in corso, attendere prego..."
   },
@@ -132,5 +151,31 @@
     "certifications": "Certificazioni",
     "projects": "Progetti",
     "main_content_tabs": "Schede di navigazione del contenuto principale"
+  },
+  "seo": {
+  "default": {
+    "title": "Junior Full Stack Developer | Portfolio",
+    "description": "Portfolio personale di Leoncini Libanio, Junior Full Stack Developer con focus su React, TypeScript e sviluppo web moderno."
+  },
+
+  "home": {
+    "title": "Leoncini Libanio – Junior Full Stack Developer",
+    "description": "Portfolio di Leoncini Libanio con progetti, certificazioni e competenze in sviluppo frontend e full stack."
+  },
+
+  "projects": {
+    "title": "Progetti | Leoncini Libanio",
+    "description": "Una selezione di progetti frontend e full stack sviluppati con React, TypeScript, Redux e Spring Boot."
+  },
+
+  "certifications": {
+    "title": "Certificazioni | Leoncini Libanio",
+    "description": "Certificazioni professionali e percorsi di formazione in sviluppo web e tecnologie digitali."
+  },
+
+  "errors": {
+    "404_title": "Pagina non trovata | Portfolio",
+    "404_description": "La pagina che stai cercando non esiste o è stata spostata."
   }
+}
 }

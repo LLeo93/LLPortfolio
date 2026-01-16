@@ -1,5 +1,23 @@
 {
+"me":{
+    "language":{
+      "en": "EN",
+      "it": "IT"
+    },
+    "social":{
+       "gmail": "Gmail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
 
+    "name": "Libanio",
+    "surname":"Leoncini",
+    "full_name": "Leoncini Libanio",
+    "role": "Junior Full Stack Developer",
+    "phone": "+39 3806952354",
+    "copyright": "© {{year}} {{name}}"
+
+  },
   "loading": {
     "message": "Loading, please wait..."
   },
@@ -132,5 +150,31 @@
     "certifications": "Certifications",
     "projects": "Projects",
     "main_content_tabs": "Main content navigation tabs"
+  },
+  "seo": {
+  "default": {
+    "title": "Junior Full Stack Developer | Portfolio",
+    "description": "Personal portfolio of Leoncini Libanio, Junior Full Stack Developer focused on React, TypeScript, and modern web development."
+  },
+
+  "home": {
+    "title": "Leoncini Libanio – Junior Full Stack Developer",
+    "description": "Portfolio of Leoncini Libanio featuring projects, certifications, and skills in frontend and full stack development."
+  },
+
+  "projects": {
+    "title": "Projects | Leoncini Libanio",
+    "description": "A selection of frontend and full stack projects developed with React, TypeScript, Redux, and Spring Boot."
+  },
+
+  "certifications": {
+    "title": "Certifications | Leoncini Libanio",
+    "description": "Professional certifications and training paths in web development and digital technologies."
+  },
+
+  "errors": {
+    "404_title": "Page Not Found | Portfolio",
+    "404_description": "The page you are looking for does not exist or has been moved."
   }
+}
 }
