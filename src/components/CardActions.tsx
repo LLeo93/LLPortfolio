@@ -13,13 +13,65 @@ interface CardActionsProps {
   actions?: ActionItem[];
   layout?: 'row' | 'col';
   backAction?: ActionItem;
+  variant?: 'default' | 'split';
 }
 
 const CardActions: React.FC<CardActionsProps> = ({
   actions = [],
   layout = 'row',
   backAction,
+  variant = 'default',
 }) => {
+  if (variant === 'split') {
+    return (
+      <div className="flex w-full items-center justify-between">
+        {/* LEFT */}
+        <div className="flex items-center gap-2">
+          {backAction && (
+            <Link
+              to={backAction.url}
+              className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-1"
+              aria-label={backAction.label}
+            >
+              {backAction.icon}
+              {backAction.label}
+            </Link>
+          )}
+        </div>
+
+        {/* RIGHT */}
+        <div className="flex items-center gap-2">
+          {actions.map((a, i) =>
+            a.type === 'link' ? (
+              <Link
+                key={i}
+                to={a.url}
+                className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-1"
+                aria-label={a.label}
+              >
+                {a.label}
+                {a.icon}
+              </Link>
+            ) : (
+              <a
+                key={i}
+                href={a.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-1"
+                aria-label={a.label}
+              >
+                {a.icon}
+                {a.label}
+              </a>
+            )
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // comportamento attuale INALTERATO
   return (
     <div
       className={`flex ${
@@ -32,13 +84,8 @@ const CardActions: React.FC<CardActionsProps> = ({
           className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-1"
           aria-label={backAction.label}
         >
-          {backAction.icon &&
-            backAction.iconPosition === 'start' &&
-            backAction.icon}
+          {backAction.icon}
           {backAction.label}
-          {backAction.icon &&
-            backAction.iconPosition === 'end' &&
-            backAction.icon}
         </Link>
       )}
 
@@ -50,9 +97,9 @@ const CardActions: React.FC<CardActionsProps> = ({
             className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-1"
             aria-label={a.label}
           >
-            {a.icon && a.iconPosition === 'start' && a.icon}
+            {a.iconPosition === 'start' && a.icon}
             {a.label}
-            {a.icon && a.iconPosition === 'end' && a.icon}
+            {a.iconPosition === 'end' && a.icon}
           </Link>
         ) : (
           <a
@@ -63,9 +110,9 @@ const CardActions: React.FC<CardActionsProps> = ({
             className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-1"
             aria-label={a.label}
           >
-            {a.icon && a.iconPosition === 'start' && a.icon}
+            {a.iconPosition === 'start' && a.icon}
             {a.label}
-            {a.icon && a.iconPosition === 'end' && a.icon}
+            {a.iconPosition === 'end' && a.icon}
           </a>
         )
       )}

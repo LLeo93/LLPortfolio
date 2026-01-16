@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { certificationsData } from '../data/CertificationsData';
 import { Image as ImageIcon } from 'lucide-react';
 import Seo from '../components/Seo';
+import Card from '../components/Card';
+import CardActions from '../components/CardActions';
 
 const CertificationList: React.FC = () => {
   const { t } = useTranslation();
@@ -26,41 +28,48 @@ const CertificationList: React.FC = () => {
             const title = t(cert.titleKey);
 
             return (
-              <article
+              <Card
                 key={cert.id}
-                className="items-center justify-center flex flex-col md:flex-row bg-neutral-900 bg-opacity-10 p-4 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105"
-              >
-                <div className="flex-1">
-                  <h4 className="text-xl font-bold mb-1">{title}</h4>
-                  <p className="text-gray-300 text-sm mb-4">{cert.provider}</p>
-
+                layout="horizontal"
+                hoverScale={true}
+                imagePosition="end"
+                header={
+                  <div>
+                    <h4 className="text-xl font-bold mb-1">{title}</h4>
+                    <p className="text-gray-300 text-sm">{cert.provider}</p>
+                  </div>
+                }
+                body={null}
+                actions={
+                  <CardActions
+                    backAction={{
+                      type: 'link',
+                      url: `/certifications/${cert.id}`,
+                      label: `${t('projects_list.view_certificate')} →`,
+                    }}
+                  />
+                }
+                image={
                   <Link
                     to={`/certifications/${cert.id}`}
-                    className="text-cyan-400 hover:text-cyan-200 transition-colors"
-                    aria-label={`${t(
-                      'projects_list.view_certificate'
-                    )} - ${title}`}
+                    className="w-35 h-25 md:w-40 md:h-28 lg:w-48 flex flex-col items-center justify-center"
+                    aria-hidden="true"
+                    tabIndex={-1}
                   >
-                    {t('projects_list.view_certificate')} &rarr;
+                    {!cert.imageClass && (
+                      <ImageIcon
+                        size={24}
+                        className="text-gray-600 opacity-50"
+                      />
+                    )}
+                    <div
+                      className={`${cert.imageClass} w-full h-full rounded-lg bg-cover bg-center border border-gray-800 flex items-center justify-center text-xs text-gray-500 italic`}
+                      role="img"
+                      aria-label={t(cert.imageAltKey)}
+                    ></div>
                   </Link>
-                </div>
-
-                <Link
-                  to={`/certifications/${cert.id}`}
-                  className="w-35 h-25 md:w-40 md:h-28 md:ml-4 lg:w-48 mt-4 md:mt-0"
-                  aria-hidden="true"
-                  tabIndex={-1}
-                >
-                  {!cert.imageClass && (
-                    <ImageIcon size={24} className="text-gray-600 opacity-50" />
-                  )}
-                  <div
-                    className={`${cert.imageClass} w-full h-full rounded-lg bg-cover bg-center border border-gray-800 flex items-center justify-center text-xs text-gray-500 italic`}
-                    role="img"
-                    aria-label={t(cert.imageAltKey)}
-                  ></div>
-                </Link>
-              </article>
+                }
+              />
             );
           })}
         </div>

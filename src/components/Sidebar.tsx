@@ -18,16 +18,16 @@ const Sidebar: React.FC = () => {
   return (
     <aside
       className="
-        bg-black bg-opacity-40 backdrop-blur-md text-gray-200 shadow-lg z-50 p-6 
-        flex flex-col items-center gap-4 rounded-3xl
-        my-6 w-full max-w-sm sm:max-w-md
-        md:flex-row md:max-w-xl md:w-3/4
+        bg-black bg-opacity-40 backdrop-blur-md text-gray-200 shadow-lg z-50 p-4 sm:p-5
+        flex flex-col items-center gap-2 sm:gap-3 rounded-3xl
+        my-4 sm:my-5 w-full max-w-sm sm:max-w-md h-fit
+        md:flex-row md:max-w-xl md:w-3/4 md:p-5 md:gap-4 md:my-6
         lg:fixed lg:top-16 lg:left-16 lg:h-[calc(100vh-8rem)] lg:w-72 lg:flex-col lg:items-center lg:my-0 lg:mx-0 lg:p-8
       "
     >
       <div className="flex flex-col items-center justify-center text-center">
         {/* Avatar */}
-        <div className="rounded-full overflow-hidden w-28 h-28 border-2 border-cyan-400 mb-4 transform transition-transform duration-300 hover:scale-105">
+        <div className="rounded-full overflow-hidden w-20 sm:w-24 md:w-28 h-20 sm:h-24 md:h-28 border-2 border-cyan-400 mb-2 sm:mb-3 md:mb-4 transform transition-transform duration-300 hover:scale-105">
           <img
             src={Avatar}
             alt="Avatar"
@@ -37,16 +37,18 @@ const Sidebar: React.FC = () => {
 
         {/* Nome e Ruolo */}
         <div className="cursor-pointer">
-          <h2 className="text-xl font-bold text-white mb-1">
+          <h2 className="text-lg sm:text-xl md:text-xl font-bold text-white mb-0 sm:mb-1 md:mb-1">
             Leoncini Libanio
           </h2>
-          <p className="text-sm text-white mb-4">Junior Full Stack Developer</p>
+          <p className="text-xs sm:text-sm md:text-sm text-white mb-2 sm:mb-3 md:mb-4">
+            Junior Full Stack Developer
+          </p>
         </div>
-        <div className="flex justify-center space-x-2 w-full mb-4">
+        <div className="flex justify-center space-x-2 w-full mb-2 sm:mb-3 md:mb-4">
           <button
             onClick={() => changeLanguage('it')}
             className={`
-              text-sm font-bold py-2 px-4 rounded-full transition-colors duration-300
+              text-xs sm:text-sm font-bold py-1 sm:py-2 px-3 sm:px-4 rounded-full transition-colors duration-300
               ${
                 i18n.language === 'it'
                   ? 'bg-cyan-400 text-black'
@@ -59,7 +61,7 @@ const Sidebar: React.FC = () => {
           <button
             onClick={() => changeLanguage('en')}
             className={`
-              text-sm font-bold py-2 px-4 rounded-full transition-colors duration-300
+              text-xs sm:text-sm font-bold py-1 sm:py-2 px-3 sm:px-4 rounded-full transition-colors duration-300
               ${
                 i18n.language === 'en'
                   ? 'bg-cyan-400 text-black'
@@ -92,7 +94,7 @@ const Sidebar: React.FC = () => {
 
       {/* Contatti */}
       <nav
-        className="flex flex-col gap-3 w-full text-sm text-center lg:text-left cursor-pointer mt-4"
+        className="flex flex-col gap-1 sm:gap-2 md:gap-3 w-full text-xs sm:text-sm md:text-sm text-center lg:text-left cursor-pointer mt-2 sm:mt-3 md:mt-4"
         aria-label={t('navigation.main_content_tabs"')}
       >
         <a
@@ -129,7 +131,7 @@ const Sidebar: React.FC = () => {
         </a>
       </nav>
 
-      <div className="mt-6 text-xs text-white text-center lg:text-left">
+      <div className="mt-2 sm:mt-3 md:mt-4 text-xs text-white text-center lg:text-left">
         &copy; 2025 LLeo. - Junior Full Stack Developer
       </div>
     </aside>

@@ -1,47 +1,63 @@
 import React from 'react';
 
-export type CardLayout = 'vertical' | 'horizontal' | 'custom';
-
 interface CardProps {
-  layout?: CardLayout;
+  layout?: 'horizontal' | 'vertical';
+  hoverScale?: boolean;
   className?: string;
   image?: React.ReactNode;
+  imagePosition?: 'start' | 'end';
   header?: React.ReactNode;
   body?: React.ReactNode;
   actions?: React.ReactNode;
-  hoverScale?: boolean;
 }
 
 const Card: React.FC<CardProps> = ({
   layout = 'vertical',
+  hoverScale = true,
   className = '',
   image,
+  imagePosition = 'start',
   header,
   body,
   actions,
-  hoverScale = true,
 }) => {
-  const baseClasses =
-    'bg-neutral-900 bg-opacity-10 p-6 rounded-xl shadow-lg transform transition-transform duration-300';
-  const hoverClasses = hoverScale ? 'hover:scale-105' : '';
-
-  const layoutClasses =
-    layout === 'horizontal'
-      ? 'flex flex-col md:flex-row items-center'
-      : layout === 'vertical'
-      ? 'flex flex-col items-center'
-      : '';
-
   return (
     <article
-      className={`${baseClasses} ${hoverClasses} ${layoutClasses} ${className}`}
+      className={`
+        bg-neutral-900 bg-opacity-10
+        p-4
+        rounded-xl
+        shadow-lg
+        h-full
+        flex flex-col
+        ${
+          hoverScale
+            ? 'transform transition-transform duration-300 hover:scale-105'
+            : ''
+        }
+        ${className}
+      `}
     >
-      {image}
+      <div
+        className={`flex ${
+          layout === 'horizontal'
+            ? 'flex-col md:flex-row items-center gap-4'
+            : 'flex-col gap-4 h-full'
+        }`}
+      >
+        {image && imagePosition === 'start' && <div>{image}</div>}
 
-      <div className="flex-1 flex flex-col w-full mt-4 md:mt-0">
-        {header && <div className="mb-2 w-full">{header}</div>}
-        {body && <div className="mb-4 w-full">{body}</div>}
-        {actions && <div className="w-full mt-auto">{actions}</div>}
+        <div
+          className={`${
+            layout === 'vertical' ? 'flex flex-col' : ''
+          } flex-1 w-full`}
+        >
+          {header && <div className="mb-2">{header}</div>}
+          {body && <div className="mb-4">{body}</div>}
+          {actions && <div className="mt-auto">{actions}</div>}
+        </div>
+
+        {image && imagePosition === 'end' && <div>{image}</div>}
       </div>
     </article>
   );
