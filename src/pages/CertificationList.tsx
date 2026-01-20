@@ -15,7 +15,10 @@ const CertificationList: React.FC = () => {
     <>
       <Seo
         title={t(`navigation.certifications`) || 'Certifications'}
-        description="Explore my certifications in Full Stack Development and digital skills."
+        description={
+          t(`seo.certifications.description`) ||
+          'Explore my certifications in Full Stack Development and digital skills.'
+        }
         image=""
         url="/certifications"
       />

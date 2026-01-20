@@ -83,7 +83,7 @@ const CardActions: React.FC<CardActionsProps> = ({
     );
   }
 
-  // comportamento attuale INALTERATO
+  // default
   return (
     <div
       className={`flex ${

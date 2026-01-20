@@ -35,7 +35,7 @@ const Certifications: React.FC = () => {
         url={`/certifications/${cert.id}`}
       />
 
-      <div className="flex flex-col h-full overflow-hidden">
+      <div className="flex flex-col ">
         <CardActions
           variant="split"
           backAction={createBackToCertificationsAction(t)}
