@@ -99,7 +99,12 @@ const Sidebar: React.FC = () => {
       >
         <a
           href="mailto:liba.leoncini@gmail.com"
-          className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"
+          className=" flex items-center justify-center lg:justify-start gap-1
+    break-all
+    px-2 py-1
+    min-h-[24px]
+    transform transition-transform duration-300 hover:scale-105
+    text-cyan-400"
         >
           <MailIcon size={18} />
           {t('me.social.gmail')}
@@ -108,7 +113,12 @@ const Sidebar: React.FC = () => {
           href="https://www.linkedin.com/in/libanio-leoncini/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"
+          className=" flex items-center justify-center lg:justify-start gap-1
+    break-all
+    px-2 py-1
+    min-h-[24px]
+    transform transition-transform duration-300 hover:scale-105
+    text-cyan-400"
         >
           <LinkedinIcon size={18} />
           {t('me.social.linkedin')}
@@ -117,14 +127,24 @@ const Sidebar: React.FC = () => {
           href="https://github.com/LLeo93"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"
+          className=" flex items-center justify-center lg:justify-start gap-1
+    break-all
+    px-2 py-1
+    min-h-[24px]
+    transform transition-transform duration-300 hover:scale-105
+    text-cyan-400"
         >
           <GithubIcon size={18} />
           {t('me.social.github')}
         </a>
         <a
           href="tel:+393806952354"
-          className="flex items-center justify-center lg:justify-start gap-2 break-all transform transition-transform duration-300 hover:scale-105 text-cyan-400"
+          className=" flex items-center justify-center lg:justify-start gap-1
+    break-all
+    px-2 py-1
+    min-h-[24px]
+    transform transition-transform duration-300 hover:scale-105
+    text-cyan-400"
         >
           <PhoneCall size={18} />
           {t('me.phone')}
