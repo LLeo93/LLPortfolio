@@ -42,7 +42,7 @@ const Card: React.FC<CardProps> = ({
         className={`flex ${
           layout === 'horizontal'
             ? 'flex-col md:flex-row items-center gap-4'
-            : 'flex-col gap-4 h-full'
+            : 'flex-col gap-6 h-full'
         }`}
       >
         {image && imagePosition === 'start' && <div>{image}</div>}
@@ -52,7 +52,7 @@ const Card: React.FC<CardProps> = ({
             layout === 'vertical' ? 'flex flex-col' : ''
           } flex-1 w-full`}
         >
-          {header && <div className="mb-2">{header}</div>}
+          {header && <div className="mb-8">{header}</div>}
           {body && <div className="mb-4">{body}</div>}
           {actions && <div className="mt-auto">{actions}</div>}
         </div>

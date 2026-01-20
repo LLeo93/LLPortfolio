@@ -6,6 +6,7 @@ import { Image as ImageIcon } from 'lucide-react';
 import Seo from '../components/Seo';
 import Card from '../components/Card';
 import CardActions from '../components/CardActions';
+import { createViewCertificateDetailsAction } from '../utils/certificationActions';
 
 const CertificationList: React.FC = () => {
   const { t } = useTranslation();
@@ -42,11 +43,13 @@ const CertificationList: React.FC = () => {
                 body={null}
                 actions={
                   <CardActions
-                    backAction={{
-                      type: 'link',
-                      url: `/certifications/${cert.id}`,
-                      label: `${t('projects_list.view_certificate')} →`,
-                    }}
+                    actions={[
+                      {
+                        ...createViewCertificateDetailsAction(t),
+                        url: `/certifications/${cert.id}`,
+                        iconPosition: 'end',
+                      },
+                    ]}
                   />
                 }
                 image={

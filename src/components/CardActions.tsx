@@ -23,6 +23,21 @@ const CardActions: React.FC<CardActionsProps> = ({
   variant = 'default',
 }) => {
   if (variant === 'split') {
+    const renderActionContent = (action: ActionItem) => {
+      const isStart = action.iconPosition === 'start';
+      return isStart ? (
+        <>
+          {action.icon}
+          {action.label}
+        </>
+      ) : (
+        <>
+          {action.label}
+          {action.icon}
+        </>
+      );
+    };
+
     return (
       <div className="flex w-full items-center justify-between">
         {/* LEFT */}
@@ -33,8 +48,7 @@ const CardActions: React.FC<CardActionsProps> = ({
               className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-1"
               aria-label={backAction.label}
             >
-              {backAction.icon}
-              {backAction.label}
+              {renderActionContent(backAction)}
             </Link>
           )}
         </div>
@@ -49,8 +63,7 @@ const CardActions: React.FC<CardActionsProps> = ({
                 className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-1"
                 aria-label={a.label}
               >
-                {a.label}
-                {a.icon}
+                {renderActionContent(a)}
               </Link>
             ) : (
               <a
@@ -61,8 +74,7 @@ const CardActions: React.FC<CardActionsProps> = ({
                 className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-1"
                 aria-label={a.label}
               >
-                {a.icon}
-                {a.label}
+                {renderActionContent(a)}
               </a>
             )
           )}

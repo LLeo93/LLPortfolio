@@ -1,18 +1,21 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { certificationsData } from '../data/CertificationsData';
-import { Image as ImageIcon, FileText } from 'lucide-react';
+import { Image as ImageIcon } from 'lucide-react';
 import Seo from '../components/Seo';
 import Card from '../components/Card';
 import CardActions from '../components/CardActions';
+import {
+  createBackToCertificationsAction,
+  createViewPdfAction,
+} from '../utils/certificationActions';
+import { useCertification } from '../hooks/useCertification';
 
 const Certifications: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
   const { t } = useTranslation();
-  const cert = certificationsData.find((c) => c.id === id);
+  const { cert, isFound } = useCertification();
 
-  if (!cert) {
+  if (!isFound || !cert) {
     return (
       <main className="flex flex-col items-center justify-center h-full p-8 text-white">
         <h2 className="text-2xl font-bold">{t('project_details.not_found')}</h2>
@@ -35,20 +38,13 @@ const Certifications: React.FC = () => {
       <div className="flex flex-col h-full overflow-hidden">
         <CardActions
           variant="split"
-          backAction={{
-            type: 'link',
-            url: '/certificationsList',
-            label: `← ${t('certifications.back')}`,
-          }}
+          backAction={createBackToCertificationsAction(t)}
           actions={
             cert.pdfUrl
               ? [
                   {
-                    type: 'external',
+                    ...createViewPdfAction(t),
                     url: cert.pdfUrl,
-                    label: `${t('certifications.view_pdf')} →`,
-                    icon: <FileText size={20} />,
-                    iconPosition: 'start',
                   },
                 ]
               : []
@@ -96,10 +92,10 @@ const Certifications: React.FC = () => {
               </header>
             }
             body={
-              <section className="mt-10 flex flex-col items-center justify-center">
+              <section className="flex flex-col items-center justify-center">
                 <figure className="w-full max-w-3xl">
                   <div
-                    className={`${cert.imageClass2} w-full aspect-[16/11] md:aspect-video rounded-lg shadow-2xl border border-gray-800 flex items-center justify-center bg-cover bg-center`}
+                    className={`${cert.imageClass2} w-full aspect-[16/11] md:aspect-video rounded-lg shadow-2xl flex items-center justify-center bg-cover bg-center`}
                     role="img"
                     aria-label={t(cert.imageAltKey)}
                   >
