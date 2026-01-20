@@ -15,6 +15,7 @@ const Sidebar: React.FC = () => {
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
+
   return (
     <aside
       className="
@@ -25,8 +26,8 @@ const Sidebar: React.FC = () => {
         lg:fixed lg:top-16 lg:left-16 lg:h-[calc(100vh-8rem)] lg:w-72 lg:flex-col lg:items-center lg:my-0 lg:mx-0 lg:p-8
       "
     >
+      {/* Profilo */}
       <div className="flex flex-col items-center justify-center text-center">
-        {/* Avatar */}
         <div className="rounded-full overflow-hidden w-20 sm:w-24 md:w-28 h-20 sm:h-24 md:h-28 border-2 border-cyan-400 mb-2 sm:mb-3 md:mb-4 transform transition-transform duration-300 hover:scale-105">
           <img
             src={Avatar}
@@ -35,7 +36,6 @@ const Sidebar: React.FC = () => {
           />
         </div>
 
-        {/* Nome e Ruolo */}
         <div className="cursor-pointer">
           <h2 className="text-lg sm:text-xl md:text-xl font-bold text-white mb-0 sm:mb-1 md:mb-1">
             {t('me.full_name')}
@@ -44,6 +44,8 @@ const Sidebar: React.FC = () => {
             {t('me.role')}
           </p>
         </div>
+
+        {/* Lingua */}
         <div className="flex justify-center space-x-2 w-full mb-2 sm:mb-3 md:mb-4">
           <button
             onClick={() => changeLanguage('it')}
@@ -72,85 +74,94 @@ const Sidebar: React.FC = () => {
             {t('me.language.en')}
           </button>
         </div>
-        {/* Lingue 
-        <div className="flex justify-center space-x-6">
-          <span
-            role="img"
-            aria-label="Italian flag"
-            className="text-3xl transform transition-transform duration-300 hover:scale-125"
-          >
-            🇮🇹
-          </span>
-          <span
-            role="img"
-            aria-label="United Kingdom flag"
-            className="text-3xl transform transition-transform duration-300 hover:scale-125"
-          >
-            🇬🇧
-          </span>
-        </div>
-        */}
       </div>
 
       {/* Contatti */}
       <nav
-        className="flex flex-col gap-1 sm:gap-2 md:gap-3 w-full text-xs sm:text-sm md:text-sm text-center lg:text-left cursor-pointer mt-2 sm:mt-3 md:mt-4"
+        className="w-full mt-2 sm:mt-3 md:mt-4 text-xs sm:text-sm md:text-sm"
         aria-label={t('navigation.main_content_tabs')}
       >
-        <a
-          href="mailto:liba.leoncini@gmail.com"
-          className=" flex items-center justify-center lg:justify-start gap-1
-    break-all
-    px-2 py-1
-    min-h-[24px]
-    transform transition-transform duration-300 hover:scale-105
-    text-cyan-400"
+        <ul
+          className="
+            grid grid-cols-2 gap-2
+            md:flex md:flex-col md:gap-5
+          "
         >
-          <MailIcon size={18} />
-          {t('me.social.gmail')}
-        </a>
-        <a
-          href="https://www.linkedin.com/in/libanio-leoncini/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className=" flex items-center justify-center lg:justify-start gap-1
-    break-all
-    px-2 py-1
-    min-h-[24px]
-    transform transition-transform duration-300 hover:scale-105
-    text-cyan-400"
-        >
-          <LinkedinIcon size={18} />
-          {t('me.social.linkedin')}
-        </a>
-        <a
-          href="https://github.com/LLeo93"
-          target="_blank"
-          rel="noopener noreferrer"
-          className=" flex items-center justify-center lg:justify-start gap-1
-    break-all
-    px-2 py-1
-    min-h-[24px]
-    transform transition-transform duration-300 hover:scale-105
-    text-cyan-400"
-        >
-          <GithubIcon size={18} />
-          {t('me.social.github')}
-        </a>
-        <a
-          href="tel:+393806952354"
-          className=" flex items-center justify-center lg:justify-start gap-1
-    break-all
-    px-2 py-1
-    min-h-[24px]
-    transform transition-transform duration-300 hover:scale-105
-    text-cyan-400"
-        >
-          <PhoneCall size={18} />
-          {t('me.phone')}
-        </a>
+          <li>
+            <a
+              href="mailto:liba.leoncini@gmail.com"
+              className="
+                flex items-center justify-center lg:justify-start gap-2
+                px-2 py-2 min-h-[40px]
+                rounded-lg
+                text-cyan-400
+                transition-transform duration-300 hover:scale-105
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400
+              "
+            >
+              <MailIcon size={18} />
+              <span>{t('me.social.gmail')}</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/libanio-leoncini/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex items-center justify-center lg:justify-start gap-2
+                px-2 py-2 min-h-[40px]
+                rounded-lg
+                text-cyan-400
+                transition-transform duration-300 hover:scale-105
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400
+              "
+            >
+              <LinkedinIcon size={18} />
+              <span>{t('me.social.linkedin')}</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://github.com/LLeo93"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex items-center justify-center lg:justify-start gap-2
+                px-2 py-2 min-h-[40px]
+                rounded-lg
+                text-cyan-400
+                transition-transform duration-300 hover:scale-105
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400
+              "
+            >
+              <GithubIcon size={18} />
+              <span>{t('me.social.github')}</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="tel:+393806952354"
+              className="
+                flex items-center justify-center lg:justify-start gap-2
+                px-2 py-2 min-h-[40px]
+                rounded-lg
+                text-cyan-400
+                transition-transform duration-300 hover:scale-105
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400
+              "
+            >
+              <PhoneCall size={18} />
+              <span>{t('me.phone')}</span>
+            </a>
+          </li>
+        </ul>
       </nav>
 
+      {/* Footer */}
       <div className="mt-2 sm:mt-3 md:mt-4 text-xs text-white text-center lg:text-left">
         {t('me.copyright', {
           year: new Date().getFullYear(),
