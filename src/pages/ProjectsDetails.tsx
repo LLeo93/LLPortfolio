@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { projectsData } from '../data/projectsData';
 import React from 'react';
 import Seo from '../components/Seo';
+import Arrow from '../components/Arrow';
 
 const ProjectsDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -31,7 +32,7 @@ const ProjectsDetails: React.FC = () => {
             to="/projects"
             className="text-cyan-400 hover:text-cyan-200 underline"
           >
-            &rarr; {t('project_details.back_to_projects')}
+            <Arrow direction="right" /> {t('project_details.back_to_projects')}
           </Link>
         </div>
       </main>
@@ -53,7 +54,7 @@ const ProjectsDetails: React.FC = () => {
           className="text-cyan-400 hover:text-cyan-200 transition-colors"
           aria-label={t('project_details.back') + ' - ' + (projectTitle || '')}
         >
-          &larr; {t('project_details.back')}
+          <Arrow direction="left" /> {t('project_details.back')}
         </Link>
 
         <a
@@ -64,7 +65,7 @@ const ProjectsDetails: React.FC = () => {
           aria-label={`${t('project_details.go_to_project')} - ${projectTitle}`}
           title={`${t('project_details.go_to_project')} - ${projectTitle}`}
         >
-          {t('project_details.go_to_project')} &rarr;
+          {t('project_details.go_to_project')} <Arrow direction="right" />
         </a>
       </div>
 
@@ -125,7 +126,7 @@ const ProjectsDetails: React.FC = () => {
               'project_details.go_to_project'
             )} - ${projectTitle}`}
           >
-            {t('project_details.go_to_project')} &rarr;
+            {t('project_details.go_to_project')} <Arrow direction="right" />
           </a>
         </div>
       </main>
