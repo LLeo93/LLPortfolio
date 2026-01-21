@@ -1,20 +1,13 @@
 import React from 'react';
-import {
-  Github as GithubIcon,
-  Linkedin as LinkedinIcon,
-  Mail as MailIcon,
-  Phone as PhoneCall,
-} from 'lucide-react';
-import Avatar from '../assets/LLeoAvatar.jpg';
 import { useTranslation } from 'react-i18next';
+import Avatar from '../assets/LLeoAvatar.jpg';
+import { SidebarProfile } from './SidebarProfile';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { SidebarContacts } from './SidebarContacts';
 
 const Sidebar: React.FC = () => {
   const { i18n, t } = useTranslation();
   const fullName = t('me.full_name');
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
 
   return (
     <aside
@@ -24,150 +17,22 @@ const Sidebar: React.FC = () => {
         my-4 sm:my-5 w-full max-w-sm sm:max-w-md h-fit
         md:flex-row md:max-w-xl md:w-3/4 md:p-5 md:gap-4 md:my-6
         lg:fixed lg:top-16 lg:left-16 lg:h-[calc(100vh-8rem)] lg:w-72 lg:flex-col lg:items-center lg:my-0 lg:mx-0 lg:p-8
-      "
+    "
     >
-      {/* Profilo */}
-      <div className="flex flex-col items-center justify-center text-center">
-        <div className="rounded-full overflow-hidden w-20 sm:w-24 md:w-28 h-20 sm:h-24 md:h-28 border-2 border-cyan-400 mb-2 sm:mb-3 md:mb-4 transform transition-transform duration-300 hover:scale-105">
-          <img
-            src={Avatar}
-            alt="Avatar"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="cursor-pointer">
-          <h2 className="text-lg sm:text-xl md:text-xl font-bold text-white mb-0 sm:mb-1 md:mb-1">
-            {t('me.full_name')}
-          </h2>
-          <p className="text-xs sm:text-sm md:text-sm text-white mb-2 sm:mb-3 md:mb-4">
-            {t('me.role')}
-          </p>
-        </div>
-
-        {/* Lingua */}
-        <div className="flex justify-center space-x-2 w-full mb-2 sm:mb-3 md:mb-4">
-          <button
-            onClick={() => changeLanguage('it')}
-            className={`
-              text-xs sm:text-sm font-bold py-1 sm:py-2 px-3 sm:px-4 rounded-full transition-colors duration-300
-              ${
-                i18n.language === 'it'
-                  ? 'bg-cyan-400 text-black'
-                  : 'bg-transparent text-gray-400 border border-gray-400 hover:bg-cyan-400 hover:text-black'
-              }
-            `}
-          >
-            {t('me.language.it')}
-          </button>
-          <button
-            onClick={() => changeLanguage('en')}
-            className={`
-              text-xs sm:text-sm font-bold py-1 sm:py-2 px-3 sm:px-4 rounded-full transition-colors duration-300
-              ${
-                i18n.language === 'en'
-                  ? 'bg-cyan-400 text-black'
-                  : 'bg-transparent text-gray-400 border border-gray-400 hover:bg-cyan-400 hover:text-black'
-              }
-            `}
-          >
-            {t('me.language.en')}
-          </button>
-        </div>
+      <div className="flex flex-col items-center">
+        <SidebarProfile avatar={Avatar} name={fullName} role={t('me.role')} />
+        <LanguageSwitcher
+          currentLang={i18n.language}
+          onChange={(lng) => i18n.changeLanguage(lng)}
+          labels={{ it: t('me.language.it'), en: t('me.language.en') }}
+        />
       </div>
 
-      {/* Contatti */}
-      <nav
-        className="w-full mt-2 sm:mt-3 md:mt-4 text-xs sm:text-sm md:text-sm"
-        aria-label={t('navigation.main_content_tabs')}
-      >
-        <ul
-          className="
-            grid grid-cols-2 gap-2
-            md:flex md:flex-col md:gap-5
-          "
-        >
-          <li>
-            <a
-              href="mailto:liba.leoncini@gmail.com"
-              className="
-                flex items-center justify-center lg:justify-start gap-2
-                px-2 py-2 min-h-[40px]
-                rounded-lg
-                text-cyan-400
-                transition-transform duration-300 hover:scale-105
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400
-              "
-            >
-              <MailIcon size={18} />
-              <span>{t('me.social.gmail')}</span>
-            </a>
-          </li>
+      <SidebarContacts t={t} />
 
-          <li>
-            <a
-              href="https://www.linkedin.com/in/libanio-leoncini/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                flex items-center justify-center lg:justify-start gap-2
-                px-2 py-2 min-h-[40px]
-                rounded-lg
-                text-cyan-400
-                transition-transform duration-300 hover:scale-105
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400
-              "
-            >
-              <LinkedinIcon size={18} />
-              <span>{t('me.social.linkedin')}</span>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="https://github.com/LLeo93"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                flex items-center justify-center lg:justify-start gap-2
-                px-2 py-2 min-h-[40px]
-                rounded-lg
-                text-cyan-400
-                transition-transform duration-300 hover:scale-105
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400
-              "
-            >
-              <GithubIcon size={18} />
-              <span>{t('me.social.github')}</span>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="tel:+393806952354"
-              className="
-                flex items-center justify-center lg:justify-start gap-2
-                px-2 py-2 min-h-[40px]
-                rounded-lg
-                text-cyan-400
-                transition-transform duration-300 hover:scale-105
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400
-              "
-            >
-              <PhoneCall size={18} />
-              <span>{t('me.phone')}</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      {/* Footer */}
-      <div className="mt-2 sm:mt-3 md:mt-4 text-xs text-white text-center lg:text-left">
-        {t('me.copyright', {
-          year: new Date().getFullYear(),
-          name: fullName,
-        })}
-      </div>
+      <footer className="mt-2 sm:mt-3 md:mt-4 text-xs text-white text-center lg:text-left">
+        {t('me.copyright', { year: new Date().getFullYear(), name: fullName })}
+      </footer>
     </aside>
   );
 };
