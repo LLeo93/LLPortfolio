@@ -74,6 +74,15 @@
   "provider": "Lezione-online / MIM (Italian Ministry of Education)",
   "image_alt": "Certificate of Merit for Artificial Intelligence and ChatGPT",
   "image_caption": "Certificate of Merit - Libanio Leoncini"
+},
+"freecodecamp_responsive": {
+  "title": "Responsive Web Design Certification",
+  "description": "Developer certification issued by freeCodeCamp after completing approximately 300 hours of hands-on practice. The entire course, including lessons, documentation, and final projects, was delivered and assessed fully in English. The program focused on building responsive, accessible, and mobile-first websites using modern HTML5 and CSS3, with a strong emphasis on real-world layouts and best practices.",
+  "skills": "HTML5, CSS3, Responsive Design, Accessibility, Mobile-First Layouts",
+  "period": "February 2026",
+  "provider": "freeCodeCamp",
+  "image_alt": "freeCodeCamp Responsive Web Design Certificate",
+  "image_caption": "Responsive Web Design Certification – freeCodeCamp"
 }
   },
   "home": {

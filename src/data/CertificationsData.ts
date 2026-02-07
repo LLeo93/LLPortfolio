@@ -39,6 +39,8 @@ export const certificationsData: Certification[] = [
     imageClass2: 'bg-certificate-big-formatemp1',
     imageAltKey: 'certifications.frontend_course.image_alt',
     imageCaptionKey: 'certifications.frontend_course.image_caption',
+    logoUrl:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0qYQZS_le9_Eve6bJxTJddS5CNoLaUjvK_g&s',
     pdfUrl: '/Documents/Certificato_Libanio_Leoncini_Formatemp.pdf',
   },
   {
@@ -51,6 +53,8 @@ export const certificationsData: Certification[] = [
     imageClass2: 'bg-certificate-big-digitalcomp',
     imageAltKey: 'certifications.digital_skills.image_alt',
     imageCaptionKey: 'certifications.digital_skills.image_caption',
+    logoUrl:
+      'https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Lombardy_square.svg',
     pdfUrl: '/Documents/Certificato_EDO_E1.2025.1316990.pdf',
   },
   {
@@ -63,6 +67,22 @@ export const certificationsData: Certification[] = [
     imageClass2: 'bg-certificate-big-chatgpt',
     imageAltKey: 'certifications.ai_chatgpt.image_alt',
     imageCaptionKey: 'certifications.ai_chatgpt.image_caption',
+    logoUrl:
+      'https://media.licdn.com/dms/image/v2/C4E0BAQGHBne248-qgg/company-logo_200_200/company-logo_200_200/0/1643713851206/lezione_onlineit_logo?e=2147483647&v=beta&t=XWynh9V1CAcYmQqKyPzcmb8NDw3YpCpU_krnhGENf6k',
     pdfUrl: '/Documents/Libanio_Leoncini_Certificato_ChatGpt.pdf',
+  },
+  {
+    id: 'freecodecamp-responsive-web-design',
+    titleKey: 'certifications.freecodecamp_responsive.title',
+    provider: 'freeCodeCamp',
+    providerLink: 'https://www.freecodecamp.org',
+    descriptionKey1: 'certifications.freecodecamp_responsive.description',
+    imageClass: 'bg-certificate-freecodecamp',
+    imageClass2: 'bg-certificate-big-freecodecamp',
+    imageAltKey: 'certifications.freecodecamp_responsive.image_alt',
+    imageCaptionKey: 'certifications.freecodecamp_responsive.image_caption',
+    logoUrl: 'https://popsql.com/static/external-logos/freecodecamp.png',
+    pdfUrl:
+      '/Documents/freecodecamp.org_certification_lleo93_responsive-web-design.pdf',
   },
 ];

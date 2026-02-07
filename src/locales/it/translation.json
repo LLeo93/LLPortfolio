@@ -75,6 +75,15 @@
   "provider": "Lezione-online / MIM (Ministero dell'Istruzione e del Merito)",
   "image_alt": "Certificato di merito Intelligenza Artificiale ChatGPT",
   "image_caption": "Attestato di merito - Libanio Leoncini"
+},
+"freecodecamp_responsive": {
+  "title": "Certificazione Responsive Web Design",
+  "description": "Certificazione Developer rilasciata da freeCodeCamp dopo il completamento di circa 300 ore di attività pratiche. L’intero percorso formativo, comprese lezioni, materiali didattici ed esami finali, è stato svolto interamente in lingua inglese. Il programma si è concentrato sulla realizzazione di siti web responsive, accessibili e mobile-first, applicando HTML5 e CSS3 moderni secondo standard professionali e best practice del web.",
+  "skills": "HTML5, CSS3, Responsive Design, Accessibilità, Mobile-First Layout",
+  "period": "Febbraio 2026",
+  "provider": "freeCodeCamp",
+  "image_alt": "Certificato Responsive Web Design freeCodeCamp",
+  "image_caption": "Certificazione Responsive Web Design – freeCodeCamp"
 }
   },
   "home": {
