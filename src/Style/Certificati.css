@@ -28,6 +28,13 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.bg-certificate-freecodecamp-v9 {
+  background-image: url('../assets/Certificati/freecodecamp.org_certification_lleo93_responsive-web-design-v9.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*big*/
 .bg-certificate-big-digitalcomp {
   background-image: url('../assets/Certificati/Digitalcomp.png');
   background-size: contain;
@@ -48,6 +55,12 @@
 }
 .bg-certificate-big-freecodecamp {
   background-image: url('../assets/Certificati/freecodecamp.org_certification_lleo93_responsive-web-design.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg-certificate-big-freecodecamp-v9 {
+  background-image: url('../assets/Certificati/freecodecamp.org_certification_lleo93_responsive-web-design-v9.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

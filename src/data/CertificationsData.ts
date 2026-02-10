@@ -85,4 +85,19 @@ export const certificationsData: Certification[] = [
     pdfUrl:
       '/Documents/freecodecamp.org_certification_lleo93_responsive-web-design.pdf',
   },
+  {
+    id: 'freecodecamp-responsive-v9',
+    titleKey: 'certifications.freecodecamp_responsive_v9.title',
+    provider: 'freeCodeCamp',
+    providerLink:
+      'https://www.freecodecamp.org/certification/lleo93/responsive-web-design-v9',
+    descriptionKey1: 'certifications.freecodecamp_responsive_v9.description',
+    imageClass: 'bg-certificate-freecodecamp-v9',
+    imageClass2: 'bg-certificate-big-freecodecamp-v9',
+    imageAltKey: 'certifications.freecodecamp_responsive_v9.image_alt',
+    imageCaptionKey: 'certifications.freecodecamp_responsive_v9.image_caption',
+    logoUrl: 'https://popsql.com/static/external-logos/freecodecamp.png',
+    pdfUrl:
+      '/Documents/freecodecamp.org_certification_lleo93_responsive-web-design-v9.pdf',
+  },
 ];

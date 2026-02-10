@@ -84,6 +84,14 @@
   "provider": "freeCodeCamp",
   "image_alt": "Certificato Responsive Web Design freeCodeCamp",
   "image_caption": "Certificazione Responsive Web Design – freeCodeCamp"
+},"freecodecamp_responsive_v9": {
+  "title": "Certificazione Responsive Web Design (v9)",
+  "description": "Certificazione per sviluppatori rilasciata da freeCodeCamp dopo il completamento di circa 300 ore di pratica. L'intero corso, inclusi i progetti finali, è stato svolto in lingua inglese. Il programma si è focalizzato sulla creazione di siti web accessibili e mobile-first utilizzando HTML5 e CSS3 moderni, con particolare attenzione al design responsivo e alle best practice del settore.",
+  "skills": "HTML5, CSS3, Responsive Design, Accessibilità, Layout Mobile-First",
+  "period": "Febbraio 2026",
+  "provider": "freeCodeCamp",
+  "image_alt": "Certificato freeCodeCamp Responsive Web Design v9",
+  "image_caption": "Certificazione Responsive Web Design – freeCodeCamp"
 }
   },
   "home": {
