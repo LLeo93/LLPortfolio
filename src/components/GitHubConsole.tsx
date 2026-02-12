@@ -162,7 +162,7 @@ const GitHubConsole: React.FC = () => {
             <Clock size={10} /> {t('home.github_status.last_sync')}:{' '}
             {new Date(activity.date).toLocaleTimeString()}
           </span>
-          <span className="text-gray-600">
+          <span className="text-white">
             {t('home.github_status.auth_type')}
           </span>
         </div>
