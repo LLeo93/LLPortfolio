@@ -94,10 +94,21 @@
 }
   },
   "home": {
+    "live_activity": "Live GitHub Activity",
     "home": "Home",
     "welcome": "Welcome!",
     "title": "I'm Leoncini Libanio, Junior Full Stack Developer.",
-    "subtitle": "Explore my portfolio to discover my projects and skills."
+    "subtitle": "Explore my portfolio to discover my projects and skills.",
+    "github_status": {
+    "sys_status": "System Status",
+    "feed_stable": "FEED_STABLE",
+    "repository": "repository",
+    "latest_log": "latest_log",
+    "last_sync": "LAST_SYNC",
+    "connecting": "INIT_SESSION...",
+    "quota": "API_QUOTA",
+    "auth_type": "AUTH_TYPE: NULL_UNAUTHENTICATED"
+  }
   },
   "project_details": {
     "not_found": "Project not found",

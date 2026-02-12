@@ -15,6 +15,7 @@ import sassIcon from '../assets/icons/sass.png';
 import gitIcon from '../assets/icons/git.png';
 import { useTranslation } from 'react-i18next';
 import Seo from '../components/Seo';
+import GitHubConsole from '../components/GitHubConsole';
 
 const icons = [
   githubIcon,
@@ -47,7 +48,7 @@ const Home: React.FC = () => {
         <h1 className="text-4xl font-bold mb-4">{t('home.welcome')}</h1>
         <h2 className="text-sm md:text-lg text-center">{t('home.title')}</h2>
         <p className="text-sm md:text-lg text-center">{t('home.subtitle')}</p>
-
+        <GitHubConsole />
         <div className="scroll-wrapper h-20 mt-12">
           <div className="scroll-container">
             {[...icons, ...icons].map((icon, index) => (
