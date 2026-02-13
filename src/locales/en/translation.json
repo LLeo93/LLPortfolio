@@ -107,7 +107,9 @@
     "last_sync": "LAST_SYNC",
     "connecting": "INIT_SESSION...",
     "quota": "API_QUOTA",
-    "auth_type": "AUTH_TYPE: NULL_UNAUTHENTICATED"
+    "auth_type": "AUTH_TYPE: NULL_UNAUTHENTICATED",
+    "skills_title": "Language Distribution",
+    "skills_subtitle": "SYSTEM_ANALYSIS // SOURCE_CODE"
   }
   },
   "project_details": {
