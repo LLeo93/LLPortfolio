@@ -92,6 +92,12 @@
   "provider": "freeCodeCamp",
   "image_alt": "Certificato freeCodeCamp Responsive Web Design v9",
   "image_caption": "Certificazione Responsive Web Design – freeCodeCamp"
+},
+"ui_ux_lowcode": {
+  "title": "UI/UX Design e Programmazione Low-Code",
+  "description": "Specializzazione di Livello EQF 5 focalizzata sulla progettazione di interfacce digitali avanzate. Il cuore del percorso ha riguardato l'ecosistema Figma, dall'architettura dell'informazione (sitemap e user flow) alla creazione di un prototipo interattivo di un'app e landing page professionali. Il profilo è completato da solide basi logiche in Python e Scratch, insieme all'integrazione di soluzioni Low-Code (Bubble) per il rapido deployment di MVP. Certificazione conseguita previo superamento di un esame finale tecnico in presenza.",
+  "image_alt": "Certificato di Competenza UI/UX Design e Low-Code",
+  "image_caption": "Attestato di Competenza GOL - Livello EQF 5"
 }
   },
   "home": {

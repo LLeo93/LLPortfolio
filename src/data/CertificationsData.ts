@@ -30,6 +30,20 @@ export const certificationsData: Certification[] = [
     pdfUrl: '/Documents/Certificato_Libanio_Leoncini_Epicode.pdf',
   },
   {
+    id: 'ui-ux-design-lowcode',
+    titleKey: 'certifications.ui_ux_lowcode.title',
+    provider: 'Regione Lombardia / GOL (Progetto Europa)',
+    providerLink: 'https://www.progetto-europa.it/',
+    descriptionKey1: 'certifications.ui_ux_lowcode.description',
+    imageClass: 'bg-certificate-uiux-lowcode',
+    imageClass2: 'bg-certificate-big-uiux-lowcode',
+    imageAltKey: 'certifications.ui_ux_lowcode.image_alt',
+    imageCaptionKey: 'certifications.ui_ux_lowcode.image_caption',
+    logoUrl:
+      'https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Lombardy_square.svg',
+    pdfUrl: '/Documents/Certificato_GOL_UIUX_LowCode_Libanio_Leoncini.pdf',
+  },
+  {
     id: 'frontend-synergie',
     titleKey: 'certifications.frontend_course.title',
     provider: 'Synergie Academy / Forma.temp',

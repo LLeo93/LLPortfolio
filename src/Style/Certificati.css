@@ -34,6 +34,13 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.bg-certificate-uiux-lowcode {
+  background-image: url('../assets/Certificati/ui-ux-lowcode-cert.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /*big*/
 .bg-certificate-big-digitalcomp {
   background-image: url('../assets/Certificati/Digitalcomp.png');
@@ -61,6 +68,13 @@
 }
 .bg-certificate-big-freecodecamp-v9 {
   background-image: url('../assets/Certificati/freecodecamp.org_certification_lleo93_responsive-web-design-v9.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-certificate-big-uiux-lowcode {
+  background-image: url('../assets/Certificati/ui-ux-lowcode-cert.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

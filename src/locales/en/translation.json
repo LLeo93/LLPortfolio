@@ -91,6 +91,11 @@
   "provider": "freeCodeCamp",
   "image_alt": "freeCodeCamp Responsive Web Design Certificate v9",
   "image_caption": "Responsive Web Design Certification – freeCodeCamp"
+},    "ui_ux_lowcode": {
+  "title": "UI/UX Design and Low-Code Programming",
+  "description": "EQF Level 5 specialization focused on advanced digital interface design. The core of the program centered on the Figma ecosystem, from information architecture (sitemaps and user flows) to the creation of an interactive app prototype and professional landing pages. The profile is complemented by logical foundations in Python and Scratch, along with the integration of Low-Code solutions (Bubble) for rapid MVP deployment. Certification awarded upon successful completion of a technical in-person final exam.",
+  "image_alt": "UI/UX Design and Low-Code Competence Certificate",
+  "image_caption": "GOL Competence Certificate - EQF Level 5"
 }
   },
   "home": {
@@ -159,6 +164,7 @@
       "image_alt": "Prompt-AI app screenshot",
       "image_caption": "Prompt-AI - prompt manager"
     }
+
   },
   "projects_list": {
     "projects": "Projects",
