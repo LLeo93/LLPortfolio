@@ -97,7 +97,7 @@ const Projects: React.FC = () => {
                   to={project.internalLink}
                   className="inline-block w-full overflow-hidden rounded-lg group"
                 >
-                  <div className="transform transition-transform duration-500 group-hover:scale-105 rounded-lg hoverflow-hidden">
+                  <div className="transform transition-transform duration-500 group-hover:scale-[1.025] rounded-lg hoverflow-hidden">
                     {renderMediaContent()}
                   </div>
                 </Link>
@@ -111,7 +111,7 @@ const Projects: React.FC = () => {
                   key={project.id}
                   image={imageNode}
                   header={
-                    <h4 className="text-xl font-bold mb-2 text-white">
+                    <h4 className="text-xl font-bold mb-2 text-white transition-all duration-500 group-hover:text-cyan-100">
                       {t(project.titleKey)}
                     </h4>
                   }

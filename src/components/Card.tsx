@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Style/Progetti.css';
 
 interface CardProps {
   layout?: 'horizontal' | 'vertical';
@@ -24,7 +25,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <article
       className={`
-        bg-neutral-900 bg-opacity-10
+       bg-white/[0.03] backdrop-blur-sm animate-fade-in-up
         p-4
         rounded-xl
         shadow-lg
@@ -32,7 +33,7 @@ const Card: React.FC<CardProps> = ({
         flex flex-col
         ${
           hoverScale
-            ? 'transform transition-all duration-300 ease-out hover:-translate-y-1'
+            ? 'group transform-gpu transition-all will-change-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2'
             : ''
         }
         ${className}
