@@ -12,12 +12,12 @@ const Sidebar: React.FC = () => {
   return (
     <aside
       className="
-        bg-black bg-opacity-40 backdrop-blur-md text-gray-200 shadow-lg z-50 p-4 sm:p-5
-        flex flex-col items-center gap-2 sm:gap-3 rounded-3xl
-        my-4 sm:my-5 w-full max-w-sm sm:max-w-md h-fit
-        md:flex-row md:max-w-xl md:w-3/4 md:p-5 md:gap-4 md:my-6
-        lg:fixed lg:top-16 lg:left-16 lg:h-[calc(100vh-8rem)] lg:w-72 lg:flex-col lg:items-center lg:my-0 lg:mx-0 lg:p-8
-    "
+    bg-black bg-opacity-40 backdrop-blur-md text-gray-200 shadow-lg z-50 p-4 sm:p-5
+    flex flex-col items-center gap-2 sm:gap-3 rounded-3xl
+    my-4 sm:my-5 w-full max-w-sm sm:max-w-md h-fit
+    md:flex-row md:max-w-xl md:w-3/4 md:p-5 md:gap-4 md:my-6
+    lg:sticky lg:top-8 lg:h-[calc(100vh-4rem)] lg:w-72 lg:flex-col lg:items-center lg:my-0 lg:mx-0 lg:p-8
+  "
     >
       <div className="flex flex-col items-center">
         <SidebarProfile avatar={Avatar} name={fullName} role={t('me.role')} />

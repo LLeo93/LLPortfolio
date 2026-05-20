@@ -4,6 +4,7 @@ import { projectsData } from '../data/projectsData';
 import React from 'react';
 import Seo from '../components/Seo';
 import Arrow from '../components/Arrow';
+import TechBadge from '../components/TechBadge';
 
 const ProjectsDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -14,6 +15,7 @@ const ProjectsDetails: React.FC = () => {
   const projectDescription = project
     ? (t(project.descriptionKey) as string)
     : '';
+
   const imageAltKey = project?.imageAltKey;
   const imageCaptionKey = project?.imageCaptionKey;
 
@@ -28,6 +30,7 @@ const ProjectsDetails: React.FC = () => {
           <h2 className="text-2xl font-bold mb-4">
             {t('project_details.not_found')}
           </h2>
+
           <Link
             to="/projects"
             className="text-cyan-400 hover:text-cyan-200 underline"
@@ -39,6 +42,12 @@ const ProjectsDetails: React.FC = () => {
     );
   }
 
+  const ariaLabelText =
+    (imageAltKey && t(imageAltKey)) ||
+    projectTitle ||
+    project.imageAltFallback ||
+    'Project media content';
+
   return (
     <>
       <Seo
@@ -48,7 +57,8 @@ const ProjectsDetails: React.FC = () => {
         url={`/projects/${project.id}`}
       />
 
-      <div className="flex flex-col min-[335px]:flex-row justify-between items-center gap-4">
+      {/* Header di Navigazione superiore */}
+      <div className="flex flex-col min-[335px]:flex-row justify-between items-center gap-4 mb-4">
         <Link
           to="/projects"
           className="text-cyan-400 hover:text-cyan-200 transition-colors"
@@ -57,77 +67,122 @@ const ProjectsDetails: React.FC = () => {
           <Arrow direction="left" /> {t('project_details.back')}
         </Link>
 
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-cyan-400 hover:text-cyan-200 transition-colors"
-          aria-label={`${t('project_details.go_to_project')} - ${projectTitle}`}
-          title={`${t('project_details.go_to_project')} - ${projectTitle}`}
-        >
-          {t('project_details.go_to_project')} <Arrow direction="right" />
-        </a>
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:text-cyan-200 transition-colors"
+            aria-label={`${t('project_details.go_to_project')} - ${projectTitle}`}
+            title={`${t('project_details.go_to_project')} - ${projectTitle}`}
+          >
+            {t('project_details.go_to_project')} <Arrow direction="right" />
+          </a>
+        )}
       </div>
 
       <main
         id="project-main"
         aria-labelledby="project-title"
-        className="flex-1 flex flex-col items-center justify-start p-8 text-gray-200 overflow-y-auto"
+        className="w-full max-w-7xl mx-auto px-4 md:px-8 text-gray-200"
       >
         <h2
           id="project-title"
-          className="text-3xl font-bold mb-4 text-cyan-400"
+          className="text-3xl md:text-4xl font-bold mb-6 text-cyan-400 text-center md:text-left"
         >
           {projectTitle || project.titleFallback || 'Project'}
         </h2>
 
-        <figure className="w-full max-w-2xl mb-6">
-          <div
-            className={`${project.image} aspect-video w-full rounded-lg mb-0 bg-center bg-cover`}
-            role="img"
-            aria-label={
-              (imageAltKey && t(imageAltKey)) ||
-              projectTitle ||
-              project.imageAltFallback ||
-              'Project screenshot'
-            }
-          />
-          {(imageCaptionKey && t(imageCaptionKey)) ||
-          project.imageCaptionFallback ? (
-            <figcaption className="mt-2 text-sm text-gray-400 text-center">
-              {(imageCaptionKey && t(imageCaptionKey)) ||
-                project.imageCaptionFallback}
-            </figcaption>
-          ) : null}
-        </figure>
+        <div
+          id="contenitoreDueColonne"
+          className={`w-full relative gap-8 lg:gap-12 items-start ${
+            project.videoSrc ? 'flex flex-col lg:flex-row' : 'flex flex-col'
+          }`}
+        >
+          <figure
+            className={`flex flex-col justify-start items-center ${
+              project.videoSrc
+                ? 'w-full lg:w-[40%] lg:sticky lg:top-4'
+                : 'w-full'
+            }`}
+          >
+            {project.videoSrc ? (
+              <div className="w-full flex justify-center items-start">
+                <video
+                  src={project.videoSrc}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-auto max-w-full h-auto max-h-[55vh] rounded-2xl shadow-2xl border border-neutral-800 object-contain bg-neutral-950"
+                  aria-label={ariaLabelText}
+                  onLoadedMetadata={(e) => {
+                    e.currentTarget.muted = true;
+                  }}
+                />
+              </div>
+            ) : (
+              <div
+                className={`${project.image} aspect-video w-full rounded-2xl shadow-2xl border border-neutral-800 bg-center bg-cover max-h-[70vh]`}
+                role="img"
+                aria-label={ariaLabelText}
+              />
+            )}
 
-        <article className="prose max-w-2xl">
-          <p className="text-gray-300 mb-6 text-justify text-sm md:text-lg">
-            {projectDescription || project.descriptionFallback}
-          </p>
-        </article>
+            {(imageCaptionKey && t(imageCaptionKey)) ||
+            project.imageCaptionFallback ? (
+              <figcaption className="mt-3 text-xs text-gray-500 text-center italic max-w-xs">
+                {(imageCaptionKey && t(imageCaptionKey)) ||
+                  project.imageCaptionFallback}
+              </figcaption>
+            ) : null}
+          </figure>
 
-        <div className="flex flex-col min-[335px]:flex-row justify-between items-center gap-4">
+          <article
+            id="colonnaDiDestra"
+            className={`flex flex-col justify-start space-y-8 pb-12 ${
+              project.videoSrc ? 'w-full lg:w-[55%]' : 'w-full'
+            }`}
+          >
+            <div className="prose max-w-none text-gray-300">
+              <p className="text-base md:text-lg leading-relaxed text-justify whitespace-pre-line">
+                {projectDescription || project.descriptionFallback}
+              </p>
+            </div>
+
+            <div className="pt-4 border-t border-neutral-800">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-3">
+                {t('projects_list.tech_stack')}
+              </h3>
+
+              <TechBadge technologies={project.technologies} />
+            </div>
+          </article>
+        </div>
+
+        {/* FOOTER DI NAVIGAZIONE */}
+        <div className="flex flex-col min-[335px]:flex-row justify-between items-center gap-4 w-full mt-12 border-t border-gray-800 pt-6 pb-8">
           <Link
             to="/projects"
-            className="text-cyan-400 hover:text-cyan-200 transition-colors"
+            className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-2"
             aria-label={
               t('project_details.back') + ' - ' + (projectTitle || '')
             }
           >
             &larr; {t('project_details.back')}
           </Link>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-cyan-400 hover:text-cyan-200 transition-colors"
-            aria-label={`${t(
-              'project_details.go_to_project'
-            )} - ${projectTitle}`}
-          >
-            {t('project_details.go_to_project')} <Arrow direction="right" />
-          </a>
+
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-2"
+              aria-label={`${t('project_details.go_to_project')} - ${projectTitle}`}
+            >
+              {t('project_details.go_to_project')} <Arrow direction="right" />
+            </a>
+          )}
         </div>
       </main>
     </>

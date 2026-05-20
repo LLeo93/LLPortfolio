@@ -1,44 +1,208 @@
+:root {
+  /* Gradienti per il bg del contenitore delle immagini */
+  --gradient-deep-ocean: linear-gradient(
+    145deg,
+    #0f172a 0%,
+    #132238 25%,
+    #1e3a5f 55%,
+    #0b1120 100%
+  );
+  --gradient-glass-cyan: linear-gradient(
+    160deg,
+    rgba(15, 23, 42, 0.92) 0%,
+    rgba(17, 34, 64, 0.88) 35%,
+    rgba(14, 116, 144, 0.2) 70%,
+    rgba(2, 6, 23, 0.96) 100%
+  );
+  --gradient-cyber-blue: linear-gradient(
+    135deg,
+    #020617 0%,
+    #0f172a 20%,
+    #1d4ed8 50%,
+    #0f172a 80%,
+    #020617 100%
+  );
+  --gradient-midnight-aurora: linear-gradient(
+    155deg,
+    #020617 0%,
+    #111827 25%,
+    #164e63 55%,
+    #0f172a 75%,
+    #020617 100%
+  );
+  --gradient-space-storm: linear-gradient(
+    140deg,
+    #030712 0%,
+    #111827 30%,
+    #1e40af 60%,
+    #0f172a 100%
+  );
+  --gradient-electric-night: linear-gradient(
+    160deg,
+    #020617 0%,
+    #0f172a 35%,
+    #0891b2 65%,
+    #111827 100%
+  );
+  --gradient-frosted-steel: linear-gradient(
+    150deg,
+    #111827 0%,
+    #1f2937 35%,
+    #334155 70%,
+    #0f172a 100%
+  );
+  --gradient-deep-space-glass: linear-gradient(
+    165deg,
+    rgba(2, 6, 23, 0.96) 0%,
+    rgba(15, 23, 42, 0.92) 30%,
+    rgba(8, 47, 73, 0.45) 60%,
+    rgba(2, 132, 199, 0.15) 85%,
+    rgba(2, 6, 23, 0.98) 100%
+  );
+  --gradient-ai-dashboard: linear-gradient(
+    145deg,
+    #0b1120 0%,
+    #172554 35%,
+    #0f766e 70%,
+    #020617 100%
+  );
+  --gradient-soft-cyan-depth: linear-gradient(
+    180deg,
+    #0f172a 0%,
+    #1e293b 40%,
+    #164e63 75%,
+    #020617 100%
+  );
+  --gradient-ultra-glass-blue: linear-gradient(
+    160deg,
+    rgba(2, 6, 23, 0.98) 0%,
+    rgba(15, 23, 42, 0.92) 25%,
+    rgba(30, 64, 175, 0.35) 55%,
+    rgba(6, 182, 212, 0.18) 78%,
+    rgba(2, 6, 23, 0.98) 100%
+  );
+  --gradient-cosmic-cyan: linear-gradient(
+    135deg,
+    #020617 0%,
+    #082f49 25%,
+    #0891b2 55%,
+    #1e3a8a 75%,
+    #020617 100%
+  );
+  --gradient-dark-tech: linear-gradient(
+    145deg,
+    #111827 0%,
+    #1f2937 30%,
+    #0f172a 65%,
+    #020617 100%
+  );
+
+  --gradient-holographic-blue: linear-gradient(
+    155deg,
+    #020617 0%,
+    #172554 30%,
+    #2563eb 55%,
+    #06b6d4 75%,
+    #020617 100%
+  );
+  --gradient-glass-night-cyan: linear-gradient(
+    160deg,
+    rgba(15, 23, 42, 0.94) 0%,
+    rgba(17, 34, 64, 0.9) 30%,
+    rgba(8, 145, 178, 0.18) 60%,
+    rgba(3, 7, 18, 0.98) 100%
+  );
+}
+.project-card-media {
+  box-shadow: var(--box-shadow);
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  position: relative;
+  isolation: isolate;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  overflow: hidden;
+}
+.project-card-media::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.08),
+    transparent 40%
+  );
+
+  pointer-events: none;
+}
 /*immagini icone dei progetti*/
+.bg-projects-autocare {
+  background-image:
+    url('../assets/icons/Auto_Care.png'), var(--project-gradient);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-color: #121212;
+}
+.bg-project-mooddrop {
+  background-image: url('../assets/icons/moodrop.png'), var(--project-gradient);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-color: #121212;
+}
 .bg-project-spotify {
-  background-image: url('../assets/icons/spotifyimmagine.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image:
+    url('../assets/icons/spotifyimmagine.png'), var(--project-gradient);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
   background-color: #121212;
 }
 .bg-project-llmeteo {
-  background-image: url('../assets/icons/LLmeteoimmagine.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image:
+    url('../assets/icons/LLmeteoimmagine.png'), var(--project-gradient);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
   background-color: #121212;
 }
 .bg-project-applemusic {
-  background-image: url('../assets/icons/applemusicimmagine.webp');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image:
+    url('../assets/icons/applemusicimmagine.png'), var(--project-gradient);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
   background-color: #121212;
 }
 .bg-project-llnetflix {
-  background-image: url('../assets/icons/Netfliximmagine.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image:
+    url('../assets/icons/Netfliximmagine.png'), var(--project-gradient);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
   background-color: #121212;
 }
 .bg-project-pixelpals {
-  background-image: url('../assets/icons/pixelpalsimmagine.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image:
+    url('../assets/icons/pixelpalsimmagine.png'), var(--project-gradient);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
   background-color: #121212;
 }
 .bg-project-prompt-ai {
-  background-image: url('../assets/icons/prompt-aiimmagine.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image:
+    url('../assets/icons/prompt-aiimmagine.png'), var(--project-gradient);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
   background-color: #121212;
 }
 
@@ -50,6 +214,18 @@
 }
 
 /*immagini delle descrizioni dei progetti*/
+.autocare-img {
+  background-image: url('../assets/Progetti/Auto_Care.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.moodrop-img {
+  background-image: url('../assets/Progetti/moodrop.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .spotify-img {
   background-image: url('../assets/Progetti/Spotify.png');
   background-size: contain;

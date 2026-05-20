@@ -7,9 +7,14 @@ import CardActions from '../components/CardActions';
 import type { ActionItem } from '../components/CardActions';
 import { projects } from '../data/projects';
 import '../Style/Progetti.css';
+import TechBadge from '../components/TechBadge';
+import Gradients from '../data/Gradients';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
+  const randomGradient = React.useMemo(() => {
+    return Gradients[Math.floor(Math.random() * Gradients.length)];
+  }, []);
 
   return (
     <>
@@ -23,7 +28,14 @@ const Projects: React.FC = () => {
         url="/projects"
       />
 
-      <div className="flex-1 flex flex-col items-center justify-start p-8 text-gray-200 overflow-y-auto">
+      <div
+        className="flex-1 flex flex-col items-center justify-start p-8 text-gray-200 overflow-y-auto"
+        style={
+          {
+            '--project-gradient': randomGradient,
+          } as React.CSSProperties
+        }
+      >
         <section className="mb-12 w-full max-w-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => {
@@ -58,22 +70,42 @@ const Projects: React.FC = () => {
                   iconPosition: 'end',
                 });
               }
-              const imageNode = project.internalLink ? (
-                <Link to={project.internalLink} className="inline-block w-full">
+              const renderMediaContent = () => {
+                if (project.videoSrc) {
+                  return (
+                    <video
+                      src={project.videoSrc}
+                      muted
+                      autoPlay
+                      loop
+                      playsInline
+                      poster={project.imageFallbackUrl || ''}
+                      className="w-full h-32 md:h-48 rounded-lg object-cover bg-neutral-800"
+                    />
+                  );
+                }
+                return (
                   <div
-                    className={`${project.bgClass} h-32 md:h-48 w-full rounded-lg`}
+                    className={`${project.bgClass}  project-card-media h-32 md:h-48 w-full rounded-lg bg-center bg-contain bg-no-repeat`}
                     role="img"
                     aria-label={t(project.titleKey)}
                   />
+                );
+              };
+              const imageNode = project.internalLink ? (
+                <Link
+                  to={project.internalLink}
+                  className="inline-block w-full overflow-hidden rounded-lg group"
+                >
+                  <div className="transform transition-transform duration-500 group-hover:scale-105 rounded-lg hoverflow-hidden">
+                    {renderMediaContent()}
+                  </div>
                 </Link>
               ) : (
-                <div
-                  className={`${project.bgClass} h-32 md:h-48 w-full rounded-lg`}
-                  role="img"
-                  aria-label={t(project.titleKey)}
-                />
+                <div className="w-full overflow-hidden rounded-lg">
+                  {renderMediaContent()}
+                </div>
               );
-
               return (
                 <Card
                   key={project.id}
@@ -84,9 +116,12 @@ const Projects: React.FC = () => {
                     </h4>
                   }
                   body={
-                    <p className="text-gray-300 text-sm">
-                      {t(project.descKey)}
-                    </p>
+                    <div>
+                      <p className="text-gray-300 text-sm">
+                        {t(project.descKey)}
+                      </p>
+                      <TechBadge technologies={project.technologies} />
+                    </div>
                   }
                   actions={<CardActions actions={actions} layout="col" />}
                 />

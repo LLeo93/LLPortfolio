@@ -1,5 +1,25 @@
 export const projects = [
   {
+    id: 'autocare',
+    bgClass: 'bg-projects-autocare',
+    imgClass: 'autocare-img',
+    titleKey: 'projects.autocare.title',
+    descKey: 'projects_list.autocare_description',
+    internalLink: '/projects/autocare',
+    technologies: ['UI/UX Prototype', 'Figma'],
+  },
+  {
+    id: 'mooddrop',
+    bgClass: 'bg-project-mooddrop',
+    imgClass: 'moodrop-img',
+    titleKey: 'projects.mooddrop.title',
+    descKey: 'projects_list.mooddrop_description',
+    internalLink: '/projects/mooddrop',
+    livelink: '',
+    repoLink: '',
+    technologies: ['UI/UX Prototype', 'Mobile Dev', 'Supabase'],
+  },
+  {
     id: 'prompt-ai',
     bgClass: 'bg-project-prompt-ai',
     imgClass: 'prompt-ai-img',
@@ -8,7 +28,11 @@ export const projects = [
     internalLink: '/projects/prompt-ai',
     liveLink: 'https://prompt-ai-orpin.vercel.app/',
     repoLink: 'https://github.com/LLeo93/prompt-ai',
+    technologies: ['Frontend Eng', 'State Management'],
+    videoSrc: '',
+    imageFallbackUrl: '',
   },
+
   {
     id: 'pixelpals',
     bgClass: 'bg-project-pixelpals',
@@ -17,6 +41,9 @@ export const projects = [
     descKey: 'projects_list.pixelpals_description',
     internalLink: '/projects/pixelpals',
     repoLink: 'https://github.com/LLeo93/pixelpals/blob/main/README.md',
+    technologies: ['Full-Stack Dev', 'WebSockets'],
+    videoSrc: '',
+    imageFallbackUrl: '',
   },
   {
     id: 'spotify',
@@ -27,6 +54,9 @@ export const projects = [
     internalLink: '/projects/spotify',
     liveLink: 'https://spoti-team7-final.vercel.app/',
     repoLink: 'https://github.com/LLeo93/BW2-Team7/tree/main',
+    technologies: ['Team Project', 'UI Replica'],
+    videoSrc: '',
+    imageFallbackUrl: '',
   },
   {
     id: 'applemusic',
@@ -37,6 +67,9 @@ export const projects = [
     internalLink: '/projects/applemusic',
     liveLink: 'https://applemusic-gold.vercel.app/',
     repoLink: 'https://github.com/LLeo93/applemusic',
+    technologies: ['Frontend Eng', 'Redux Logic'],
+    videoSrc: '',
+    imageFallbackUrl: '',
   },
   {
     id: 'llmeteo',
@@ -47,6 +80,9 @@ export const projects = [
     internalLink: '/projects/llmeteo',
     liveLink: 'https://ll-meteo.vercel.app/',
     repoLink: 'https://github.com/LLeo93/LLMeteo',
+    technologies: ['Web App', 'Responsive UI'],
+    videoSrc: '',
+    imageFallbackUrl: '',
   },
   {
     id: 'llnetflix',
@@ -57,5 +93,8 @@ export const projects = [
     internalLink: '/projects/llnetflix',
     liveLink: 'https://ll-netflix-clone-v4yg.vercel.app/',
     repoLink: 'https://github.com/LLeo93/LLNetflixClone',
+    technologies: ['Web App', 'API Integration'],
+    videoSrc: '',
+    imageFallbackUrl: '',
   },
 ];

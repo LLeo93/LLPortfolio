@@ -2,18 +2,52 @@ export interface ProjectData {
   id: string;
   titleKey: string;
   descriptionKey: string;
-  image: string;
-  link: string;
-  repo: string;
+  technologies?: string[];
+  image?: string;
+  link?: string;
+  repo?: string;
   imageAltKey?: string;
   imageCaptionKey?: string;
   imageAltFallback?: string;
   imageCaptionFallback?: string;
   titleFallback?: string;
   descriptionFallback?: string;
+  videoSrc?: string;
+  imageFallbackUrl?: string;
 }
 
 export const projectsData: ProjectData[] = [
+  {
+    id: 'autocare',
+    titleKey: 'projects.autocare.title',
+    descriptionKey: 'projects.autocare.description',
+    image: 'autocare-img',
+    repo: '',
+    imageAltKey: 'projects.autocare.image_alt',
+    imageCaptionKey: 'projects.autocare.image_caption',
+    imageAltFallback: 'AutoCare app screenshot',
+    imageCaptionFallback: 'AutoCare - UI/UX Prototype',
+    titleFallback: 'AutoCare',
+    descriptionFallback:
+      'AutoCare — UI/UX prototype for a car maintenance app, designed in Figma.',
+    technologies: ['UI/UX Prototype', 'Figma'],
+    videoSrc: '/Videos/Auto_Care_video.webm',
+  },
+  {
+    id: 'mooddrop',
+    titleKey: 'projects.mooddrop.title',
+    descriptionKey: 'projects.mooddrop.description',
+    videoSrc: '/Videos/Mood_Drop_Video.webm',
+    repo: '',
+    imageAltKey: 'projects.mooddrop.image_alt',
+    imageCaptionKey: 'projects.mooddrop.image_caption',
+    imageAltFallback: 'MoodDrop application concept and Figma design',
+    imageCaptionFallback: 'MoodDrop — UI/UX Prototyping & Mobile Architecture',
+    titleFallback: 'MoodDrop',
+    descriptionFallback:
+      'MoodDrop — Mood-tracking mobile application designed in Figma and currently engineered for React Native and Supabase infrastructure.',
+    technologies: ['UI/UX Prototype', 'Mobile Dev', 'Supabase'],
+  },
   {
     id: 'spotify',
     titleKey: 'projects.spotify.title',
@@ -28,6 +62,7 @@ export const projectsData: ProjectData[] = [
     titleFallback: 'Spotify clone',
     descriptionFallback:
       "Spotify clone — team project replicating Spotify's UI using HTML, CSS and JS.",
+    technologies: ['Team Project', 'UI Replica'],
   },
   {
     id: 'pixelpals',
@@ -43,6 +78,7 @@ export const projectsData: ProjectData[] = [
     titleFallback: 'PixelPals',
     descriptionFallback:
       'PixelPals — matchmaking platform for gamers built with React and WebSocket chat.',
+    technologies: ['Full-Stack Dev', 'WebSockets'],
   },
   {
     id: 'llmeteo',
@@ -58,6 +94,7 @@ export const projectsData: ProjectData[] = [
     titleFallback: 'LLMeteo',
     descriptionFallback:
       'LLMeteo — simple responsive weather app using an external weather API.',
+    technologies: ['Web App', 'Responsive UI'],
   },
   {
     id: 'llnetflix',
@@ -73,6 +110,7 @@ export const projectsData: ProjectData[] = [
     titleFallback: 'LLNetflix',
     descriptionFallback:
       'LLNetflix — Netflix mockup clone demonstrating responsive UI and API integration.',
+    technologies: ['Web App', 'API Integration'],
   },
   {
     id: 'applemusic',
@@ -88,6 +126,7 @@ export const projectsData: ProjectData[] = [
     titleFallback: 'Apple Music clone',
     descriptionFallback:
       'Apple Music clone — front-end project with React and Redux for search functionality.',
+    technologies: ['Frontend Eng', 'Redux Logic'],
   },
   {
     id: 'prompt-ai',
@@ -103,5 +142,6 @@ export const projectsData: ProjectData[] = [
     titleFallback: 'Prompt-AI',
     descriptionFallback:
       'Prompt-AI — prompt manager web app, responsive and built with Redux and Framer Motion.',
+    technologies: ['Frontend Eng', 'State Management'],
   },
 ];

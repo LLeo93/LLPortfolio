@@ -13,11 +13,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <BackgroundLayer />
       <div
         className="
-          relative z-10
-          p-4 md:p-8
-          flex flex-col items-center justify-center
-          lg:flex-row lg:items-start lg:justify-center
-        "
+    relative z-10
+    p-4 md:p-8 max-w-none mx-auto
+    flex flex-col items-center justify-center gap-6
+    lg:flex-row lg:items-start lg:justify-start lg:px-6
+  "
       >
         <Sidebar />
         <MainContent>{children}</MainContent>

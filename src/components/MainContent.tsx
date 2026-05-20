@@ -38,14 +38,14 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
     <main
       className="
         bg-black bg-opacity-40 backdrop-blur-md text-gray-200 shadow-lg z-50 p-6
-        flex flex-col gap-4 rounded-3xl w-full max-w-sm sm:max-w-md my-6
+        flex flex-col rounded-3xl w-full max-w-sm sm:max-w-md my-6
         md:max-w-xl md:w-3/4
-        lg:fixed lg:top-16 lg:right-16 lg:h-[calc(100vh-8rem)] lg:w-[calc(100vw-450px)] lg:max-w-none lg:items-center lg:mx-0 lg:my-0
-        overflow-y-auto
+        lg:fixed lg:top-8 lg:right-6 lg:bottom-6 lg:w-[calc(100vw-450px)] lg:max-w-none lg:items-center lg:mx-0 lg:my-0
+        overflow-hidden
       "
     >
       <nav
-        className="flex justify-around items-center w-full mb-4 md:mb-8"
+        className="flex justify-around items-center w-full mb-4 md:mb-8 flex-shrink-0"
         aria-label={t('navigation.main_content_tabs')}
       >
         <Link
@@ -92,11 +92,11 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
         </Link>
       </nav>
 
-      <h1 className="text-3xl font-bold mb-4 text-center">
+      <h1 className="text-3xl font-bold lg:mb-0.5 mb-4 text-center flex-shrink-0">
         {getTitle(location.pathname)}
       </h1>
 
-      <div className="w-full h-full flex flex-col overflow-y-auto">
+      <div className="w-full h-full flex flex-col overflow-y-auto min-h-0 flex-grow">
         {children}
       </div>
     </main>

@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({
         flex flex-col
         ${
           hoverScale
-            ? 'transform transition-transform duration-300 hover:scale-105'
+            ? 'transform transition-all duration-300 ease-out hover:-translate-y-1'
             : ''
         }
         ${className}
