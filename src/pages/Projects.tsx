@@ -86,6 +86,8 @@ const Projects: React.FC = () => {
                       autoPlay
                       loop
                       playsInline
+                      disablePictureInPicture
+                      webkit-playsinline="true"
                       poster={project.imageFallbackUrl || ''}
                       className="w-full h-32 md:h-48 rounded-lg object-cover bg-neutral-800"
                     />
