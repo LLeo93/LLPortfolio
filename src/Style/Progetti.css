@@ -129,7 +129,6 @@
 
   overflow: hidden;
   cursor: pointer;
-  transform: translateZ(0);
 }
 .project-card-media::before {
   content: '';
