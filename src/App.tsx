@@ -38,7 +38,7 @@ function AnimatedRoutes() {
           y: -8,
         }}
         transition={{
-          duration: 0.32,
+          duration: 0.45,
           ease: [0.22, 1, 0.36, 1],
         }}
         className="h-full"

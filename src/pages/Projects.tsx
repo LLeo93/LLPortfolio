@@ -82,7 +82,6 @@ const Projects: React.FC = () => {
                   return (
                     <video
                       src={project.videoSrc}
-                      preload="auto"
                       muted
                       autoPlay
                       loop
