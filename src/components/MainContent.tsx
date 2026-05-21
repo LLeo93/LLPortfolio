@@ -51,7 +51,9 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
         <Link
           to="/"
           className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 ${
-            location.pathname === '/' ? 'text-cyan-400' : ''
+            location.pathname === '/'
+              ? 'text-cyan-300 drop-shadow-[0_0_12px_rgba(34,211,238,0.45)]'
+              : ''
           }`}
         >
           <HomeIcon

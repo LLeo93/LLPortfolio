@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div
         className="
     relative z-10
-    bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.04),transparent_40%)]
+    bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.08),transparent_45%)]
     p-4 md:p-8 max-w-none mx-auto
     flex flex-col items-center justify-center gap-6
     lg:flex-row lg:items-start lg:justify-start lg:px-6

@@ -5,6 +5,7 @@ import React from 'react';
 import Seo from '../components/Seo';
 import Arrow from '../components/Arrow';
 import TechBadge from '../components/TechBadge';
+import '../Style/Progetti.css';
 
 const ProjectsDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -110,6 +111,7 @@ const ProjectsDetails: React.FC = () => {
               <div className="w-full flex justify-center items-start">
                 <video
                   src={project.videoSrc}
+                  preload="metadata"
                   autoPlay
                   loop
                   muted

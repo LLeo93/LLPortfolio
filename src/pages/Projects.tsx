@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
       >
         <section className="mb-12 w-full max-w-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project) => {
+            {projects.map((project, index) => {
               const actions: ActionItem[] = [];
 
               if (project.internalLink) {
@@ -75,6 +75,7 @@ const Projects: React.FC = () => {
                   return (
                     <video
                       src={project.videoSrc}
+                      preload="metadata"
                       muted
                       autoPlay
                       loop
@@ -109,9 +110,12 @@ const Projects: React.FC = () => {
               return (
                 <Card
                   key={project.id}
+                  style={{
+                    animationDelay: `${index * 120}ms`,
+                  }}
                   image={imageNode}
                   header={
-                    <h4 className="text-xl font-bold mb-2 text-white transition-all duration-500 group-hover:text-cyan-100">
+                    <h4 className="text-xl font-bold mb-2 text-white transition-all duration-500 group-hover:text-cyan-100 animate-stagger ">
                       {t(project.titleKey)}
                     </h4>
                   }

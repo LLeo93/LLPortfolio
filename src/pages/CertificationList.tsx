@@ -7,6 +7,7 @@ import Seo from '../components/Seo';
 import Card from '../components/Card';
 import CardActions from '../components/CardActions';
 import { createViewCertificateDetailsAction } from '../utils/certificationActions';
+import '../Style/Progetti.css';
 
 const CertificationList: React.FC = () => {
   const { t } = useTranslation();
@@ -28,12 +29,16 @@ const CertificationList: React.FC = () => {
         aria-labelledby="certifications-title"
       >
         <div className="flex flex-col gap-6">
-          {certificationsData.map((cert) => {
+          {certificationsData.map((cert, index) => {
             const title = t(cert.titleKey);
 
             return (
               <Card
                 key={cert.id}
+                style={{
+                  animationDelay: `${index * 120}ms`,
+                }}
+                className="animate-stagger"
                 layout="horizontal"
                 hoverScale={true}
                 imagePosition="end"
