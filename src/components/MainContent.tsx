@@ -130,7 +130,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
         {getTitle(location.pathname)}
       </h1>
 
-      <div className="w-full h-full flex flex-col overflow-y-auto min-h-0 flex-grow">
+      <div className="w-full h-full flex flex-col  overflow-y-scroll min-h-0 flex-grow">
         {children}
       </div>
     </main>
