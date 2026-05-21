@@ -37,7 +37,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
   return (
     <main
       className="
-        bg-black bg-opacity-40 backdrop-blur-sm text-gray-200 shadow-lg z-50 p-6
+        bg-black bg-opacity-40 text-gray-200 shadow-lg z-50 p-6
         flex flex-col rounded-3xl w-full max-w-sm sm:max-w-md my-6
         md:max-w-xl md:w-3/4
         lg:fixed lg:top-8 lg:right-6 lg:bottom-6 lg:w-[calc(100vw-450px)] lg:max-w-none lg:items-center lg:mx-0 lg:my-0
