@@ -113,7 +113,7 @@ const Projects: React.FC = () => {
                   to={project.internalLink}
                   className="inline-block w-full overflow-hidden rounded-lg group"
                 >
-                  <div className="transform transition-transform duration-500 group-hover:scale-[1.025] rounded-lg overflow-hidden">
+                  <div className="transform transition-transform duration-500  rounded-lg overflow-hidden">
                     {renderMediaContent()}
                   </div>
                 </Link>
