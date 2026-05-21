@@ -22,7 +22,7 @@ function AnimatedRoutes() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="sync">
+    <AnimatePresence mode="sync" initial={false}>
       <motion.div
         key={location.pathname}
         initial={{
