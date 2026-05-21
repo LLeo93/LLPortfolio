@@ -115,6 +115,7 @@ const ProjectsDetails: React.FC = () => {
                   loop
                   muted
                   playsInline
+                  preload="metadata"
                   className="w-auto max-w-full h-auto max-h-[55vh] rounded-2xl shadow-2xl border border-neutral-800 object-contain bg-neutral-950"
                   aria-label={ariaLabelText}
                 />
