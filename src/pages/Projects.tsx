@@ -79,8 +79,8 @@ const Projects: React.FC = () => {
                       autoPlay
                       loop
                       playsInline
-                      poster={project.imageFallbackUrl || ''}
-                      className="w-full h-32 md:h-48 rounded-lg object-cover bg-neutral-800"
+                      controls
+                      className="w-full h-32 md:h-48 rounded-lg object-cover bg-red-500"
                     />
                   );
                 }
