@@ -88,9 +88,6 @@ const Projects: React.FC = () => {
                       loop
                       playsInline
                       poster={project.imageFallbackUrl || ''}
-                      onLoadedData={(e) => {
-                        e.currentTarget.play().catch(() => {});
-                      }}
                       className="w-full h-32 md:h-48 rounded-lg object-cover bg-neutral-800"
                     />
                   );

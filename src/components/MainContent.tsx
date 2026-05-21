@@ -41,7 +41,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
         flex flex-col rounded-3xl w-full max-w-sm sm:max-w-md my-6
         md:max-w-xl md:w-3/4
         lg:fixed lg:top-8 lg:right-6 lg:bottom-6 lg:w-[calc(100vw-450px)] lg:max-w-none lg:items-center lg:mx-0 lg:my-0
-        overflow-hidden
+       overflow-visible lg:overflow-hidden
       "
     >
       <nav
@@ -130,7 +130,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
         {getTitle(location.pathname)}
       </h1>
 
-      <div className="w-full h-full flex flex-col  overflow-y-scroll min-h-0 flex-grow">
+      <div className="w-full h-full flex flex-col  overflow-y-auto min-h-0 flex-grow">
         {children}
       </div>
     </main>

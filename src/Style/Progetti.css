@@ -114,16 +114,7 @@
   );
 }
 /* CSS PER LE CLASSI CARD MEDIA*/
-.project-card-media,
-article,
-video,
-img {
-  transform: translateZ(0);
 
-  backface-visibility: hidden;
-
-  -webkit-backface-visibility: hidden;
-}
 .project-card-media {
   box-shadow: var(--box-shadow);
   will-change: transform;
@@ -138,13 +129,7 @@ img {
 
   overflow: hidden;
   cursor: pointer;
-}
-.group:hover article {
-  transform: translateY(-10px);
-
-  box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.45),
-    0 0 40px rgba(34, 211, 238, 0.08);
+  transform: translateZ(0);
 }
 .project-card-media::before {
   content: '';
@@ -212,23 +197,6 @@ img {
 .group:hover .project-card-media::after {
   opacity: 1;
   transform: scale(1);
-}
-.animate-stagger {
-  opacity: 0;
-
-  animation: staggerFade 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes staggerFade {
-  from {
-    opacity: 0;
-    transform: translateY(18px) scale(0.985);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }
 
 /*immagini icone dei progetti*/
