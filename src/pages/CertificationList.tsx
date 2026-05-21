@@ -8,6 +8,8 @@ import Card from '../components/Card';
 import CardActions from '../components/CardActions';
 import { createViewCertificateDetailsAction } from '../utils/certificationActions';
 import '../Style/Progetti.css';
+import { itemVariants, containerVariants } from '../animations/motion';
+import { motion } from 'framer-motion';
 
 const CertificationList: React.FC = () => {
   const { t } = useTranslation();
@@ -28,62 +30,75 @@ const CertificationList: React.FC = () => {
         className="flex-1 flex flex-col items-center justify-start p-8 text-gray-200 overflow-y-auto"
         aria-labelledby="certifications-title"
       >
-        <div className="flex flex-col gap-6">
-          {certificationsData.map((cert, index) => {
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col gap-6"
+        >
+          {certificationsData.map((cert) => {
             const title = t(cert.titleKey);
 
             return (
-              <Card
-                key={cert.id}
-                style={{
-                  animationDelay: `${index * 120}ms`,
-                }}
-                className="animate-stagger"
-                layout="horizontal"
-                hoverScale={true}
-                imagePosition="end"
-                header={
-                  <div>
-                    <h4 className="text-xl font-bold mb-1">{title}</h4>
-                    <p className="text-gray-300 text-sm">{cert.provider}</p>
-                  </div>
-                }
-                body={null}
-                actions={
-                  <CardActions
-                    actions={[
-                      {
-                        ...createViewCertificateDetailsAction(t),
-                        url: `/certifications/${cert.id}`,
-                        iconPosition: 'end',
-                      },
-                    ]}
-                  />
-                }
-                image={
-                  <Link
-                    to={`/certifications/${cert.id}`}
-                    className="w-35 h-25 md:w-40 md:h-28 lg:w-48 flex flex-col items-center justify-center"
-                    aria-hidden="true"
-                    tabIndex={-1}
-                  >
-                    {!cert.imageClass && (
-                      <ImageIcon
-                        size={24}
-                        className="text-gray-600 opacity-50"
-                      />
-                    )}
-                    <div
-                      className={`${cert.imageClass} w-full h-full rounded-lg bg-cover bg-center border border-gray-800 flex items-center justify-center text-xs text-gray-500 italic`}
-                      role="img"
-                      aria-label={t(cert.imageAltKey)}
-                    ></div>
-                  </Link>
-                }
-              />
+              <motion.div variants={itemVariants} key={cert.id}>
+                <Card
+                  layout="horizontal"
+                  hoverScale={true}
+                  imagePosition="end"
+                  header={
+                    <div>
+                      <h4 className="text-xl font-bold mb-1">{title}</h4>
+                      <p className="text-gray-300 text-sm">{cert.provider}</p>
+                    </div>
+                  }
+                  body={null}
+                  actions={
+                    <CardActions
+                      actions={[
+                        {
+                          ...createViewCertificateDetailsAction(t),
+                          url: `/certifications/${cert.id}`,
+                          iconPosition: 'end',
+                        },
+                      ]}
+                    />
+                  }
+                  image={
+                    <Link
+                      to={`/certifications/${cert.id}`}
+                      className="w-35 h-25 md:w-40 md:h-28 lg:w-48 flex flex-col items-center justify-center"
+                      aria-hidden="true"
+                      tabIndex={-1}
+                    >
+                      {!cert.imageClass && (
+                        <ImageIcon
+                          size={24}
+                          className="text-gray-600 opacity-50"
+                        />
+                      )}
+                      <div
+                        onMouseMove={(e) => {
+                          const rect = e.currentTarget.getBoundingClientRect();
+
+                          const x =
+                            ((e.clientX - rect.left) / rect.width) * 100;
+                          const y =
+                            ((e.clientY - rect.top) / rect.height) * 100;
+
+                          e.currentTarget.style.setProperty('--x', `${x}%`);
+                          e.currentTarget.style.setProperty('--y', `${y}%`);
+                        }}
+                        className={`${cert.imageClass} w-full h-full rounded-lg bg-cover bg-center border border-gray-800 flex items-center justify-center text-xs text-gray-500 italic`}
+                        role="img"
+                        aria-label={t(cert.imageAltKey)}
+                      ></div>
+                    </Link>
+                  }
+                />
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </section>
     </>
   );

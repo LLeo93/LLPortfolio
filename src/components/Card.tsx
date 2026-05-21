@@ -36,7 +36,7 @@ const Card: React.FC<CardProps> = ({
         flex flex-col
         ${
           hoverScale
-            ? 'group transform-gpu transition-all will-change-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2'
+            ? 'group transform-gpu transition-all will-change-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:scale-[1.015] hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)]'
             : ''
         }
         ${className}

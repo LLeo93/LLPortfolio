@@ -166,8 +166,6 @@ img {
     opacity 0.5s ease,
     transform 0.7s ease,
     background-position 1s ease;
-
-  pointer-events: none;
 }
 .project-card-media::after {
   content: '';
@@ -176,9 +174,9 @@ img {
   inset: -20%;
 
   background: radial-gradient(
-    circle,
-    rgba(34, 211, 238, 0.08),
-    transparent 70%
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.14),
+    transparent 40%
   );
 
   opacity: 0;
