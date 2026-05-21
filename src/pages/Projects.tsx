@@ -9,8 +9,6 @@ import { projects } from '../data/projects';
 import '../Style/Progetti.css';
 import TechBadge from '../components/TechBadge';
 import Gradients from '../data/Gradients';
-import { containerVariants } from '../animations/motion';
-import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
@@ -39,12 +37,7 @@ const Projects: React.FC = () => {
         }
       >
         <section className="mb-12 w-full max-w-2xl">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => {
               const actions: ActionItem[] = [];
 
@@ -144,7 +137,7 @@ const Projects: React.FC = () => {
                 </div>
               );
             })}
-          </motion.div>
+          </div>
         </section>
       </div>
     </>
