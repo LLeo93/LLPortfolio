@@ -6,7 +6,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 
-import { AnimatePresence, motion } from 'framer-motion';
+// import { AnimatePresence, motion } from 'framer-motion';
 
 import Layout from './components/Layout.tsx';
 import ErrorBoundary from './components/ErrorBoundary.tsx';
@@ -22,36 +22,36 @@ function AnimatedRoutes() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="sync" initial={false}>
-      <motion.div
-        key={location.pathname}
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        exit={{
-          opacity: 0,
-        }}
-        transition={{
-          duration: 0.45,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className="h-full"
-      >
-        <Suspense fallback={null}>
-          <Routes location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/certificationsList" element={<CertificationList />} />
-            <Route path="/certifications/:id" element={<Certifications />} />
-            <Route path="/projects/:id" element={<ProjectsDetails />} />
-          </Routes>
-        </Suspense>
-      </motion.div>
-    </AnimatePresence>
+    // <AnimatePresence mode="sync" initial={false}>
+    //   <motion.div
+    //     key={location.pathname}
+    //     initial={{
+    //       opacity: 0,
+    //     }}
+    //     animate={{
+    //       opacity: 1,
+    //     }}
+    //     exit={{
+    //       opacity: 0,
+    //     }}
+    //     transition={{
+    //       duration: 0.45,
+    //       ease: [0.22, 1, 0.36, 1],
+    //     }}
+    //     className="h-full"
+    //   >
+    <Suspense fallback={null}>
+      <Routes location={location}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/certificationsList" element={<CertificationList />} />
+        <Route path="/certifications/:id" element={<Certifications />} />
+        <Route path="/projects/:id" element={<ProjectsDetails />} />
+      </Routes>
+    </Suspense>
+    //   </motion.div>
+    // </AnimatePresence>
   );
 }
 
