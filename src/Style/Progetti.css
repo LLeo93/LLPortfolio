@@ -129,6 +129,8 @@
 }
 .project-card-media::before {
   content: '';
+  background-size: 200% 200%;
+  background-position: 100% 0%;
 
   position: absolute;
   inset: 0;
@@ -143,10 +145,34 @@
 
   transition:
     opacity 0.5s ease,
-    transform 0.7s ease;
+    transform 0.7s ease,
+    background-position 1s ease;
 
   pointer-events: none;
 }
+.project-card-media::after {
+  content: '';
+
+  position: absolute;
+  inset: -20%;
+
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.08),
+    transparent 70%
+  );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.8s ease;
+
+  transform: scale(0.8);
+
+  z-index: -1;
+}
+
 .group:hover .project-card-media {
   box-shadow:
     0 18px 50px rgba(0, 0, 0, 0.45),
@@ -157,8 +183,13 @@
 .group:hover .project-card-media::before {
   opacity: 1;
 
-  transform: scale(1.08);
+  transform: scale(1.08) translateY(-2px);
 }
+.group:hover .project-card-media::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /*immagini icone dei progetti*/
 .bg-projects-autocare {
   background-image:
@@ -296,5 +327,6 @@
 }
 
 .animate-fade-in-up {
+  opacity: 0;
   animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }

@@ -37,7 +37,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
   return (
     <main
       className="
-        bg-black bg-opacity-40 backdrop-blur-md text-gray-200 shadow-lg z-50 p-6
+        bg-black bg-opacity-40 backdrop-blur-sm text-gray-200 shadow-lg z-50 p-6
         flex flex-col rounded-3xl w-full max-w-sm sm:max-w-md my-6
         md:max-w-xl md:w-3/4
         lg:fixed lg:top-8 lg:right-6 lg:bottom-6 lg:w-[calc(100vw-450px)] lg:max-w-none lg:items-center lg:mx-0 lg:my-0
@@ -50,49 +50,81 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
       >
         <Link
           to="/"
-          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
+          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 ${
             location.pathname === '/' ? 'text-cyan-400' : ''
           }`}
         >
-          <HomeIcon size={24} />
+          <HomeIcon
+            size={24}
+            className="
+    transition-all
+    duration-300
+    group-hover:scale-110
+    group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+  "
+          />
           <span className="text-xs sm:text-sm">{t('navigation.home')}</span>
         </Link>
 
         <Link
           to="/about"
-          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
+          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 ${
             location.pathname === '/about' ? 'text-cyan-400' : ''
           }`}
         >
-          <UserIcon size={24} />
+          <UserIcon
+            size={24}
+            className="
+    transition-all
+    duration-300
+    group-hover:scale-110
+    group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+  "
+          />
           <span className="text-xs sm:text-sm">{t('navigation.about_me')}</span>
         </Link>
 
         <Link
           to="/projects"
-          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
+          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 ${
             location.pathname === '/projects' ? 'text-cyan-400' : ''
           }`}
         >
-          <BriefcaseIcon size={24} />
+          <BriefcaseIcon
+            size={24}
+            className="
+    transition-all
+    duration-300
+    group-hover:scale-110
+    group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+  "
+          />
           <span className="text-xs sm:text-sm">
             {t('projects_list.projects')}
           </span>
         </Link>
         <Link
           to="/certificationsList"
-          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-colors duration-300 ${
+          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 ${
             location.pathname === '/certificationsList' ? 'text-cyan-400' : ''
           }`}
         >
-          <AwardIcon size={24} />
+          <AwardIcon
+            size={24}
+            className="
+    transition-all
+    duration-300
+    group-hover:scale-110
+    group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+  "
+          />
           <span className="text-xs sm:text-sm">
             {t('projects_list.certifications')}
           </span>
         </Link>
       </nav>
 
-      <h1 className="text-3xl font-bold lg:mb-0.5 mb-4 text-center flex-shrink-0">
+      <h1 className="text-3xl font-bold lg:mb-0.5 mb-4 text-center flex-shrink-0 animate-fade-in-up">
         {getTitle(location.pathname)}
       </h1>
 

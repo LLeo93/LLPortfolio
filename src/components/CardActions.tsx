@@ -106,7 +106,7 @@ const CardActions: React.FC<CardActionsProps> = ({
           <Link
             key={i}
             to={a.url}
-            className="text-cyan-400 hover:text-cyan-200 transition-all duration-300 hover:translate-x-1 flex items-center gap-1"
+            className="text-cyan-400 hover:text-cyan-200 transition-all duration-300 hover:translate-x-1 hover:gap-2 flex items-center gap-1"
             aria-label={a.label}
           >
             {a.iconPosition === 'start' && a.icon}
@@ -119,7 +119,7 @@ const CardActions: React.FC<CardActionsProps> = ({
             href={a.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cyan-400 hover:text-cyan-200 transition-all duration-300 hover:translate-x-1 flex items-center gap-1"
+            className="text-cyan-400 hover:text-cyan-200 transition-all duration-300 hover:translate-x-1 hover:gap-2 flex items-center gap-1"
             aria-label={a.label}
           >
             {a.iconPosition === 'start' && a.icon}

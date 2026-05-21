@@ -10,6 +10,7 @@ interface CardProps {
   header?: React.ReactNode;
   body?: React.ReactNode;
   actions?: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -21,9 +22,11 @@ const Card: React.FC<CardProps> = ({
   header,
   body,
   actions,
+  style,
 }) => {
   return (
     <article
+      style={style}
       className={`
        bg-white/[0.03] backdrop-blur-sm animate-fade-in-up
         p-4
