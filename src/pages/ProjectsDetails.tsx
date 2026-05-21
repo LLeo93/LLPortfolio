@@ -111,16 +111,12 @@ const ProjectsDetails: React.FC = () => {
               <div className="w-full flex justify-center items-start">
                 <video
                   src={project.videoSrc}
-                  preload="metadata"
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="w-auto max-w-full h-auto max-h-[55vh] rounded-2xl shadow-2xl border border-neutral-800 object-contain bg-neutral-950"
                   aria-label={ariaLabelText}
-                  onLoadedMetadata={(e) => {
-                    e.currentTarget.muted = true;
-                  }}
                 />
               </div>
             ) : (
