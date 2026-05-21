@@ -88,6 +88,7 @@ const Projects: React.FC = () => {
                       playsInline
                       disablePictureInPicture
                       webkit-playsinline="true"
+                      controls
                       poster={project.imageFallbackUrl || ''}
                       className="w-full h-32 md:h-48 rounded-lg object-cover bg-neutral-800"
                     />
