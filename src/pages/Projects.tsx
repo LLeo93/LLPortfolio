@@ -9,7 +9,7 @@ import { projects } from '../data/projects';
 import '../Style/Progetti.css';
 import TechBadge from '../components/TechBadge';
 import Gradients from '../data/Gradients';
-import { containerVariants, itemVariants } from '../animations/motion';
+import { containerVariants } from '../animations/motion';
 import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
@@ -86,7 +86,6 @@ const Projects: React.FC = () => {
                       autoPlay
                       loop
                       playsInline
-                      disablePictureInPicture
                       poster={project.imageFallbackUrl || ''}
                       className="w-full h-32 md:h-48 rounded-lg object-cover bg-neutral-800"
                     />
@@ -124,7 +123,7 @@ const Projects: React.FC = () => {
                 </div>
               );
               return (
-                <motion.div variants={itemVariants} key={project.id}>
+                <div key={project.id}>
                   <Card
                     image={imageNode}
                     header={
@@ -142,7 +141,7 @@ const Projects: React.FC = () => {
                     }
                     actions={<CardActions actions={actions} layout="col" />}
                   />
-                </motion.div>
+                </div>
               );
             })}
           </motion.div>
