@@ -13,7 +13,7 @@
     "name": "Libanio",
     "surname":"Leoncini",
     "full_name": "Leoncini Libanio",
-    "role": "Junior Full Stack Developer",
+    "role": "Junior Full Stack Developer & UI/UX Designer",
     "phone": "+39 3806952354",
     "copyright": "© {{year}} {{name}}"
 
@@ -23,18 +23,24 @@
   },
   "error": {
     "title": "Oops! Something went wrong.",
+    "headline": "Something interrupted the system",
     "description": "We encountered an unexpected error while loading the page.",
-    "back_home": "Return to Home"
+    "back_home": "Return to Home",
+    "reload": "Reload Page",
+    "system_interruption": "System Interruption",
+    "monitoring_active": "Live interface monitoring active",
+    "degraded_state": "Degraded State",
+    "debug_log": "Debug Log"
   },
   "about": {
-    "title_1": "Build your future, one experience at a time.",
-    "text_1": "I am a Junior Full Stack Developer driven by a passion for creating and solving problems. My journey into the world of programming was not a straight line. For seven years, I worked full-time in a completely different context as a warehouse worker at Laika, where I learned the importance of precision and organization. The desire for a new challenge and dissatisfaction with my job pushed me to make a courageous decision: to change my life. Inspired by my uncle, a developer with years of experience, and driven by my childhood passion for modifying video games, I embarked on a Full Stack Developer Master's program.",
-    "text_2": "This Master's degree gave me the tools to transform my creativity into code and my determination into solutions. I realized that programming is not just a job, but a way to build something tangible, just as I used to, but in a completely new world. Today, I am ready to put my skills and insatiable desire to learn to work for a dynamic team and innovative projects. I believe my unique background makes me a versatile professional, capable of facing any challenge with a different perspective and a strong work ethic.",
-    "title_2": "My vision.",
+    "title_1": "Building modern, intuitive and accessible digital experiences.",
+    "text_1": "I’m a Junior Full Stack Developer passionate about building modern interfaces, intuitive user experiences and responsive web applications. After several years working in a completely different field, I decided to transition into software development and turn a long-standing personal passion into a professional career.",
+    "text_2": "Over the last few years I’ve been developing projects using React, TypeScript, Java and Spring Boot, while also exploring UI/UX Design, modern animations and accessibility best practices. I enjoy combining logic, design and attention to detail to create digital experiences that are both functional and engaging. I’m curious, determined and always eager to improve my skills.",
+    "title_2": "My approach.",
     "heading": "About me",
-    "image_alt": "Ritratto di Leoncini Libanio",
-    "image_caption": "Leoncini Libanio - Junior Full Stack Developer",
-    "short_description": "Junior Full Stack Developer appassionato nella creazione di esperienze web accessibili e performanti."
+    "image_alt": "Portrait of Libanio Leoncini, Full Stack Developer and UI/UX Designer",
+    "image_caption": "Libanio Leoncini - Full Stack Developer • UI/UX Designer",
+    "short_description": "Full Stack Developer focused on React, TypeScript, UI/UX Design and modern web experiences."
   },
   "certifications": {
     "back": "Back",
@@ -102,21 +108,38 @@
     "live_activity": "Live GitHub Activity",
     "home": "Home",
     "welcome": "Welcome!",
-    "title": "I'm Leoncini Libanio, Junior Full Stack Developer.",
-    "subtitle": "Explore my portfolio to discover my projects and skills.",
-    "github_status": {
-    "sys_status": "System Status",
-    "feed_stable": "FEED_STABLE",
-    "repository": "repository",
-    "latest_log": "latest_log",
-    "last_sync": "LAST_SYNC",
-    "connecting": "INIT_SESSION...",
-    "quota": "API_QUOTA",
-    "auth_type": "AUTH_TYPE: NULL_UNAUTHENTICATED",
-    "skills_title": "Language Distribution",
-    "skills_subtitle": "SYSTEM_ANALYSIS // SOURCE_CODE"
+    "title": "Designing and developing modern, responsive digital experiences.",
+    "subtitle": "A curated selection of frontend, full stack and UI/UX projects focused on performance, usability and modern design.",
+  "github_status": {
+  "sys_status": "System Status",
+  "feed_stable": "LIVE_ACTIVITY",
+  "repository": "Latest Repository",
+  "latest_log": "Latest Commit",
+  "last_sync": "Last Sync",
+  "connecting": "Connecting to GitHub API...",
+  "quota": "API Requests",
+  "auth_type": "Public GitHub Data",
+  "skills_title": "Tech Stack Distribution",
+  "skills_subtitle": "Languages & Technologies Overview",
+     "repository_label": "GitHub Repository",
+      "stacks": "STACKS",
+      "fetch_error": "ERROR: FAILED_TO_FETCH_GITHUB_DATA"
+},
+"tech_ecosystem":
+ {
+      "eyebrow": "Tech Ecosystem",
+      "title": "Engineering Stack",
+      "description": "Modern frontend engineering, scalable architectures and UI-focused development workflows.",
+
+      "categories": {
+        "frontend": "Frontend",
+        "ui_styling": "UI & Styling",
+        "backend_data": "Backend & Data",
+        "workflow": "Workflow & Collaboration"
+      }
+
   }
-  },
+},
   "project_details": {
     "not_found": "Project not found",
     "back_to_projects": "Back to projects",
@@ -204,12 +227,12 @@
   },
   "seo": {
   "default": {
-    "title": "Junior Full Stack Developer | Portfolio",
+    "title": "Libanio Leoncini — Junior Full Stack Developer & UI/UX Designer | Portfolio",
     "description": "Personal portfolio of Leoncini Libanio, Junior Full Stack Developer focused on React, TypeScript, and modern web development."
   },
 
   "home": {
-    "title": "Leoncini Libanio – Junior Full Stack Developer",
+    "title": "Libanio Leoncini — Junior Full Stack Developer & UI/UX Designer",
     "description": "Portfolio of Leoncini Libanio featuring projects, certifications, and skills in frontend and full stack development."
   },
 

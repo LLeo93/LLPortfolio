@@ -9,14 +9,12 @@ import { projects } from '../data/projects';
 import '../Style/Progetti.css';
 import TechBadge from '../components/TechBadge';
 import Gradients from '../data/Gradients';
+import type { Project } from '../data/projects';
 import { containerVariants, itemVariants } from '../animations/motion';
 import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
-  const randomGradient = React.useMemo(() => {
-    return Gradients[Math.floor(Math.random() * Gradients.length)];
-  }, []);
 
   return (
     <>
@@ -30,14 +28,7 @@ const Projects: React.FC = () => {
         url="/projects"
       />
 
-      <div
-        className="flex-1 flex flex-col items-center justify-start p-8 text-gray-200 overflow-y-auto"
-        style={
-          {
-            '--project-gradient': randomGradient,
-          } as React.CSSProperties
-        }
-      >
+      <div className="flex-1 flex flex-col items-center justify-start p-8 text-gray-200 overflow-y-auto">
         <section className="mb-12 w-full max-w-2xl">
           <motion.div
             variants={containerVariants}
@@ -45,7 +36,7 @@ const Projects: React.FC = () => {
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            {projects.map((project) => {
+            {projects.map((project: Project) => {
               const actions: ActionItem[] = [];
 
               if (project.internalLink) {
@@ -102,6 +93,11 @@ const Projects: React.FC = () => {
                       e.currentTarget.style.setProperty('--x', `${x}%`);
                       e.currentTarget.style.setProperty('--y', `${y}%`);
                     }}
+                    style={
+                      {
+                        '--project-gradient': Gradients[project.gradient],
+                      } as React.CSSProperties
+                    }
                     className={`${project.bgClass}  project-card-media h-32 md:h-48 w-full rounded-lg bg-center bg-contain bg-no-repeat`}
                     role="img"
                     aria-label={t(project.titleKey)}

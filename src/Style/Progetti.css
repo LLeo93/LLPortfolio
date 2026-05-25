@@ -7,13 +7,6 @@
     #1e3a5f 55%,
     #0b1120 100%
   );
-  --gradient-glass-cyan: linear-gradient(
-    160deg,
-    rgba(15, 23, 42, 0.92) 0%,
-    rgba(17, 34, 64, 0.88) 35%,
-    rgba(14, 116, 144, 0.2) 70%,
-    rgba(2, 6, 23, 0.96) 100%
-  );
   --gradient-cyber-blue: linear-gradient(
     135deg,
     #020617 0%,
@@ -30,27 +23,14 @@
     #0f172a 75%,
     #020617 100%
   );
-  --gradient-space-storm: linear-gradient(
-    140deg,
-    #030712 0%,
-    #111827 30%,
-    #1e40af 60%,
-    #0f172a 100%
-  );
   --gradient-electric-night: linear-gradient(
-    160deg,
+    145deg,
     #020617 0%,
-    #0f172a 35%,
-    #0891b2 65%,
-    #111827 100%
+    #111827 45%,
+    #164e63 75%,
+    #020617 100%
   );
-  --gradient-frosted-steel: linear-gradient(
-    150deg,
-    #111827 0%,
-    #1f2937 35%,
-    #334155 70%,
-    #0f172a 100%
-  );
+
   --gradient-deep-space-glass: linear-gradient(
     165deg,
     rgba(2, 6, 23, 0.96) 0%,
@@ -64,13 +44,6 @@
     #0b1120 0%,
     #172554 35%,
     #0f766e 70%,
-    #020617 100%
-  );
-  --gradient-soft-cyan-depth: linear-gradient(
-    180deg,
-    #0f172a 0%,
-    #1e293b 40%,
-    #164e63 75%,
     #020617 100%
   );
   --gradient-ultra-glass-blue: linear-gradient(
@@ -89,28 +62,13 @@
     #1e3a8a 75%,
     #020617 100%
   );
-  --gradient-dark-tech: linear-gradient(
-    145deg,
-    #111827 0%,
-    #1f2937 30%,
-    #0f172a 65%,
-    #020617 100%
-  );
 
   --gradient-holographic-blue: linear-gradient(
-    155deg,
-    #020617 0%,
-    #172554 30%,
-    #2563eb 55%,
-    #06b6d4 75%,
+    150deg,
+    #0b1120 0%,
+    #172554 40%,
+    #1e293b 75%,
     #020617 100%
-  );
-  --gradient-glass-night-cyan: linear-gradient(
-    160deg,
-    rgba(15, 23, 42, 0.94) 0%,
-    rgba(17, 34, 64, 0.9) 30%,
-    rgba(8, 145, 178, 0.18) 60%,
-    rgba(3, 7, 18, 0.98) 100%
   );
 }
 /* CSS PER LE CLASSI CARD MEDIA*/

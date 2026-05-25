@@ -1,4 +1,20 @@
-export const projects = [
+import type { GradientType } from './Gradients';
+
+export type Project = {
+  id: string;
+  bgClass: string;
+  imgClass: string;
+  titleKey: string;
+  descKey: string;
+  internalLink: string;
+  technologies: string[];
+  gradient: GradientType;
+  liveLink?: string;
+  repoLink?: string;
+  videoSrc?: string;
+  imageFallbackUrl?: string;
+};
+export const projects: Project[] = [
   {
     id: 'autocare',
     bgClass: 'bg-projects-autocare',
@@ -7,6 +23,7 @@ export const projects = [
     descKey: 'projects_list.autocare_description',
     internalLink: '/projects/autocare',
     technologies: ['UI/UX Prototype', 'Figma'],
+    gradient: 'enterprise',
   },
   {
     id: 'mooddrop',
@@ -15,9 +32,10 @@ export const projects = [
     titleKey: 'projects.mooddrop.title',
     descKey: 'projects_list.mooddrop_description',
     internalLink: '/projects/mooddrop',
-    livelink: '',
+    liveLink: '',
     repoLink: '',
     technologies: ['UI/UX Prototype', 'Mobile Dev', 'Supabase'],
+    gradient: 'creative',
   },
   {
     id: 'prompt-ai',
@@ -31,6 +49,7 @@ export const projects = [
     technologies: ['Frontend Eng', 'State Management'],
     videoSrc: '',
     imageFallbackUrl: '',
+    gradient: 'ai',
   },
 
   {
@@ -44,6 +63,7 @@ export const projects = [
     technologies: ['Full-Stack Dev', 'WebSockets'],
     videoSrc: '',
     imageFallbackUrl: '',
+    gradient: 'social',
   },
   {
     id: 'spotify',
@@ -57,6 +77,7 @@ export const projects = [
     technologies: ['Team Project', 'UI Replica'],
     videoSrc: '',
     imageFallbackUrl: '',
+    gradient: 'social',
   },
   {
     id: 'applemusic',
@@ -70,6 +91,7 @@ export const projects = [
     technologies: ['Frontend Eng', 'Redux Logic'],
     videoSrc: '',
     imageFallbackUrl: '',
+    gradient: 'creative',
   },
   {
     id: 'llmeteo',
@@ -83,6 +105,7 @@ export const projects = [
     technologies: ['Web App', 'Responsive UI'],
     videoSrc: '',
     imageFallbackUrl: '',
+    gradient: 'enterprise',
   },
   {
     id: 'llnetflix',
@@ -96,5 +119,6 @@ export const projects = [
     technologies: ['Web App', 'API Integration'],
     videoSrc: '',
     imageFallbackUrl: '',
+    gradient: 'social',
   },
 ];

@@ -5,9 +5,6 @@ import {
   Route,
   useLocation,
 } from 'react-router-dom';
-
-// import { AnimatePresence, motion } from 'framer-motion';
-
 import Layout from './components/Layout.tsx';
 import ErrorBoundary from './components/ErrorBoundary.tsx';
 
@@ -17,29 +14,12 @@ const Projects = lazy(() => import('./pages/Projects.tsx'));
 const Certifications = lazy(() => import('./pages/Certifications.tsx'));
 const ProjectsDetails = lazy(() => import('./pages/ProjectsDetails.tsx'));
 const CertificationList = lazy(() => import('./pages/CertificationList.tsx'));
+const ErrorPage = lazy(() => import('./pages/ErrorPage.tsx'));
 
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
-    // <AnimatePresence mode="sync" initial={false}>
-    //   <motion.div
-    //     key={location.pathname}
-    //     initial={{
-    //       opacity: 0,
-    //     }}
-    //     animate={{
-    //       opacity: 1,
-    //     }}
-    //     exit={{
-    //       opacity: 0,
-    //     }}
-    //     transition={{
-    //       duration: 0.45,
-    //       ease: [0.22, 1, 0.36, 1],
-    //     }}
-    //     className="h-full"
-    //   >
     <Suspense fallback={null}>
       <Routes location={location}>
         <Route path="/" element={<Home />} />
@@ -48,10 +28,9 @@ function AnimatedRoutes() {
         <Route path="/certificationsList" element={<CertificationList />} />
         <Route path="/certifications/:id" element={<Certifications />} />
         <Route path="/projects/:id" element={<ProjectsDetails />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Suspense>
-    //   </motion.div>
-    // </AnimatePresence>
   );
 }
 

@@ -13,7 +13,7 @@
     "name": "Libanio",
     "surname":"Leoncini",
     "full_name": "Leoncini Libanio",
-    "role": "Junior Full Stack Developer",
+    "role": "Junior Full Stack Developer & UI/UX Designer",
     "phone": "+39 3806952354",
     "copyright": "© {{year}} {{name}}"
 
@@ -23,19 +23,24 @@
   },
   "error": {
     "title": "Ops! Qualcosa è andato storto.",
+    "headline": "Qualcosa ha interrotto il sistema",
     "description": "Si è verificato un errore imprevisto durante il caricamento della pagina.",
-    "back_home": "Torna alla Home"
+    "back_home": "Torna alla Home",
+    "reload": "Ricarica la pagina",
+    "monitoring_active": "Monitoraggio interfaccia attivo",
+    "degraded_state": "Stato degradato",
+    "debug_log": "Log Debug"
   },
 
   "about": {
-    "title_1": "Costruisci il tuo futuro, un'esperienza alla volta.",
-    "text_1": "Sono un Junior Full Stack Developer spinto dalla passione per la creazione e la risoluzione di problemi. Il mio percorso nel mondo della programmazione non è stato lineare. Per sette anni ho lavorato a tempo pieno in un contesto completamente diverso, come magazziniere alla Laika, dove ho imparato l'importanza della precisione e dell'organizzazione. Il desiderio di una nuova sfida e l'insoddisfazione per il mio lavoro mi hanno spinto a prendere una decisione coraggiosa: cambiare vita. Ispirato da mio zio, uno sviluppatore con anni di esperienza, e spinto dalla mia passione di bambino per la modifica dei videogiochi, ho intrapreso un Master in Full Stack Developer.",
-    "text_2": " Questo Master mi ha dato gli strumenti per trasformare la mia creatività in codice e la mia determinazione in soluzioni. Ho capito che la programmazione non è solo un lavoro, ma un modo per costruire qualcosa di concreto, proprio come facevo prima, ma in un mondo completamente nuovo. Oggi, sono pronto a mettere le mie competenze e la mia inesauribile voglia di imparare al servizio di un team dinamico e di progetti innovativi. Credo che il mio background unico mi renda un professionista versatile, capace di affrontare ogni sfida con una prospettiva diversa e una forte etica del lavoro.",
-    "title_2": "La mia visione.",
+    "title_1": "Costruire esperienze digitali moderne, intuitive e accessibili.",
+    "text_1": "Sono un Junior Full Stack Developer con una forte passione per la creazione di interfacce moderne, esperienze utente intuitive e applicazioni web responsive. Dopo diversi anni di esperienza lavorativa in un settore completamente diverso, ho scelto di intraprendere un percorso nel mondo dello sviluppo software, trasformando una passione personale in una professione.",
+    "text_2": "Negli ultimi anni ho sviluppato progetti utilizzando React, TypeScript, Java e Spring Boot, approfondendo anche UI/UX Design, animazioni moderne e attenzione all’accessibilità. Mi piace combinare logica, design e cura dei dettagli per creare esperienze digitali solide, moderne e piacevoli da utilizzare. Sono una persona curiosa, determinata e sempre pronta a migliorare le proprie competenze.",
+    "title_2": "Il mio approccio.",
     "heading": "Su di me",
-    "image_alt": "Portrait of Leoncini Libanio",
-    "image_caption": "Leoncini Libanio - Junior Full Stack Developer",
-    "short_description": "Junior Full Stack Developer passionate about building reliable, accessible web experiences."
+    "image_alt": "Ritratto di Libanio Leoncini, Full Stack Developer and UI/UX Designer",
+    "image_caption": "Libanio Leoncini - Full Stack Developer • UI/UX Designer",
+    "short_description": "Full Stack Developer con focus su React, TypeScript, UI/UX Design ed esperienze web moderne."
   },
   "certifications": {
     "back": "Indietro",
@@ -104,21 +109,35 @@
     "live_activity": "Attività GitHub Live",
     "home": "Home",
     "welcome": "Benvenuto!",
-    "title": "Sono Leoncini Libanio, Junior Full Stack Developer.",
-    "subtitle": "Esplora il mio portfolio per conoscere i miei progetti e le mie competenze.",
-    "github_status": {
-    "sys_status": "Stato Sistema",
-    "feed_stable": "FEED_STABILE",
-    "repository": "repository",
-    "latest_log": "ultimo_log",
-    "last_sync": "ULTIMA_SINC",
-    "connecting": "INIZIALIZZAZIONE...",
-    "quota": "QUOTA_API",
-    "auth_type": "TIPO_AUTH: NULL_NON_AUTENTICATO",
-    "skills_title": "Distribuzione Linguaggi",
-  "skills_subtitle": "ANALISI_SISTEMA // CODICE_SORGENTE"
-  }
-  },
+    "title": "Progetto e sviluppo esperienze web moderne, intuitive e responsive.",
+    "subtitle": "Una selezione curata di progetti frontend, full stack e UI/UX orientati a performance, accessibilità e design moderno.",
+ "github_status": {
+  "sys_status": "Stato Sistema",
+  "feed_stable": "ATTIVITÀ LIVE",
+  "repository": "Repository Recenti",
+  "latest_log": "Ultimo Commit",
+  "last_sync": "Ultima Sincronizzazione",
+  "connecting": "Connessione alle API GitHub...",
+  "quota": "Richieste API",
+  "auth_type": "Dati Pubblici GitHub",
+  "skills_title": "Distribuzione Tecnologie",
+  "skills_subtitle": "Panoramica Linguaggi e Tecnologie",
+  "repository_label": "Repository GitHub",
+  "stacks": "STACK",
+   "fetch_error": "ERRORE: IMPOSSIBILE RECUPERARE I DATI GITHUB"
+},   
+"tech_ecosystem": {
+      "eyebrow": "Ecosistema Tecnologico",
+      "title": "Stack Ingegneristico",
+      "description": "Frontend moderno, architetture scalabili e workflow orientati alla qualità dell’interfaccia utente.",
+
+      "categories": {
+        "frontend": "Frontend",
+        "ui_styling": "UI & Styling",
+        "backend_data": "Backend & Dati",
+        "workflow": "Workflow & Collaborazione"
+      }
+  }},
   "project_details": {
     "not_found": "Progetto non trovato",
     "back_to_projects": "Torna ai progetti",
@@ -204,12 +223,12 @@
   },
   "seo": {
   "default": {
-    "title": "Junior Full Stack Developer | Portfolio",
+    "title": "Libanio Leoncini | Full Stack Developer & UI/UX Designer | Portfolio",
     "description": "Portfolio personale di Leoncini Libanio, Junior Full Stack Developer con focus su React, TypeScript e sviluppo web moderno."
   },
 
   "home": {
-    "title": "Leoncini Libanio – Junior Full Stack Developer",
+    "title": "Leoncini Libanio | Full Stack Developer & UI/UX Designer",
     "description": "Portfolio di Leoncini Libanio con progetti, certificazioni e competenze in sviluppo frontend e full stack."
   },
 
@@ -219,7 +238,7 @@
   },
 
   "certifications": {
-    "title": "Certificazioni | Leoncini Libanio",
+    "title": "Certificazioni | Libanio Leoncini | Full Stack Developer & UI/UX Designer",
     "description": "Certificazioni professionali e percorsi di formazione in sviluppo web e tecnologie digitali."
   },
 
