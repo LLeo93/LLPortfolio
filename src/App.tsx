@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Layout from './components/Layout.tsx';
 import ErrorBoundary from './components/ErrorBoundary.tsx';
+import ScrollManager from './components/ScrollManager.tsx';
 
 const Home = lazy(() => import('./pages/Home.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
@@ -38,6 +39,7 @@ function App() {
   return (
     <Router>
       <ErrorBoundary>
+        <ScrollManager />
         <Layout>
           <AnimatedRoutes />
         </Layout>

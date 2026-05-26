@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import MainContent from './MainContent';
 import BackgroundLayer from './BackgroundLayer';
+import ScrollTop from './ScrollTop';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -25,6 +26,7 @@ ease-out
       >
         <Sidebar />
         <MainContent>{children}</MainContent>
+        <ScrollTop />
       </div>
     </div>
   );
