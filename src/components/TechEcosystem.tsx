@@ -15,7 +15,7 @@ const TechEcosystem = () => {
           border border-white/10
           bg-black/40
 
-          backdrop-blur-2xl
+          blackdrop-blur-none md:backdrop-blur-2xl 
 
           shadow-[0_10px_60px_rgba(0,0,0,0.45)]
 
@@ -76,16 +76,16 @@ const TechEcosystem = () => {
                 <div className="flex items-center justify-between mb-5">
                   <h4
                     className="
-                      text-sm
+                      text-[11px] sm:text-xs
                       uppercase
-                      tracking-[0.22em]
+                      tracking-[0.18em]
                       text-gray-400
                     "
                   >
                     {t(group.category)}
                   </h4>
 
-                  <div className="w-2 h-2 rounded-full bg-cyan-400" />
+                  <div className="w-2 h-2 rounded-full bg-cyan-400 flex-shrink-0 mt-1" />
                 </div>
 
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
@@ -108,16 +108,11 @@ const TechEcosystem = () => {
                           flex flex-col
                           items-center
                           justify-center 
-
                           rounded-xl
-
                           border border-white/5
                           bg-black/30
-
                           p-3 sm:p-4
-
                           transition-all duration-300
-
                           hover:border-cyan-400/20
                           hover:bg-cyan-400/[0.03]
                         "

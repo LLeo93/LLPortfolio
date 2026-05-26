@@ -179,7 +179,7 @@ px-0 sm:px-4
         className="
           absolute inset-0
           bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.12),transparent_70%)]
-          blur-3xl
+          md:blur-3xl blur-none
           pointer-events-none
         "
       />
