@@ -14,7 +14,7 @@ export default function ScrollManager() {
 
       if (container) {
         container.scrollTo({
-          top: 120,
+          top: 0,
           behavior: 'smooth',
         });
       }
