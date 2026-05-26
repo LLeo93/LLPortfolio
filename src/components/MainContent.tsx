@@ -59,10 +59,10 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           <HomeIcon
             size={24}
             className="
-    transition-all
-    duration-300
-    group-hover:scale-110
-    group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+              transition-all
+              duration-300
+              group-hover:scale-110
+              group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
   "
           />
           <span className="text-xs sm:text-sm">{t('navigation.home')}</span>
@@ -77,10 +77,10 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           <UserIcon
             size={24}
             className="
-    transition-all
-    duration-300
-    group-hover:scale-110
-    group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+              transition-all
+              duration-300
+              group-hover:scale-110
+              group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
   "
           />
           <span className="text-xs sm:text-sm">{t('navigation.about_me')}</span>
@@ -95,10 +95,10 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           <BriefcaseIcon
             size={24}
             className="
-    transition-all
-    duration-300
-    group-hover:scale-110
-    group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+              transition-all
+              duration-300
+              group-hover:scale-110
+              group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
   "
           />
           <span className="text-xs sm:text-sm">
@@ -114,11 +114,11 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
           <AwardIcon
             size={24}
             className="
-    transition-all
-    duration-300
-    group-hover:scale-110
-    group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
-  "
+              transition-all
+              duration-300
+              group-hover:scale-110
+              group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+            "
           />
           <span className="text-xs sm:text-sm">
             {t('projects_list.certifications')}

@@ -14,7 +14,6 @@ const About: React.FC = () => {
         image={LLimg}
         url="/about"
       />
-
       <section
         aria-labelledby="about-heading"
         className="flex-1 flex flex-col items-center justify-center p-8 text-gray-200"

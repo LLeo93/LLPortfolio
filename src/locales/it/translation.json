@@ -47,6 +47,8 @@
     "not_found": "Certificazione non trovata",
     "aria_back": "Torna alla lista delle certificazioni",
     "view_pdf": "Visualizza PDF ",
+    "subtitle": "Credenziali Professionali",
+    "description": "Percorsi di apprendimento verificati, studi di ingegneria del software frontend, specializzazione in UI/UX e crescita professionale continua.",
     "master_title": "Master in Full Stack Developer",
     "description_1": "Certificato Master di sei mesi in Sviluppo Full Stack, dove ho acquisito competenze avanzate in un ambiente di lavoro Agile e Scrum. Ho sviluppato progetti completi sia in autonomia che in team, dimostrando padronanza di un'ampia gamma di tecnologie, tra cui HTML5, CSS3, JavaScript, TypeScript, React, Java Spring Boot e SQL.",
     "description_2": "Il mio progetto finale, 'PixelPals', è un'applicazione web completa per il matchmaking tra giocatori, che riflette la mia capacità di gestire lo sviluppo di un'applicazione dalla concezione alla realizzazione finale.",
@@ -73,7 +75,7 @@
   "image_caption": "Certificazione Competenze Digitali GOL"
 },
 "ai_chatgpt": {
-  "title": "Intelligenza Artificiale: Utilizza ChatGPT al massimo del suo potenziale",
+  "title": "Intelligenza Artificiale & ChatGPT Avanzato",
   "description": "Formazione online focalizzata sull'uso avanzato di ChatGPT, conclusa con il superamento di un test finale con valutazione di 100/100[cite: 5, 6, 7, 9]. Il corso è accreditato dal MIM (Ministero dell'Istruzione e del Merito) secondo la direttiva n. 170/2016.",
   "skills": "AI Generativa, Prompt Engineering, Automazione, ChatGPT",
   "period": "Gennaio 2026",

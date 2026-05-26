@@ -19,22 +19,22 @@ const Home: React.FC = () => {
       />
       <div
         className="
-    flex-1
-    flex
-    flex-col
-    items-center
-    px-4
-    sm:px-6
-    md:px-8
-    pt-10
-    pb-16
-    text-center
-    text-gray-200
-    overflow-x-hidden
-  "
+          flex-1
+          flex
+          flex-col
+          items-center
+          px-4
+          sm:px-6
+          md:px-8
+          pt-10
+          pb-16
+          text-center
+          text-gray-200
+          overflow-x-hidden
+        "
       >
-        <h1 className="text-4xl font-bold mb-4">{t('home.welcome')}</h1>
-        <h2 className="text-sm md:text-lg text-center">{t('home.title')}</h2>
+        <h2 className="text-4xl font-bold mb-4">{t('home.welcome')}</h2>
+        <h3 className="text-sm md:text-lg text-center">{t('home.title')}</h3>
         <p className="text-sm md:text-lg text-center">{t('home.subtitle')}</p>
         <GitHubConsole />
         <TechEcosystem />

@@ -1,3 +1,8 @@
+export type CertificationStatus =
+  | 'verified'
+  | 'completed'
+  | 'in-progress'
+  | undefined;
 export interface Certification {
   id: string;
   titleKey: string;
@@ -11,6 +16,10 @@ export interface Certification {
   imageCaptionKey: string;
   logoUrl?: string;
   pdfUrl?: string;
+  year?: string;
+  type?: string;
+  status?: CertificationStatus;
+  featured?: boolean;
 }
 
 export const certificationsData: Certification[] = [
@@ -28,6 +37,10 @@ export const certificationsData: Certification[] = [
     logoUrl:
       'https://s3-eu-west-1.amazonaws.com/tpd/logos/62a6277627ee655c1226b624/0x0.png',
     pdfUrl: '/Documents/Certificato_Libanio_Leoncini_Epicode.pdf',
+    year: '2025',
+    type: 'Full Stack',
+    status: 'verified',
+    featured: true,
   },
   {
     id: 'ui-ux-design-lowcode',
@@ -42,6 +55,10 @@ export const certificationsData: Certification[] = [
     logoUrl:
       'https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Lombardy_square.svg',
     pdfUrl: '/Documents/Certificato_GOL_UIUX_LowCode_Libanio_Leoncini.pdf',
+    year: '2026',
+    type: 'UI/UX Design',
+    status: 'verified',
+    featured: true,
   },
   {
     id: 'frontend-synergie',
@@ -56,6 +73,10 @@ export const certificationsData: Certification[] = [
     logoUrl:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0qYQZS_le9_Eve6bJxTJddS5CNoLaUjvK_g&s',
     pdfUrl: '/Documents/Certificato_Libanio_Leoncini_Formatemp.pdf',
+    year: '2025',
+    type: 'Frontend',
+    status: 'verified',
+    featured: false,
   },
   {
     id: 'digital-skills-edo',
@@ -70,6 +91,10 @@ export const certificationsData: Certification[] = [
     logoUrl:
       'https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Lombardy_square.svg',
     pdfUrl: '/Documents/Certificato_EDO_E1.2025.1316990.pdf',
+    year: '2025',
+    type: 'Digital Skills',
+    status: 'verified',
+    featured: false,
   },
   {
     id: 'ai-chatgpt-lezione-online',
@@ -84,6 +109,10 @@ export const certificationsData: Certification[] = [
     logoUrl:
       'https://media.licdn.com/dms/image/v2/C4E0BAQGHBne248-qgg/company-logo_200_200/company-logo_200_200/0/1643713851206/lezione_onlineit_logo?e=2147483647&v=beta&t=XWynh9V1CAcYmQqKyPzcmb8NDw3YpCpU_krnhGENf6k',
     pdfUrl: '/Documents/Libanio_Leoncini_Certificato_ChatGpt.pdf',
+    year: '2026',
+    type: 'Artificial Intelligence',
+    status: 'verified',
+    featured: false,
   },
   {
     id: 'freecodecamp-responsive-web-design',
@@ -98,6 +127,10 @@ export const certificationsData: Certification[] = [
     logoUrl: 'https://popsql.com/static/external-logos/freecodecamp.png',
     pdfUrl:
       '/Documents/freecodecamp.org_certification_lleo93_responsive-web-design.pdf',
+    year: '2026',
+    type: 'Web Design',
+    status: 'completed',
+    featured: false,
   },
   {
     id: 'freecodecamp-responsive-v9',
@@ -113,5 +146,9 @@ export const certificationsData: Certification[] = [
     logoUrl: 'https://popsql.com/static/external-logos/freecodecamp.png',
     pdfUrl:
       '/Documents/freecodecamp.org_certification_lleo93_responsive-web-design-v9.pdf',
+    year: '2026',
+    type: 'Web Design',
+    status: 'completed',
+    featured: false,
   },
 ];
