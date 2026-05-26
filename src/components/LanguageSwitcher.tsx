@@ -35,7 +35,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         border border-white/10
         bg-white/[0.04]
 
-        backdrop-blur-2xl
+        md:backdrop-blur-2xl backdrop-blur-none
 
         shadow-[0_8px_32px_rgba(0,0,0,0.35)]
 
