@@ -35,6 +35,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
 
   return (
     <main
+      id="app-shell"
       className="
         bg-black bg-opacity-40 text-gray-200 shadow-lg z-50 p-4 sm:p-6
         flex flex-col rounded-3xl w-full max-w-sm sm:max-w-md my-6
