@@ -33,8 +33,7 @@ const Home: React.FC = () => {
           overflow-x-hidden
         "
       >
-        <h2 className="text-4xl font-bold mb-4">{t('home.welcome')}</h2>
-        <h3 className="text-sm md:text-lg text-center">{t('home.title')}</h3>
+        <h2 className="text-sm md:text-lg text-center">{t('home.title')}</h2>
         <p className="text-sm md:text-lg text-center">{t('home.subtitle')}</p>
         <GitHubConsole />
         <TechEcosystem />

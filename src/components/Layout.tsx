@@ -15,13 +15,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div
         className="
     relative z-10
-    bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.08),transparent_45%)]
+    bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.04),transparent_45%)]
     p-4 md:p-8 max-w-none mx-auto
     flex flex-col items-center justify-center gap-6
     lg:flex-row lg:items-start lg:justify-start lg:px-6
-    min-h-[100dvh] transition-all
-duration-700
-ease-out
+    min-h-[100dvh] 
   "
       >
         <Sidebar />

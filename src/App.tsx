@@ -8,6 +8,7 @@ import {
 import Layout from './components/Layout.tsx';
 import ErrorBoundary from './components/ErrorBoundary.tsx';
 import ScrollManager from './components/ScrollManager.tsx';
+import ErrorPage from './pages/ErrorPage.tsx';
 
 const Home = lazy(() => import('./pages/Home.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
@@ -15,7 +16,6 @@ const Projects = lazy(() => import('./pages/Projects.tsx'));
 const Certifications = lazy(() => import('./pages/Certifications.tsx'));
 const ProjectsDetails = lazy(() => import('./pages/ProjectsDetails.tsx'));
 const CertificationList = lazy(() => import('./pages/CertificationList.tsx'));
-const ErrorPage = lazy(() => import('./pages/ErrorPage.tsx'));
 
 function AnimatedRoutes() {
   const location = useLocation();

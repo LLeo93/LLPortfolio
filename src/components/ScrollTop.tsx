@@ -83,37 +83,26 @@ const ScrollTop: React.FC<ScrollProgressProps> = ({
       aria-label="Back to top"
       className="
         group
-
         fixed
         bottom-5
         right-5
-
         z-[120]
-
         flex
         items-center
         justify-center
-
         w-14
         h-14
-
         rounded-2xl
-
         border
         border-cyan-400/20
-
         bg-[#07111f]/80
         backdrop-blur-xl
-
         shadow-[0_0_30px_rgba(34,211,238,0.12)]
-
         transition-all
         duration-300
-
         hover:-translate-y-1
         hover:border-cyan-400/40
         hover:shadow-[0_0_40px_rgba(34,211,238,0.24)]
-
         active:scale-95
       "
     >
@@ -147,10 +136,6 @@ const ScrollTop: React.FC<ScrollProgressProps> = ({
         size={22}
         className="
           text-cyan-300
-
-          transition-all
-          duration-300
-
           group-hover:-translate-y-0.5
           group-hover:text-cyan-100
         "

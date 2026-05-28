@@ -12,7 +12,7 @@ const Sidebar: React.FC = () => {
   return (
     <aside
       className="
-    bg-black bg-opacity-40 backdrop-blur-md text-gray-200 shadow-lg z-50 p-4 sm:p-5
+   bg-[#0B1120] bg-opacity-40 backdrop-blur-lg text-gray-200 border border-white/5 z-50 p-4 sm:p-5
     flex flex-col items-center gap-2 sm:gap-3 rounded-3xl
     my-4 sm:my-5 w-full max-w-sm sm:max-w-md h-fit
     md:flex-row md:max-w-xl md:w-3/4 md:p-5 md:gap-4 md:my-6

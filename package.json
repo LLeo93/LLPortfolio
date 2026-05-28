@@ -13,8 +13,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.9.1",
     "framer-motion": "^12.23.12",
     "i18next": "^25.5.2",
     "lucide-react": "^0.542.0",

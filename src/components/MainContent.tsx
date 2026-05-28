@@ -37,7 +37,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
     <main
       id="app-shell"
       className="
-        bg-black bg-opacity-40 text-gray-200 shadow-lg z-50 p-4 sm:p-6
+       bg-[#0B1120] bg-opacity-40 text-gray-200 border  border-white/5 z-50 p-4 sm:p-6
         flex flex-col rounded-3xl w-full max-w-sm sm:max-w-md my-6
         md:max-w-xl md:w-3/4
         lg:fixed lg:top-8 lg:right-6 lg:bottom-6 lg:w-[calc(100vw-450px)] lg:max-w-none lg:items-center lg:mx-0 lg:my-0
@@ -45,14 +45,14 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
       "
     >
       <nav
-        className="flex justify-around items-center w-full mb-4 md:mb-8 flex-shrink-0"
+        className="flex justify-around items-center w-full mb-6 md:mb-8 flex-shrink-0  pb-6 border-b border-cyan-500/10"
         aria-label={t('navigation.main_content_tabs')}
       >
         <Link
           to="/"
-          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 ${
+          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-0.5 group ${
             location.pathname === '/'
-              ? 'text-cyan-300 drop-shadow-[0_0_12px_rgba(34,211,238,0.45)]'
+              ? 'text-cyan-300 drop-shadow-[0_0_6px_rgba(34,211,238,0.18)]'
               : ''
           }`}
         >
@@ -62,7 +62,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
               transition-all
               duration-300
               group-hover:scale-110
-              group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+              group-hover:text-cyan-300
   "
           />
           <span className="text-xs sm:text-sm">{t('navigation.home')}</span>
@@ -70,7 +70,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
 
         <Link
           to="/about"
-          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 ${
+          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-0.5 group ${
             location.pathname === '/about' ? 'text-cyan-400' : ''
           }`}
         >
@@ -80,7 +80,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
               transition-all
               duration-300
               group-hover:scale-110
-              group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+              group-hover:text-cyan-300
   "
           />
           <span className="text-xs sm:text-sm">{t('navigation.about_me')}</span>
@@ -88,7 +88,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
 
         <Link
           to="/projects"
-          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 ${
+          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-0.5 group ${
             location.pathname === '/projects' ? 'text-cyan-400' : ''
           }`}
         >
@@ -98,7 +98,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
               transition-all
               duration-300
               group-hover:scale-110
-              group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+              group-hover:text-cyan-300
   "
           />
           <span className="text-xs sm:text-sm">
@@ -107,7 +107,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
         </Link>
         <Link
           to="/certificationsList"
-          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-1 ${
+          className={`flex flex-col items-center gap-1 hover:text-cyan-400 transition-all duration-300 hover:-translate-y-0.5 group ${
             location.pathname === '/certificationsList' ? 'text-cyan-400' : ''
           }`}
         >
@@ -117,7 +117,7 @@ const MainContent: React.FC<MainContentProps> = ({ children }) => {
               transition-all
               duration-300
               group-hover:scale-110
-              group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.45)]
+              group-hover:text-cyan-300
             "
           />
           <span className="text-xs sm:text-sm">
