@@ -12,6 +12,7 @@ import Gradients from '../data/Gradients';
 import type { Project } from '../data/projects';
 import { containerVariants, itemVariants } from '../animations/motion';
 import { motion } from 'framer-motion';
+import Arrow from '../components/Arrow';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
@@ -44,7 +45,7 @@ const Projects: React.FC = () => {
                   type: 'link',
                   url: project.internalLink,
                   label: t('projects_list.details') || 'Dettagli',
-                  icon: <span>&rarr;</span>,
+                  icon: <Arrow direction="right" variant="action" />,
                   iconPosition: 'end',
                 });
               }
@@ -54,7 +55,7 @@ const Projects: React.FC = () => {
                   type: 'external',
                   url: project.liveLink,
                   label: t('projects_list.view_project') || 'Vai al progetto',
-                  icon: <span>&rarr;</span>,
+                  icon: <Arrow direction="right" variant="action" />,
                   iconPosition: 'end',
                 });
               }
@@ -64,7 +65,7 @@ const Projects: React.FC = () => {
                   type: 'external',
                   url: project.repoLink,
                   label: 'GitHub Repo',
-                  icon: <span>&rarr;</span>,
+                  icon: <Arrow direction="right" variant="action" />,
                   iconPosition: 'end',
                 });
               }

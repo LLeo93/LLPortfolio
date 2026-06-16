@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { projectsData } from '../data/projectsData';
 import React from 'react';
@@ -6,6 +6,7 @@ import Seo from '../components/Seo';
 import Arrow from '../components/Arrow';
 import TechBadge from '../components/TechBadge';
 import '../Style/Progetti.css';
+import CardActions from '../components/CardActions';
 
 import { containerVariants, itemVariants } from '../animations/motion';
 import { motion } from 'framer-motion';
@@ -24,6 +25,26 @@ const ProjectsDetails: React.FC = () => {
   const imageAltKey = project?.imageAltKey;
   const imageCaptionKey = project?.imageCaptionKey;
 
+  const projectActionClass = `
+  inline-flex items-center justify-center gap-2 lg:mr-4
+  whitespace-nowrap
+  px-5 py-3
+  rounded-xl
+
+  border border-cyan-400/15
+  bg-cyan-400/[0.04]
+  text-cyan-300
+
+  hover:border-cyan-300/30
+  hover:bg-cyan-400/[0.08]
+  hover:text-cyan-100
+
+  hover:shadow-[0_0_12px_rgba(34,211,238,0.10)]
+  hover:-translate-y-0.5
+
+  transition-all duration-300
+`;
+
   if (!project) {
     return (
       <main className="flex flex-col items-center justify-center h-full text-gray-200 p-8">
@@ -35,13 +56,19 @@ const ProjectsDetails: React.FC = () => {
           <h2 className="text-2xl font-bold mb-4">
             {t('project_details.not_found')}
           </h2>
-
-          <Link
-            to="/projects"
-            className="text-cyan-400 hover:text-cyan-200 underline"
-          >
-            <Arrow direction="right" /> {t('project_details.back_to_projects')}
-          </Link>
+       <CardActions
+  variant="credential"
+  layout="row"
+  actions={[
+    {
+      type: 'link',
+      url: '/projects',
+      label: t('certifications.back'),
+      icon: <Arrow direction="left" variant="navigation"  />,
+      iconPosition: 'start',
+    },
+  ]}
+/>
         </div>
       </main>
     );
@@ -66,34 +93,35 @@ const ProjectsDetails: React.FC = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="w-full"
+        className="w-full mt-2"
       >
         {/* HEADER */}
         <motion.div
           variants={itemVariants}
           className="flex flex-col min-[335px]:flex-row justify-between items-center gap-4 mb-4"
         >
-          <Link
-            to="/projects"
-            className="text-cyan-400 hover:text-cyan-200 transition-colors"
-            aria-label={
-              t('project_details.back') + ' - ' + (projectTitle || '')
-            }
-          >
-            <Arrow direction="left" /> {t('project_details.back')}
-          </Link>
+    <CardActions
+  variant="credential"
+  layout="row"
+  backAction={{
+    type: 'link',
+    url: '/projects',
+    label: t('certifications.back'),
+    icon: <Arrow direction="left" variant="navigation" />,
+    iconPosition: 'start',
+  }}
+/>
 
           {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cyan-400 hover:text-cyan-200 transition-colors"
-              aria-label={`${t('project_details.go_to_project')} - ${projectTitle}`}
-              title={`${t('project_details.go_to_project')} - ${projectTitle}`}
-            >
-              {t('project_details.go_to_project')} <Arrow direction="right" />
-            </a>
+<a
+  href={project.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={projectActionClass}
+>
+  {t('project_details.go_to_project')} 
+  <Arrow direction="right" variant="action" />
+</a>
           )}
         </motion.div>
 
@@ -206,25 +234,27 @@ const ProjectsDetails: React.FC = () => {
             variants={itemVariants}
             className="flex flex-col min-[335px]:flex-row justify-between items-center gap-4 w-full mt-12 border-t border-gray-800 pt-6 pb-8"
           >
-            <Link
-              to="/projects"
-              className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-2"
-              aria-label={
-                t('project_details.back') + ' - ' + (projectTitle || '')
-              }
-            >
-              &larr; {t('project_details.back')}
-            </Link>
+       <CardActions
+  variant="credential"
+  layout="row"
+  backAction={{
+    type: 'link',
+    url: '/projects',
+    label: t('certifications.back'),
+    icon: <Arrow direction="left" variant="navigation" />,
+    iconPosition: 'start',
+  }}
+/>
 
             {project.link && (
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-200 transition-colors flex items-center gap-2"
+                className={projectActionClass}
                 aria-label={`${t('project_details.go_to_project')} - ${projectTitle}`}
               >
-                {t('project_details.go_to_project')} <Arrow direction="right" />
+                {t('project_details.go_to_project')} <Arrow direction="right" variant='navigation'/>
               </a>
             )}
           </motion.div>

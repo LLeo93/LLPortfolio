@@ -7,7 +7,7 @@ export const createBackToCertificationsAction = (
   type: 'link',
   url: '/certificationsList',
   label: t('certifications.back'),
-  icon: <Arrow direction="left" />,
+  icon: <Arrow direction="left" variant="navigation" />,
   iconPosition: 'start',
 });
 
@@ -20,7 +20,7 @@ export const createViewPdfAction = (
   icon: (
     <>
       <FileText size={20} />
-      <Arrow direction="right" />
+      <Arrow direction="right" variant='external'/>
     </>
   ),
   iconPosition: 'end',
@@ -32,6 +32,6 @@ export const createViewCertificateDetailsAction = (
   type: 'link',
   url: '',
   label: t('projects_list.view_certificate'),
-  icon: <Arrow direction="right" />,
+  icon: <Arrow direction="right" variant='action'/>,
   iconPosition: 'end',
 });

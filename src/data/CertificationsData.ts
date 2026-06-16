@@ -20,6 +20,7 @@ export interface Certification {
   type?: string;
   status?: CertificationStatus;
   featured?: boolean;
+  relatedProjects?: string[];
 }
 
 export const certificationsData: Certification[] = [
@@ -41,6 +42,13 @@ export const certificationsData: Certification[] = [
     type: 'Full Stack',
     status: 'verified',
     featured: true,
+    relatedProjects: [
+    'pixelpals',
+    'spotify',
+    'applemusic',
+    'llmeteo',
+    'llnetflix',
+],
   },
   {
     id: 'ui-ux-design-lowcode',
@@ -59,6 +67,12 @@ export const certificationsData: Certification[] = [
     type: 'UI/UX Design',
     status: 'verified',
     featured: true,
+    relatedProjects: [
+      'autocare',
+      'mooddrop',
+      'portfolio',
+      //bodega-menu
+],
   },
   {
     id: 'frontend-synergie',
@@ -77,6 +91,11 @@ export const certificationsData: Certification[] = [
     type: 'Frontend',
     status: 'verified',
     featured: false,
+    relatedProjects: [
+    'prompt-ai',
+    'portfolio',
+    //'t-doll',
+],
   },
   {
     id: 'digital-skills-edo',
@@ -95,6 +114,7 @@ export const certificationsData: Certification[] = [
     type: 'Digital Skills',
     status: 'verified',
     featured: false,
+     relatedProjects: ['mooddrop'],
   },
   {
     id: 'ai-chatgpt-lezione-online',
@@ -113,6 +133,12 @@ export const certificationsData: Certification[] = [
     type: 'Artificial Intelligence',
     status: 'verified',
     featured: false,
+    relatedProjects: [
+    'prompt-ai',
+    'mooddrop',
+    'autocare',
+    //tdoll, bodega-menu
+]
   },
   {
     id: 'freecodecamp-responsive-web-design',
@@ -131,6 +157,7 @@ export const certificationsData: Certification[] = [
     type: 'Web Design',
     status: 'completed',
     featured: false,
+     relatedProjects: [],
   },
   {
     id: 'freecodecamp-responsive-v9',
@@ -150,5 +177,6 @@ export const certificationsData: Certification[] = [
     type: 'Web Design',
     status: 'completed',
     featured: false,
+     relatedProjects: [],
   },
 ];
