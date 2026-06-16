@@ -169,24 +169,24 @@ body={
   <>
     <section className="mt-8">
       <figure>
-        <div
-          className={`
-            ${cert.imageClass2}
-            w-full
-            aspect-video
-            rounded-2xl
-            border
-            border-white/5
-            shadow-2xl
-            bg-cover
-            bg-center
-            flex
-            items-center
-            justify-center
-          `}
-          role="img"
-          aria-label={t(cert.imageAltKey)}
-        >
+      <div
+  className={`
+    ${cert.imageClass2}
+    w-full
+    rounded-2xl
+    shadow-2xl
+    flex
+    items-center
+    justify-center
+    ${
+      cert.orientation === 'portrait'
+        ? 'min-h-[550px] md:min-h-[700px]'
+        : 'aspect-video'
+    }
+  `}
+  role="img"
+  aria-label={t(cert.imageAltKey)}
+>
           {!cert.imageClass2 && (
             <ImageIcon
               size={48}

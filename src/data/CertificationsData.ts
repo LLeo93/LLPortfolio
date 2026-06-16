@@ -21,8 +21,8 @@ export interface Certification {
   status?: CertificationStatus;
   featured?: boolean;
   relatedProjects?: string[];
+  orientation: 'portrait' | 'landscape';
 }
-
 export const certificationsData: Certification[] = [
   {
     id: 'master-epicode',
@@ -33,6 +33,7 @@ export const certificationsData: Certification[] = [
     descriptionKey2: 'certifications.description_2',
     imageClass: 'bg-certificate-capstone',
     imageClass2: 'bg-certificate-capstone',
+    orientation: 'landscape',
     imageAltKey: 'certifications.capstone_image_alt',
     imageCaptionKey: 'certifications.capstone_image_caption',
     logoUrl:
@@ -58,6 +59,7 @@ export const certificationsData: Certification[] = [
     descriptionKey1: 'certifications.ui_ux_lowcode.description',
     imageClass: 'bg-certificate-uiux-lowcode',
     imageClass2: 'bg-certificate-big-uiux-lowcode',
+    orientation:"portrait",
     imageAltKey: 'certifications.ui_ux_lowcode.image_alt',
     imageCaptionKey: 'certifications.ui_ux_lowcode.image_caption',
     logoUrl:
@@ -82,6 +84,7 @@ export const certificationsData: Certification[] = [
     descriptionKey1: 'certifications.frontend_course.description',
     imageClass: 'bg-certificate-formatemp1',
     imageClass2: 'bg-certificate-big-formatemp1',
+    orientation: 'landscape',
     imageAltKey: 'certifications.frontend_course.image_alt',
     imageCaptionKey: 'certifications.frontend_course.image_caption',
     logoUrl:
@@ -105,6 +108,7 @@ export const certificationsData: Certification[] = [
     descriptionKey1: 'certifications.digital_skills.description',
     imageClass: 'bg-certificate-digitalcomp',
     imageClass2: 'bg-certificate-big-digitalcomp',
+    orientation:"portrait",
     imageAltKey: 'certifications.digital_skills.image_alt',
     imageCaptionKey: 'certifications.digital_skills.image_caption',
     logoUrl:
@@ -124,6 +128,7 @@ export const certificationsData: Certification[] = [
     descriptionKey1: 'certifications.ai_chatgpt.description',
     imageClass: 'bg-certificate-chatgpt',
     imageClass2: 'bg-certificate-big-chatgpt',
+    orientation: 'landscape',
     imageAltKey: 'certifications.ai_chatgpt.image_alt',
     imageCaptionKey: 'certifications.ai_chatgpt.image_caption',
     logoUrl:
@@ -148,6 +153,7 @@ export const certificationsData: Certification[] = [
     descriptionKey1: 'certifications.freecodecamp_responsive.description',
     imageClass: 'bg-certificate-freecodecamp',
     imageClass2: 'bg-certificate-big-freecodecamp',
+    orientation: 'landscape',
     imageAltKey: 'certifications.freecodecamp_responsive.image_alt',
     imageCaptionKey: 'certifications.freecodecamp_responsive.image_caption',
     logoUrl: 'https://popsql.com/static/external-logos/freecodecamp.png',
@@ -168,6 +174,7 @@ export const certificationsData: Certification[] = [
     descriptionKey1: 'certifications.freecodecamp_responsive_v9.description',
     imageClass: 'bg-certificate-freecodecamp-v9',
     imageClass2: 'bg-certificate-big-freecodecamp-v9',
+    orientation: 'landscape',
     imageAltKey: 'certifications.freecodecamp_responsive_v9.image_alt',
     imageCaptionKey: 'certifications.freecodecamp_responsive_v9.image_caption',
     logoUrl: 'https://popsql.com/static/external-logos/freecodecamp.png',
