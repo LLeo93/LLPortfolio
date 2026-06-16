@@ -48,7 +48,7 @@ const About: React.FC = () => {
           variants={itemVariants}
           className="
             grid
-            lg:grid-cols-[260px_1fr]
+            xl:grid-cols-[260px_1fr]
             gap-10
             items-center
             mb-16 lg:mt-6 mt-2
