@@ -40,7 +40,17 @@
     "heading": "About me",
     "image_alt": "Portrait of Libanio Leoncini, Full Stack Developer and UI/UX Designer",
     "image_caption": "Libanio Leoncini - Full Stack Developer • UI/UX Designer",
-    "short_description": "Full Stack Developer focused on React, TypeScript, UI/UX Design and modern web experiences."
+    "short_description": "Full Stack Developer focused on React, TypeScript, UI/UX Design and modern web experiences.",
+    "looking_for_title": "What I'm Looking For",
+    "looking_for_text": "I'm looking for opportunities where I can contribute to modern digital products, collaborate with quality-driven teams, and continue growing as a software developer.",
+    "approach_title": "My Approach",
+    "approach_1_title": "Problem Solving",
+    "approach_1_text": "Transforming complex requirements into intuitive and effective digital experiences.",
+    "approach_2_title": "UI/UX Thinking",
+    "approach_2_text": "Designing accessible, modern interfaces focused on delivering the best user experience.",
+    "approach_3_title": "Continuous Growth",
+    "approach_3_text": "Constant learning through certifications, self-study, and hands-on projects."
+  
   },
   "certifications": {
     "back": "Back",
@@ -225,7 +235,8 @@
     "about_me": "About me",
     "certifications": "Certifications",
     "projects": "Projects",
-    "main_content_tabs": "Main content navigation tabs"
+    "main_content_tabs": "Main content navigation tabs",
+    "languages": "Languages"
   },
   "seo": {
   "default": {
