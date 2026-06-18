@@ -9,7 +9,6 @@ const ScrollTop: React.FC<ScrollProgressProps> = ({
   containerId = 'main-scroll-container',
 }) => {
   const [visible, setVisible] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   const isDesktop = useMemo(() => {
     if (typeof window === 'undefined') return false;
@@ -24,24 +23,12 @@ const ScrollTop: React.FC<ScrollProgressProps> = ({
 
     const handleScroll = () => {
       let scrollTop = 0;
-      let scrollHeight = 0;
-      let clientHeight = 0;
 
       if (target instanceof Window) {
         scrollTop = window.scrollY;
-        scrollHeight = document.body.scrollHeight;
-        clientHeight = window.innerHeight;
       } else {
         scrollTop = target.scrollTop;
-        scrollHeight = target.scrollHeight;
-        clientHeight = target.clientHeight;
       }
-
-      const total = scrollHeight - clientHeight;
-
-      const currentProgress = total > 0 ? (scrollTop / total) * 100 : 0;
-
-      setProgress(currentProgress);
 
       setVisible(scrollTop > 300);
     };
@@ -106,32 +93,7 @@ const ScrollTop: React.FC<ScrollProgressProps> = ({
         active:scale-95
       "
     >
-      {/* PROGRESS RING */}
-      <svg className="absolute inset-0 -rotate-90" viewBox="0 0 100 100">
-        <circle
-          cx="50"
-          cy="50"
-          r="46"
-          stroke="rgba(255,255,255,0.06)"
-          strokeWidth="4"
-          fill="none"
-        />
-
-        <circle
-          cx="50"
-          cy="50"
-          r="46"
-          stroke="rgb(34 211 238)"
-          strokeWidth="4"
-          fill="none"
-          strokeLinecap="round"
-          pathLength="100"
-          strokeDasharray="100"
-          strokeDashoffset={100 - progress}
-          className="transition-all duration-200"
-        />
-      </svg>
-
+     
       <ChevronUp
         size={22}
         className="

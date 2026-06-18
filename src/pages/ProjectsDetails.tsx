@@ -185,8 +185,6 @@ const ProjectsDetails: React.FC = () => {
                     w-full
                     rounded-2xl
                     shadow-2xl
-                    border
-                    border-neutral-800
                     bg-center
                     bg-cover
                     max-h-[70vh]
