@@ -33,6 +33,9 @@ const LANGUAGE_COLORS: Record<string, string> = {
   Dart: '#00B4AB',
 };
 
+const getLanguageColor = (name: string): string =>
+  LANGUAGE_COLORS[name] || '#06b6d4';
+
 const checkResponse = async (response: Response): Promise<boolean> => {
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
@@ -112,5 +115,8 @@ export const getUserLanguages = async (
     username,
   );
 
-  return data?.languages ?? [];
+  return (data?.languages ?? []).map((language) => ({
+    ...language,
+    color: language.color || getLanguageColor(language.name),
+  }));
 };
