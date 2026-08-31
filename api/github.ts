@@ -29,47 +29,69 @@ export default async function handler(request: Request) {
 
   try {
     if (type === 'activity') {
-      console.log('[Vercel GitHub proxy] fetching activity for:', username);
-      const activityResponse = await fetch(
-        `https://api.github.com/users/${username.trim()}/events/public`,
+      console.log('[Vercel GitHub proxy] fetching latest repo activity for:', username);
+
+      const reposResponse = await fetch(
+        `https://api.github.com/users/${username.trim()}/repos?sort=updated&per_page=10`,
         { headers },
       );
 
-      console.log('[Vercel GitHub proxy] activity status:', activityResponse.status);
+      console.log('[Vercel GitHub proxy] repos status:', reposResponse.status);
 
-      if (!activityResponse.ok) {
-        const errorData = await activityResponse.json().catch(() => ({}));
-        console.error('[Vercel GitHub proxy] activity failed:', errorData);
+      if (!reposResponse.ok) {
+        const errorData = await reposResponse.json().catch(() => ({}));
+        console.error('[Vercel GitHub proxy] repos failed:', errorData);
         return Response.json(
           { error: errorData.message || 'GitHub API error' },
-          { status: activityResponse.status },
+          { status: reposResponse.status },
         );
       }
 
-      const events = await activityResponse.json();
-      if (!events?.length) {
+      const repos = await reposResponse.json();
+      const repo = repos?.find((item: any) => item?.name) || repos?.[0];
+
+      if (!repo) {
         return Response.json({ activity: null }, { status: 200 });
       }
 
-      const pushEvent = events.find(
-        (event: any) => event.type === 'PushEvent' && event.payload?.commits?.length > 0,
+      const commitsResponse = await fetch(
+        `https://api.github.com/repos/${repo.full_name}/commits?per_page=1`,
+        { headers },
       );
 
-      const event = pushEvent || events[0];
+      console.log('[Vercel GitHub proxy] commits status:', commitsResponse.status);
+
+      if (!commitsResponse.ok) {
+        return Response.json(
+          {
+            activity: {
+              repoName: repo.name,
+              message: 'Repository updated',
+              date: repo.updated_at || new Date().toISOString(),
+              url: repo.html_url || `https://github.com/${repo.full_name}`,
+              limitRemaining: reposResponse.headers.get('x-ratelimit-remaining') || '0',
+              limitReset: reposResponse.headers.get('x-ratelimit-reset') || '0',
+            },
+          },
+          { status: 200 },
+        );
+      }
+
+      const commits = await commitsResponse.json();
+      const commit = commits?.[0];
 
       return Response.json(
         {
           activity: {
-            repoName:
-              event.repo?.name?.split('/')[1] || event.repo?.name || 'Unknown',
-            message:
-              event.type === 'PushEvent' && event.payload?.commits?.[0]?.message
-                ? event.payload.commits[0].message
-                : `Activity: ${event.type?.replace('Event', '') || 'Update'}`,
-            date: event.created_at || new Date().toISOString(),
-            url: `https://github.com/${event.repo?.name || username}`,
-            limitRemaining: activityResponse.headers.get('x-ratelimit-remaining') || '0',
-            limitReset: activityResponse.headers.get('x-ratelimit-reset') || '0',
+            repoName: repo.name,
+            message: commit?.commit?.message?.split('\n')[0] || 'Repository updated',
+            date:
+              commit?.commit?.author?.date ||
+              repo.updated_at ||
+              new Date().toISOString(),
+            url: repo.html_url || `https://github.com/${repo.full_name}`,
+            limitRemaining: reposResponse.headers.get('x-ratelimit-remaining') || '0',
+            limitReset: reposResponse.headers.get('x-ratelimit-reset') || '0',
           },
         },
         { status: 200 },

@@ -34,56 +34,67 @@ const server = http.createServer(async (req, res) => {
       'User-Agent': 'LLPortfolio-App-Local',
     };
 
-    const targetUrl =
-      type === 'activity'
-        ? `https://api.github.com/users/${username.trim()}/events/public`
-        : `https://api.github.com/users/${username.trim()}/repos?sort=updated&per_page=10`;
-
-    console.log('[GitHub Proxy] forwarding to:', targetUrl);
-
-    const githubRes = await fetch(targetUrl, { headers });
-    const raw = await githubRes.text();
-    const payload = raw ? JSON.parse(raw) : null;
-
-    console.log('[GitHub Proxy] GitHub status:', githubRes.status);
-
-    if (!githubRes.ok) {
-      const errorMessage = payload?.message || 'GitHub API error';
-      res.writeHead(githubRes.status, {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      });
-      res.end(JSON.stringify({ error: errorMessage }));
-      return;
-    }
-
     let mapped;
 
     if (type === 'activity') {
-      if (!Array.isArray(payload) || payload.length === 0) {
+      const reposUrl = `https://api.github.com/users/${username.trim()}/repos?sort=updated&per_page=10`;
+      console.log('[GitHub Proxy] forwarding to repos:', reposUrl);
+
+      const reposResponse = await fetch(reposUrl, { headers });
+      const reposPayload = reposResponse.ok ? await reposResponse.json() : null;
+
+      console.log('[GitHub Proxy] repos status:', reposResponse.status);
+
+      if (!reposResponse.ok) {
+        res.writeHead(reposResponse.status, {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        });
+        res.end(JSON.stringify({ error: reposPayload?.message || 'GitHub API error' }));
+        return;
+      }
+
+      const repo = reposPayload?.find((item) => item?.name) || reposPayload?.[0];
+      if (!repo) {
         mapped = { activity: null };
       } else {
-        const events = payload;
-        const pushEvent = events.find(
-          (event) => event.type === 'PushEvent' && event.payload?.commits?.length > 0,
-        );
-        const event = pushEvent || events[0];
+        const commitsUrl = `https://api.github.com/repos/${repo.full_name}/commits?per_page=1`;
+        console.log('[GitHub Proxy] forwarding to commits:', commitsUrl);
+
+        const commitsResponse = await fetch(commitsUrl, { headers });
+        const commitsPayload = commitsResponse.ok ? await commitsResponse.json() : null;
+        const commit = commitsPayload?.[0];
+
         mapped = {
           activity: {
-            repoName:
-              event.repo?.name?.split('/')[1] || event.repo?.name || 'Unknown',
-            message:
-              event.type === 'PushEvent' && event.payload?.commits?.[0]?.message
-                ? event.payload.commits[0].message
-                : `Activity: ${event.type?.replace('Event', '') || 'Update'}`,
-            date: event.created_at || new Date().toISOString(),
-            url: `https://github.com/${event.repo?.name || username}`,
-            limitRemaining: githubRes.headers.get('x-ratelimit-remaining') || '0',
-            limitReset: githubRes.headers.get('x-ratelimit-reset') || '0',
+            repoName: repo.name,
+            message: commit?.commit?.message?.split('\n')[0] || 'Repository updated',
+            date: commit?.commit?.author?.date || repo.updated_at || new Date().toISOString(),
+            url: repo.html_url || `https://github.com/${repo.full_name}`,
+            limitRemaining: reposResponse.headers.get('x-ratelimit-remaining') || '0',
+            limitReset: reposResponse.headers.get('x-ratelimit-reset') || '0',
           },
         };
       }
     } else {
+      const reposUrl = `https://api.github.com/users/${username.trim()}/repos?sort=updated&per_page=10`;
+      console.log('[GitHub Proxy] forwarding to repos:', reposUrl);
+
+      const githubRes = await fetch(reposUrl, { headers });
+      const payload = githubRes.ok ? await githubRes.json() : null;
+
+      console.log('[GitHub Proxy] GitHub status:', githubRes.status);
+
+      if (!githubRes.ok) {
+        const errorMessage = payload?.message || 'GitHub API error';
+        res.writeHead(githubRes.status, {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        });
+        res.end(JSON.stringify({ error: errorMessage }));
+        return;
+      }
+
       const repos = Array.isArray(payload) ? payload : [];
       const langCounts = {};
 
@@ -129,8 +140,6 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(200, {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
-      'x-ratelimit-remaining': githubRes.headers.get('x-ratelimit-remaining') || '0',
-      'x-ratelimit-reset': githubRes.headers.get('x-ratelimit-reset') || '0',
     });
     res.end(JSON.stringify(mapped));
   } catch (error) {

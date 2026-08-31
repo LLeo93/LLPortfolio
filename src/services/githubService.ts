@@ -97,14 +97,7 @@ export const getLatestPush = async (
     return data.activity;
   }
 
-  return {
-    repoName: 'GitHub',
-    message: 'No public activity yet',
-    date: new Date().toISOString(),
-    url: `https://github.com/${username.trim() || 'LLeo93'}`,
-    limitRemaining: '0',
-    limitReset: '0',
-  };
+  return null;
 };
 
 export const getUserLanguages = async (
