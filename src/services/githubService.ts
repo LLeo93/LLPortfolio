@@ -49,76 +49,68 @@ const checkResponse = async (response: Response): Promise<boolean> => {
   return true;
 };
 
+const getGitHubApiBaseUrl = (): string => {
+  const host = typeof window !== 'undefined' ? window.location.hostname : '';
+  if (host === 'localhost' || host === '127.0.0.1') {
+    return 'http://localhost:3001';
+  }
+  return '';
+};
+
+const fetchGitHubEndpoint = async <T>(
+  type: 'activity' | 'languages',
+  username: string,
+): Promise<T | null> => {
+  try {
+    const baseUrl = getGitHubApiBaseUrl();
+    const url = `${baseUrl}/api/github?type=${type}&username=${encodeURIComponent(username.trim())}`;
+    console.log('[GitHubService] calling endpoint:', url);
+
+    const response = await fetch(url, {
+      headers: { Accept: 'application/json' },
+    });
+
+    console.log('[GitHubService] response status:', response.status, 'url:', url);
+
+    if (!(await checkResponse(response))) return null;
+    const data = (await response.json()) as T;
+    console.log('[GitHubService] parsed payload:', data);
+    return data;
+  } catch (error) {
+    console.error('[GitHubService] Fetch error:', error);
+    return null;
+  }
+};
+
 export const getLatestPush = async (
   username: string,
 ): Promise<GitHubActivityData | null> => {
-  try {
-    const url = `https://api.github.com/users/${username.trim()}/events/public`;
-    const response = await fetch(url, {
-      headers: { Accept: 'application/vnd.github.v3+json' },
-    });
+  const data = await fetchGitHubEndpoint<{ activity: GitHubActivityData | null }>(
+    'activity',
+    username,
+  );
 
-    const remaining = response.headers.get('x-ratelimit-remaining') || '0';
-    const resetTime = response.headers.get('x-ratelimit-reset') || '0';
-
-    if (!(await checkResponse(response))) return null;
-
-    const events = await response.json();
-    if (!events?.length) return null;
-
-    const pushEvent = events.find(
-      (e: any) => e.type === 'PushEvent' && e.payload?.commits?.length > 0,
-    );
-
-    const event = pushEvent || events[0];
-
-    return {
-      repoName:
-        event.repo?.name?.split('/')[1] || event.repo?.name || 'Unknown',
-      message:
-        event.type === 'PushEvent' && event.payload?.commits?.[0]?.message
-          ? event.payload.commits[0].message
-          : `Activity: ${event.type?.replace('Event', '') || 'Update'}`,
-      date: event.created_at || new Date().toISOString(),
-      url: `https://github.com/${event.repo?.name || username}`,
-      limitRemaining: remaining,
-      limitReset: resetTime,
-    };
-  } catch (error) {
-    console.error('Fetch error:', error);
-    return null;
+  if (data?.activity) {
+    return data.activity;
   }
+
+  return {
+    repoName: 'GitHub',
+    message: 'No public activity yet',
+    date: new Date().toISOString(),
+    url: `https://github.com/${username.trim() || 'LLeo93'}`,
+    limitRemaining: '0',
+    limitReset: '0',
+  };
 };
 
 export const getUserLanguages = async (
   username: string,
 ): Promise<LanguageData[]> => {
-  try {
-    const url = `https://api.github.com/users/${username.trim()}/repos?sort=updated&per_page=10`;
-    const response = await fetch(url);
+  const data = await fetchGitHubEndpoint<{ languages: LanguageData[] }>(
+    'languages',
+    username,
+  );
 
-    if (!(await checkResponse(response))) return [];
-
-    const repos = await response.json();
-    const langCounts: Record<string, number> = {};
-
-    repos.forEach((repo: any) => {
-      if (repo.language) {
-        langCounts[repo.language] = (langCounts[repo.language] || 0) + 1;
-      }
-    });
-
-    const total = Object.values(langCounts).reduce((a, b) => a + b, 0);
-    if (total === 0) return [];
-
-    return Object.keys(langCounts)
-      .map((lang) => ({
-        name: lang,
-        percentage: Math.round((langCounts[lang] / total) * 100),
-        color: LANGUAGE_COLORS[lang] || '#06b6d4',
-      }))
-      .sort((a, b) => b.percentage - a.percentage);
-  } catch (e) {
-    return [];
-  }
+  return data?.languages ?? [];
 };

@@ -6,6 +6,7 @@
   "scripts": {
     "prebuild": "node --loader ts-node/esm scripts/generate-sitemap.ts",
     "dev": "vite",
+    "dev:proxy": "node scripts/github-proxy.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
