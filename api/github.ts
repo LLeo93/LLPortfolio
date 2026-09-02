@@ -5,7 +5,7 @@ export const config = {
 export default async function handler(request: Request) {
   const { searchParams } = new URL(
     request.url,
-    `https://${request.headers.get('host') || 'localhost:3000'}`,
+    'http://localhost',
   );
 
   const type = searchParams.get('type');
