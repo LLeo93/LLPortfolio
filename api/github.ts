@@ -1,3 +1,5 @@
+/// <reference types="node" />
+
 export default async function handler(request: Request) {
   const { searchParams } = new URL(request.url);
   const type = searchParams.get('type');
@@ -11,21 +13,16 @@ export default async function handler(request: Request) {
     url: request.url,
   });
 
-  if (!token) {
-    console.error('[Vercel GitHub proxy] Missing GITHUB_TOKEN');
-    return Response.json(
-      {
-        error: 'Missing GITHUB_TOKEN',
-      },
-      { status: 500 },
-    );
-  }
-
-  const headers = {
+  const headers: Record<string, string> = {
     Accept: 'application/vnd.github.v3+json',
-    Authorization: `Bearer ${token}`,
     'User-Agent': 'LLPortfolio-App',
   };
+
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  } else {
+    console.warn('[Vercel GitHub proxy] GITHUB_TOKEN missing, using public GitHub API fallback');
+  }
 
   try {
     if (type === 'activity') {
