@@ -1,10 +1,21 @@
-/// <reference types="node" />
+export const config = {
+  runtime: 'nodejs20.x',
+};
 
 export default async function handler(request: Request) {
   const { searchParams } = new URL(request.url);
   const type = searchParams.get('type');
   const username = searchParams.get('username') || 'LLeo93';
-  const token = process.env.GITHUB_TOKEN;
+
+  const runtimeEnv = (
+    globalThis as typeof globalThis & {
+      process?: {
+        env?: Record<string, string | undefined>;
+      };
+    }
+  ).process?.env;
+
+  const token = runtimeEnv?.GITHUB_TOKEN;
 
   console.log('[Vercel GitHub proxy] request received:', {
     type,
