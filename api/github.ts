@@ -1,5 +1,5 @@
 export const config = {
-  runtime: 'nodejs20.x',
+  runtime: 'nodejs',
 };
 
 export default async function handler(request: Request) {
@@ -24,7 +24,7 @@ export default async function handler(request: Request) {
     url: request.url,
   });
 
-  const headers: Record<string, string> = {
+   const headers: Record<string, string> = {
     Accept: 'application/vnd.github.v3+json',
     'User-Agent': 'LLPortfolio-App',
   };
