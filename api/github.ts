@@ -2,7 +2,7 @@ export const config = {
   runtime: 'nodejs',
 };
 
-export default async function handler(request: Request) {
+export async function GET(request: Request) {
   const { searchParams } = new URL(
     request.url,
     'http://localhost',
