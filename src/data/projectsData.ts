@@ -17,6 +17,22 @@ export interface ProjectData {
 }
 
 export const projectsData: ProjectData[] = [
+    {
+    id: 'tdoll',
+    titleKey: 'projects.tdoll.title',
+    descriptionKey: 'projects.tdoll.description',
+    image: 'tdoll-img',
+    link: 'https://t-doll-e1bl.vercel.app/#support-tdoll-title',
+    repo: 'https://github.com/LLeo93/T-Dolls',
+    imageAltKey: 'projects.tdoll.image_alt',
+    imageCaptionKey: 'projects.tdoll.image_caption',
+    imageAltFallback: 'T-Doll landing page screenshot',
+    imageCaptionFallback: 'T-Doll - interactive support page',
+    titleFallback: 'T-Doll',
+    descriptionFallback:
+      'T-Doll — compact landing page created to present a themed product and support section with a clear, readable structure.',
+    technologies: ['Landing Page', 'UI Design', 'React'],
+  },
   {
     id: 'labodega',
     titleKey: 'projects.labodega.title',
@@ -160,4 +176,5 @@ export const projectsData: ProjectData[] = [
       'Prompt-AI — prompt manager web app, responsive and built with Redux and Framer Motion.',
     technologies: ['Frontend Eng', 'State Management'],
   },
+
 ];

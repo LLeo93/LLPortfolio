@@ -228,6 +228,14 @@
   background-position: center, center;
   background-color: #121212;
 }
+.bg-project-tdoll {
+  background-image:
+    url('../assets/icons/t-doll.png'), var(--project-gradient);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-color: #121212;
+}
 
 .bg-project-B {           
   background-image: url('../assets/icons/coming soon.jpg');
@@ -283,6 +291,13 @@
 }
 .prompt-ai-img {
   background-image: url('../assets/Progetti/prompt-ai.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #121212;
+}
+.tdoll-img {
+  background-image: url('../assets/Progetti/t-doll.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

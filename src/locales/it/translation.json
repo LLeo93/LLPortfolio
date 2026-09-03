@@ -201,6 +201,12 @@
       "link": "https://prompt-ai-orpin.vercel.app/",
       "image_alt": "Screenshot Prompt-AI",
       "image_caption": "Prompt-AI - gestore di prompt"
+    },
+    "tdoll": {
+      "title": "T-Doll",
+      "description": "T-Doll è una landing page pensata per presentare un progetto narrativo e un supporto dedicato in modo chiaro, diretto e leggibile. L'obiettivo principale è far emergere il messaggio principale senza sovraccaricare la pagina, mantenendo una struttura semplice, moderna e orientata all'azione.\n\nLa pagina è organizzata in blocchi funzionali, con una forte attenzione alla leggibilità, alla gerarchia visiva e alla coerenza del contenuto. È progettata per guidare l'utente verso le informazioni più importanti, mostrando il concept in modo immediato e lasciando spazio a una sezione di supporto ben definita. Il risultato è un'esperienza di marketing leggerissima ma efficace, adatta a una presentazione rapida di prodotto o evento.",
+      "image_alt": "Screenshot landing page T-Doll",
+      "image_caption": "T-Doll - landing page e support section"
     },"autocare": {
   "title": "AutoCare",
   "description": "AutoCare è un concept UI/UX dedicato alla gestione delle attività legate all'automobile, come manutenzione, scadenze e documentazione del veicolo. Il progetto nasce dall'obiettivo di semplificare informazioni spesso frammentate attraverso un'interfaccia moderna, intuitiva e orientata alla prevenzione.\n\nAttualmente AutoCare rappresenta un case study di progettazione realizzato in Figma, utilizzato per approfondire ricerca utente, architettura dell'informazione, wireframing e progettazione dell'esperienza mobile. Il concept è ancora in fase di revisione e non dispone al momento di una versione sviluppata o pubblicamente accessibile.",
@@ -224,9 +230,10 @@
     "applemusic_description": "Clone di Apple Music con React e Redux",
     "llnetflix_description": " Replica Netflix con React, API e Bootstrap",
     "prompt-ai_description": "Gestisci, organizza e ottimizza i tuoi prompt AI con un'interfaccia intuitiva e interattiva.",
- "autocare_description": "Esperienza smart dedicata alla gestione dell’auto, delle spese e dell’organizzazione familiare.",
-  "mooddrop_description": "Esperienza digitale dedicata al benessere emotivo, all’autenticità e alla consapevolezza personale.",
-  "details": "Dettagli",
+    "tdoll_description": "Landing page chiara e diretta per presentare il concept e la sezione support in modo semplice ed efficace.",
+    "autocare_description": "Esperienza smart dedicata alla gestione dell’auto, delle spese e dell’organizzazione familiare.",
+    "mooddrop_description": "Esperienza digitale dedicata al benessere emotivo, all’autenticità e alla consapevolezza personale.",
+    "details": "Dettagli",
     "view_project": "Visualizza progetto",
     "view_certificate": "Visualizza certificato",
     "back": "Indietro",

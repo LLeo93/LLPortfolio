@@ -15,6 +15,20 @@ export type Project = {
   imageFallbackUrl?: string;
 };
 export const projects: Project[] = [
+    {
+    id: 'tdoll',
+    bgClass: 'bg-project-tdoll',
+    imgClass: 'tdoll-img',
+    titleKey: 'projects.tdoll.title',
+    descKey: 'projects_list.tdoll_description',
+    internalLink: '/projects/tdoll',
+    liveLink: 'https://t-doll-e1bl.vercel.app/#support-tdoll-title',
+    repoLink: 'https://github.com/LLeo93/T-Dolls',
+    technologies: ['Landing Page', 'UI Design', 'React'],
+    videoSrc: '',
+    imageFallbackUrl: '',
+    gradient: 'creative',
+  },
   {
     id: 'labodega',
     bgClass: 'bg-projects-labodega',
@@ -133,4 +147,5 @@ export const projects: Project[] = [
     imageFallbackUrl: '',
     gradient: 'social',
   },
+
 ];

@@ -204,6 +204,12 @@
       "image_alt": "Prompt-AI app screenshot",
       "image_caption": "Prompt-AI - prompt manager"
     },
+    "tdoll": {
+      "title": "T-Doll",
+      "description": "T-Doll is a landing page designed to present a themed concept and a dedicated support section in a clean, direct, and readable way. The main goal is to highlight the core message without cluttering the page, while keeping a simple, modern, and action-oriented structure.\n\nThe page is organized into practical sections, with careful attention to readability, visual hierarchy, and content consistency. It is built to guide the user toward the most important details, presenting the concept clearly and leaving space for a well-defined support section. The result is a lightweight but effective marketing experience suited to a quick product or event presentation.",
+      "image_alt": "T-Doll landing page screenshot",
+      "image_caption": "T-Doll - landing page and support section"
+    },
     "autocare": {
   "title": "AutoCare",
   "description": "AutoCare is a UI/UX concept focused on simplifying vehicle-related tasks such as maintenance tracking, deadlines, and document management. The project was created to explore how a modern and intuitive interface can reduce complexity and improve the overall vehicle ownership experience.\n\nAt the moment, AutoCare is a Figma-based design case study used to practice user research, information architecture, wireframing, and mobile experience design. The concept is still being refined and does not currently have a developed or publicly available version.",
@@ -228,7 +234,8 @@
     "applemusic_description": " Apple Music clone with React and Redux",
     "llnetflix_description": "Netflix replica using React, API, and Bootstrap",
     "prompt-ai_description": "Manage, organize, and optimize your AI prompts with an intuitive and interactive interface.",
-       "autocare_description": "Smart mobility experience designed to simplify vehicle management, expenses, and family organization.",
+    "tdoll_description": "Clear and direct landing page built to present the concept and the support section in a simple, effective way.",
+    "autocare_description": "Smart mobility experience designed to simplify vehicle management, expenses, and family organization.",
     "mooddrop_description": "Digital emotional wellness experience focused on self-expression, emotional awareness, and collective empathy.",
     "details": "Details",
     "view_project": "View project",
