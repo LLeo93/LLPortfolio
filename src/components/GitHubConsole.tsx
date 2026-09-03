@@ -56,6 +56,16 @@ const GitHubConsole: React.FC = () => {
     }).format(new Date(activity.date));
   }, [activity?.date, i18n.language]);
 
+  const quotaValue = useMemo(() => {
+    if (!activity?.limitRemaining) return '1';
+
+    const numericValue = Number(activity.limitRemaining);
+    if (!Number.isFinite(numericValue)) return '1';
+
+    const wrappedValue = numericValue % 60;
+    return wrappedValue === 0 ? '1' : String(wrappedValue);
+  }, [activity?.limitRemaining]);
+
   if (loading) {
     return (
       <motion.div
@@ -576,7 +586,7 @@ gap-4
             </span>
 
             <span className="text-[10px] font-semibold text-yellow-100">
-              {activity.limitRemaining}/60
+              {quotaValue}/60
             </span>
           </div>
         </div>
