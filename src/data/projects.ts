@@ -16,6 +16,18 @@ export type Project = {
 };
 export const projects: Project[] = [
   {
+    id: 'labodega',
+    bgClass: 'bg-projects-labodega',
+    imgClass: 'labodega-img',
+    titleKey: 'projects.labodega.title',
+    descKey: 'projects_list.labodega_description',
+    internalLink: '/projects/labodega',
+    liveLink: 'https://la-bodega-menu.vercel.app/',
+    repoLink: 'https://github.com/LLeo93/la-bodega-menu',
+    technologies: ['UI/UX Design', 'Tailwind CSS', 'TypeScript'],
+    gradient: 'creative',
+  },
+  {
     id: 'autocare',
     bgClass: 'bg-projects-autocare',
     imgClass: 'autocare-img',

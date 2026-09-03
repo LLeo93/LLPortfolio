@@ -157,6 +157,14 @@
 }
 
 /*immagini icone dei progetti*/
+.bg-projects-labodega {
+  background-image:
+    url('../assets/icons/Bodega-menu.jpg'), var(--project-gradient);
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-color: #121212;
+}
 .bg-projects-autocare {
   background-image:
     url('../assets/icons/Auto_Care.png'), var(--project-gradient);
@@ -221,7 +229,7 @@
   background-color: #121212;
 }
 
-.bg-project-B {
+.bg-project-B {           
   background-image: url('../assets/icons/coming soon.jpg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -229,14 +237,15 @@
 }
 
 /*immagini delle descrizioni dei progetti*/
-.autocare-img {
-  background-image: url('../assets/Progetti/Auto_Care.PNG');
+
+.moodrop-img {
+  background-image: url('../assets/Progetti/moodrop.PNG');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.moodrop-img {
-  background-image: url('../assets/Progetti/moodrop.PNG');
+.labodega-img {
+  background-image: url('../assets/Progetti/Bodega-menu.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

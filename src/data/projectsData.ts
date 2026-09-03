@@ -18,6 +18,22 @@ export interface ProjectData {
 
 export const projectsData: ProjectData[] = [
   {
+    id: 'labodega',
+    titleKey: 'projects.labodega.title',
+    descriptionKey: 'projects.labodega.description',
+    image: 'labodega-img',
+    link: 'https://la-bodega-menu.vercel.app/',
+    repo: 'https://github.com/LLeo93/la-bodega-menu',
+    imageAltKey: 'projects.labodega.image_alt',
+    imageCaptionKey: 'projects.labodega.image_caption',
+    imageAltFallback: 'La Bodega Coctelería menu interface',
+    imageCaptionFallback: 'La Bodega - Interactive Digital Menu',
+    titleFallback: 'La Bodega Coctelería',
+    descriptionFallback:
+      'La Bodega Coctelería — Interactive digital menu and brand identity designed for an exclusive Spanish cocktail bar.',
+    technologies: ['UI/UX Design', 'Tailwind CSS', 'TypeScript'],
+  },
+  {
     id: 'autocare',
     titleKey: 'projects.autocare.title',
     descriptionKey: 'projects.autocare.description',

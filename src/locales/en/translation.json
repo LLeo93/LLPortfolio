@@ -158,6 +158,12 @@
     "back": "Go back"
   },
   "projects": {
+    "labodega": {
+      "title": "La Bodega Coctelería",
+      "description": "La Bodega Coctelería is a one-page showcase website created for a Spanish cocktail bar. The project is designed as a simple and immediate digital experience, with a polished interface that reflects the identity of the venue.\n\nThe page allows users to access two different menu sections with a single click, organized to present cocktails and spirits clearly. Particular attention was given to visual presentation, navigation, and content usability, while maintaining a clean and responsive interface.",
+      "image_alt": "La Bodega Coctelería interactive menu interface",
+      "image_caption": "La Bodega - Digital Coctelería Experience"
+    },
     "spotify": {
       "title": "Spotify clone",
       "description": "Not just a project, but the beginning of everything. This project, developed during my first Build Week at Epicode, was my baptism into the world of programming. With a team of strangers, assigned by the instructor, and armed only with HTML, CSS, Bootstrap, and JavaScript, we launched into the challenge of replicating the Spotify interface. We learned to work in a team, managing the workflow with Trello and GitHub, transforming our front-end skills into a functional product. Beyond the code, this project gave life to a solid friendship that still lasts today. This group work is not just a demonstration of my initial technical skills. It's proof that collaboration and passion can turn challenges into successes, creating an unbreakable bond between people. An experience that taught me that the best projects are born from sharing.",
@@ -215,6 +221,7 @@
   "projects_list": {
     "projects": "Projects",
     "certifications": "Certifications",
+    "labodega_description": "One-page showcase website with an interactive digital menu for a Spanish cocktail bar.",
     "pixelpals_description": "Pixelpals, the app that unites gamers!",
     "spotify_description": "Spotify clone created by Team 7",
     "llmeteo_description": "Responsive weather app using React and API",

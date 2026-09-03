@@ -156,6 +156,12 @@
     "back": "Torna indietro"
   },
   "projects": {
+    "labodega": {
+      "title": "La Bodega Coctelería",
+       "description": "La Bodega Coctelería è un sito vetrina one-page realizzato per un cocktail bar spagnolo. Il progetto è pensato come un'esperienza digitale semplice e immediata, con un'interfaccia curata e coerente con l'identità del locale.\n\nLa pagina permette di accedere con un click a due differenti sezioni del menù, organizzate per presentare in modo chiaro cocktail e distillati. Particolare attenzione è stata dedicata alla resa visiva, alla navigazione e alla fruibilità del contenuto, mantenendo un'interfaccia essenziale e responsive.",
+      "image_alt": "Interfaccia del menù digitale La Bodega Coctelería",
+      "image_caption": "La Bodega - Esperienza digitale per cocktail bar"
+    },
     "spotify": {
       "title": "Spotify clone",
       "description": "Non solo un progetto, ma l'inizio di tutto. Questo progetto, sviluppato durante la mia prima Build Week in Epicode, ha rappresentato il mio battesimo nel mondo della programmazione. Con un team di sconosciuti, assegnato dal docente, e armati solo di HTML, CSS, Bootstrap e JavaScript, ci siamo lanciati nella sfida di replicare l'interfaccia di Spotify. Abbiamo imparato a lavorare in team, gestendo il flusso con Trello e GitHub, trasformando le nostre competenze front-end in un prodotto funzionante. Oltre al codice, questo progetto ha dato vita a un'amicizia solida che dura ancora oggi. Questo lavoro di gruppo non è solo la dimostrazione delle mie prime competenze tecniche. È la prova che la collaborazione e la passione possono trasformare le sfide in successi, creando un legame indissolubile tra le persone. Un'esperienza che mi ha insegnato che i migliori progetti nascono dalla condivisione.",
@@ -211,6 +217,7 @@
   "projects_list": {
     "projects": "Progetti",
     "certifications": "Certificazioni",
+    "labodega_description": "Sito vetrina one-page con menù digitale interattivo per un cocktail bar spagnolo.",
     "pixelpals_description": "Pixelpals l'app che unisce i videogiocatori!",
     "spotify_description": "Clone di Spotify realizzato dal Team 7",
     "llmeteo_description": "App meteo responsive con React e API",
