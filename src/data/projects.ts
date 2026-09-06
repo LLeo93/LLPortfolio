@@ -16,6 +16,20 @@ export type Project = {
 };
 export const projects: Project[] = [
     {
+    id: 'healtylibby',
+    bgClass: 'bg-projects-healtylibby',
+    imgClass: 'healtylibby-img',
+    titleKey: 'projects.healtylibby.title',
+    descKey: 'projects_list.healtylibby_description',
+    internalLink: '/projects/healtylibby',
+    liveLink: 'https://healtylibby-1nf7xcku7-lleo93s-projects.vercel.app/',
+    repoLink: 'https://github.com/LLeo93/HealtyLibby',
+    technologies: ['Landing Page', 'UI Design', 'React'],
+    videoSrc: '',
+    imageFallbackUrl: '',
+    gradient: 'creative',
+  },
+    {
     id: 'tdoll',
     bgClass: 'bg-project-tdoll',
     imgClass: 'tdoll-img',

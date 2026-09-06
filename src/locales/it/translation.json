@@ -218,11 +218,18 @@
   "description": "MoodDrop è un concept di applicazione mobile attualmente in fase di progettazione, nato per esplorare il rapporto tra emotional design, benessere digitale e interazioni anonime. L'idea alla base del progetto è offrire uno spazio semplice e privo di pressione sociale in cui gli utenti possano registrare il proprio stato d'animo e visualizzare l'andamento emotivo nel tempo.\n\nIl progetto è stato sviluppato come esercizio di UX/UI design, con particolare attenzione ad accessibilità, chiarezza visiva, semplicità d'uso e costruzione di un'esperienza rilassante. Attualmente il concept è ancora in evoluzione e alcune funzionalità, flussi e schermate sono in fase di definizione e validazione.",
   "image_alt": "Interfaccia app MoodDrop per il monitoraggio emotivo",
   "image_caption": "MoodDrop - esperienza anonima di benessere emotivo"
-}
+},
+"healtylibby": {
+"title": "HealtyLibby",
+"description": "HealtyLibby è una web application pensata come diario alimentare personale, progettata per permettere agli utenti di organizzare e tenere traccia dei propri pasti attraverso un'interfaccia semplice e visiva.\n\nL'applicazione include attualmente l'autenticazione tramite Google, la gestione dei dati personali con Firebase Firestore e il caricamento delle immagini tramite Cloudinary. L'interfaccia è sviluppata con React e TypeScript, con particolare attenzione alla responsività e a una gestione dei pasti semplice e immediata.\n\nIl progetto è ancora in fase di sviluppo e viene progressivamente rifinito. La funzionalità prevista per l'analisi dei pasti tramite AI non è ancora integrata e alcuni aspetti dell'interfaccia e dell'esperienza utente sono ancora in fase di ottimizzazione.", 
+"image_alt": "Applicazione HealtyLibby per la gestione del diario alimentare", 
+"image_caption": "HealtyLibby - Diario alimentare personale"
+ }
   },
   "projects_list": {
     "projects": "Progetti",
     "certifications": "Certificazioni",
+    "healtylibby_description": "Diario alimentare personale con autenticazione Firebase, gestione dei dati tramite Firestore e caricamento delle immagini con Cloudinary. Progetto attualmente in sviluppo.",
     "labodega_description": "Sito vetrina one-page con menù digitale interattivo per un cocktail bar spagnolo.",
     "pixelpals_description": "Pixelpals l'app che unisce i videogiocatori!",
     "spotify_description": "Clone di Spotify realizzato dal Team 7",

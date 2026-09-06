@@ -157,6 +157,14 @@
 }
 
 /*immagini icone dei progetti*/
+.bg-projects-healtylibby {
+  background-image:
+  url('../assets/icons/healtylibby.png'), var(--project-gradient);
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-color: #121212;
+}
 .bg-projects-labodega {
   background-image:
     url('../assets/icons/Bodega-menu.jpg'), var(--project-gradient);
@@ -243,7 +251,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
+/* - - - - - - - - - - - - - - - - - - - - -  - -- - - - --   - -*/
 /*immagini delle descrizioni dei progetti*/
 
 .moodrop-img {
@@ -291,6 +299,13 @@
 }
 .prompt-ai-img {
   background-image: url('../assets/Progetti/prompt-ai.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #121212;
+}
+.healtylibby-img {
+  background-image: url('../assets/Progetti/healtylibby.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

@@ -204,6 +204,12 @@
       "image_alt": "Prompt-AI app screenshot",
       "image_caption": "Prompt-AI - prompt manager"
     },
+    "healtylibby": {
+     "title": "HealtyLibby",
+     "description": "HealtyLibby is a personal food journal web application designed to help users organize and keep track of their meals through a simple and visual interface.\n\nThe application currently includes Google authentication, user-specific data management with Firebase Firestore, and image uploads handled through Cloudinary. The interface is built with React and TypeScript, with a focus on responsive layouts and a straightforward meal management experience.\n\nThe project is still under development and is being progressively refined. The planned AI-assisted meal analysis feature is not yet integrated, and some interface and user experience details are still being polished.", 
+     "image_alt": "HealtyLibby personal food journal application", 
+     "image_caption": "HealtyLibby - Personal Food Journal"
+     },
     "tdoll": {
       "title": "T-Doll",
       "description": "T-Doll is a landing page designed to present a themed concept and a dedicated support section in a clean, direct, and readable way. The main goal is to highlight the core message without cluttering the page, while keeping a simple, modern, and action-oriented structure.\n\nThe page is organized into practical sections, with careful attention to readability, visual hierarchy, and content consistency. It is built to guide the user toward the most important details, presenting the concept clearly and leaving space for a well-defined support section. The result is a lightweight but effective marketing experience suited to a quick product or event presentation.",
@@ -227,6 +233,7 @@
   "projects_list": {
     "projects": "Projects",
     "certifications": "Certifications",
+    "healtylibby_description": "Personal food journal web application with Firebase authentication, Firestore data management, and Cloudinary image uploads. Currently under development.",
     "labodega_description": "One-page showcase website with an interactive digital menu for a Spanish cocktail bar.",
     "pixelpals_description": "Pixelpals, the app that unites gamers!",
     "spotify_description": "Spotify clone created by Team 7",

@@ -18,6 +18,22 @@ export interface ProjectData {
 
 export const projectsData: ProjectData[] = [
     {
+    id: 'healtylibby',
+    titleKey: 'projects.healtylibby.title',
+    descriptionKey: 'projects.healtylibby.description',
+    image: 'healtylibby-img',
+    link: 'https://healtylibby-1nf7xcku7-lleo93s-projects.vercel.app/',
+    repo: 'https://github.com/LLeo93/HealtyLibby',
+    imageAltKey: 'projects.healtylibby.image_alt',
+    imageCaptionKey: 'projects.healtylibby.image_caption',
+    imageAltFallback: 'HealtyLibby personal food journal application',
+    imageCaptionFallback: 'HealtyLibby - Personal Food Journal',
+    titleFallback: 'healtylibby',
+    descriptionFallback:
+      'healtylibby - Personal food journal web application with Firebase authentication, Firestore data management, and Cloudinary image uploads. Currently under development.',
+    technologies: ['React', 'TypeScript', 'Firebase', 'Cloudinary'],
+  },
+    {
     id: 'tdoll',
     titleKey: 'projects.tdoll.title',
     descriptionKey: 'projects.tdoll.description',
